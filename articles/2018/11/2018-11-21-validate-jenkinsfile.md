@@ -1,6 +1,6 @@
 ---
 title: 在 VS Code 中校验您的 Jenkinsfile
-description: 在 VS Code 中校验您的 Jenkinsfile
+description: VS Code 中的 Jenkinsfile 插件
 author: janjoerke
 translator: 赵晓杰
 ---
