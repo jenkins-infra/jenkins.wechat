@@ -1,6 +1,6 @@
 ---
 title: 使用 Evergreen 持续提供易于使用的 Jenkins
-description: 使用 Evergreen 持续提供易于使用的 Jenkins
+description: 自动更新、易于使用的 Jenkins
 tags:
 - jenkinsworld
 - jenkinsworld2018
@@ -9,9 +9,6 @@ author: rtyler
 translator: runzexia
 ---
 
----
-
-
 
 当我第一次[写 Jenkins Evergreen 相关的文章](https://jenkins.io/blog/2018/04/06/jenkins-essentials/)， 后来被称为 "Jenkins Essentials"，我提到的一系列的未来的发展在接下来的几个月里已经变成了 **现实** 。 今年在旧金山举办的 DevOps World - Jenkins World 会议上，我会介绍 Jenkins Evergreen 背后哲学的更多细节，展示我们已经做了什么，并且讨论这个激进的 Jenkins 发行版的走向。
 
@@ -19,7 +16,7 @@ image::/images/post-images/2019-01-09-jenkins-evergreen/magician_256.png[Jenkins
 
 正如我在第一篇博客以及[JEP-300](https://github.com/jenkinsci/jep/tree/master/jep/300)中所讨论的Jenkins Evergreen 的前两大支柱是我们关注的要点.
 
-=== 自动更新的发行版
+### 自动更新的发行版
 
 不出所料, 实现安全、自动地更新Jenkins发行版（包括核心和插件）所需的机制需要很多的工作。 在[Baptiste's 的演讲中](https://jenkins.io/blog/2018/09/13/speaker-blog-evergreen-safely-upgrading/)他将讨论如何使 Evergreen "走起来"，而我会讨论 **为何** 自动更新的发行版很重要。
 
@@ -32,7 +29,7 @@ Jenkins Evergreen 发行版通过确保最新的功能更新，bug 修复以及�
 我相信 Jenkins Evergreen 可以并且可以提供相同的体验。
 
 
-=== 自动配置默认值
+### 自动配置默认值
 
 Jenkins 平台真正强大的地方是可以为不同的组织提供不同的模式和做法。对于很多新用户来说，或一些只希望使用通用案例的用户来说， Jenkins 的灵活性与让用户做出合适的选择形成了悖论。使用 Jenkins Evergreen，很多常用的配置将自动配置，使 Jenkins 变成开箱即用的工具。
 
@@ -40,12 +37,8 @@ Jenkins 平台真正强大的地方是可以为不同的组织提供不同的模
 
 我们同样在使用非常棒的[Configuration as Code](https://jenkins.io/projects/jcasc/)进行工作, Configuration as Code 现在已经完成了1.0版本的发布, 我们通过它实现自动进行默认配置。
 
-== 现状
+## 现状
 
 迄今为止，这个项目取得了重大的进展，我们非常高兴有用户开始尝试 Jenkins Evergreen，现在[Jenkins Evergreen](https://jenkins.io/projects/evergreen)已经可以被 **早期使用者** 尝试. 不过我们现在 **不** 推荐在生产环境中使用 Jenkins Evergreen 。
 
-
-
-如果你在 DevOps World - Jenkins World in San Francisco 请参观星期三下午3:45在金门宴会厅A的[Baptiste 的演讲](https://devopsworldjenkinsworld2018.sched.com/event/F9Nn/safely-upgrading-jenkins-every-single-day) 。在上午11点15我在金门宴会厅B的[演讲](https://devopsworldjenkinsworld2018.sched.com/event/F9Nf/continuously-delivering-an-easy-to-use-jenkins-with-jenkins-evergreen) 。
-
-如果你不在 San Francisco 无法参加这个会议, 我们希望能够得到您的反馈和想法在我们的[Gitter channel](https://gitter.im/jenkins-infra/evergreen) !
+我们希望能够得到您的反馈和想法在我们的[Gitter channel](https://gitter.im/jenkins-infra/evergreen) !
