@@ -1,3 +1,21 @@
+---
+layout: post
+title: "Java 11 预览支持已在 Jenkins 2.155+ 中可用"
+description: "Java 11 预览支持已在 Jenkins 2.155+ 中可用"
+tags:
+- core
+- developer
+- java11
+- community
+- platform-sig
+author: oleg_nenashev
+translator: cizezsy
+links:
+  gitter: /jenkinsci/platform-sig
+  googlegroup: jenkins-platform-sig
+  sig: platform
+---
+
 > NOTE: 这是由 [Java 11 支持团队](https://github.com/orgs/jenkinsci/teams/java11-support) 联合撰写的博客。
 在 12 月 18 号（UTC时间下午4点）我们也会在 Jenkins 在线 Meetup 展示对 Java 11 的预览支持。（[链接](https://www.meetup.com/Jenkins-online-meetup/events/257008190/)）
 
