@@ -1,9 +1,11 @@
 ---
 title: 批量修改 Jenkins 任务的技巧
 description: "Jenkins 脚本命令行的一种实践"
+date: 2019-02-27
 tags:
-- Jenkins
+    - Jenkins
 author: zacker330
+original: https://showme.codes/2019-02-23/jenkins-script-console-in-practice/
 ---
 
 ### 通过脚本命令行批量修改 Jenkins 任务
