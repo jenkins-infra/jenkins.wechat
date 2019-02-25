@@ -7,6 +7,7 @@ tags:
 - installers
 author: slide_o_mix
 translator: raychou1203
+original: https://jenkins.io/blog/2019/02/01/windows-installers/
 ---
 
 Jenkins 的 Windows 安装程序已经存在很多年了，它是用户在 Windows 上安装 Jenkins Master 作为服务的一种方式。
