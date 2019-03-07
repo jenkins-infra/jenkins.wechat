@@ -37,5 +37,5 @@ terms:
 
 # 职责
 
-所有的文章，都需要提交到该仓库中。您的任务是从该仓库中拷贝文章，然后在[公众号平台](https://mp.weixin.qq.com)上创建，进行必要的排版处理。在发布之前，需要把预览链接发送到给[大家](https://gitter.im/jenkinsci/chinese-localization-sig)进行审查。最后，没问题的话，设置发送时间。注意，您不可以对文章的内容进行修改。
+所有的文章，都需要提交到该仓库中。您的任务是从该仓库中拷贝文章，然后在[公众号平台](https://mp.weixin.qq.com)上创建，进行必要的排版处理。在发布之前，需要把预览链接发送到给[大家](https://gitter.im/jenkinsci/chinese-localization-sig)进行审查。最后，没问题的话，设置发送时间。注意，公众号中的内容必须与该仓库保持一致。
 
