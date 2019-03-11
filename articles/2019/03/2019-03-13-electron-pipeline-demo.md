@@ -122,6 +122,8 @@ def uploadArtifact(def appName, def appVersion, def artifactPath){
 2. 各平台下的构建只做一次编译打包。并将制品上传到制品库，以方便后续步骤或阶段使用。
 3. 全局变量与平台相关变量进行分离。
 
+最后，希望能给读者带来一些启发。
+
 ### 参考：
 * 持续交付的八大原则：[https://blog.csdn.net/tony1130/article/details/6673741](https://blog.csdn.net/tony1130/article/details/6673741)
 * Jenkins nodejs 插件：[https://plugins.jenkins.io/nodejs](https://plugins.jenkins.io/nodejs)
