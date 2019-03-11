@@ -26,8 +26,8 @@ pipeline {
 agent none
 // 指定整条流水线的环境变量
 environment {
-  __version = ""
-  __appName = "electron-webpack-quick-start"
+  APP_VERSION = ""
+  APP_NAME = "electron-webpack-quick-start"
 }
 
 stages {
@@ -35,20 +35,20 @@ stages {
     agent {label "linux" }
     steps{
       script{
-          __version = generateVersion("1.0.0")
-          echo "version is ${__version}"
+          APP_VERSION = generateVersion("1.0.0")
+          echo "version is ${APP_VERSION}"
     }}
   }
   stage('并行构建') {
     // 快速失败，只要其中一个平台构建失败，
     // 整次构建算失败
     failFast true
-    // parallel 闭包内的阶段将并行执行 
+    // parallel 闭包内的阶段将并行执行
     parallel {
       stage('Windows平台下构建') {
         agent {label "windows && nodejs" }
         steps {
-          echo "${__version}"
+          echo "${APP_VERSION}"
         }
       }
       stage('Linux平台下构建') {
@@ -56,8 +56,9 @@ stages {
         // 不同平台可能存在不同的环境变量
         // environment 支持阶段级的环境变量
         environment{
-            __suffix = "tar.xz"
-            __artifactPath = "dist/${__appName}-${__version}.${__suffix}"
+            SUFFIX = "tar.xz"
+            APP_PLATFORM = "linux"
+            ARTIFACT_PATH = "dist/${APP_NAME}-${APP_PLATFORM}-${APP_VERSION}.${SUFFIX}"
         }
         steps {
           script{
@@ -67,11 +68,11 @@ stages {
             nodejs(nodeJSInstallationName: 'nodejs10.15.2') {
               // 执行具体的构建命令
               sh "npm install yarn"
-              sh "yarn version --new-version ${__version}"
+              sh "yarn version --new-version ${APP_VERSION}"
               sh "yarn install"
-              sh "yarn dist --linux deb ${__suffix}"
+              sh "yarn dist --linux deb ${SUFFIX}"
               // 上传制品
-              uploadArtifact("${__appName}", "${__version}", "${__artifactPath}")
+              uploadArtifact("${APP_NAME}", "${APP_VERSION}", "${ARTIFACT_PATH}")
         }}} // 将括号合并是为了让代码看起来紧凑，提升阅读体验。下同。
       }
       stage('Mac平台下构建') {
@@ -113,12 +114,20 @@ def uploadArtifact(def appName, def appVersion, def artifactPath){
 
 另外，默认 Electron 应用使用的三段式版本号设计，即 Major.Minor.Patch。但是笔者认为三段式的版本号信息还不够追踪应用与构建之间的关系。笔者希望版本号能反应出构建号和源代码的 commit id。函数 `generateVersion` 用于生成此类版本号。生成的版本号，看起来类似这样：`1.0.0-f7b06d0.28`。
 
-
-### 小结
 完整源码地址：https://github.com/zacker330/electronjs-pipeline-demo
 
+### 小结
+上例中，Electron 应用的流水线设计思路，不只是针对 Electron 应用，所有的跨平台应用的流水线都可以参考此思路进行设计。设计思路大概如下：
+1. 多平台构建并行化。本文只有操作系统的类型这个维度进行了说明。现实中，还需要考虑其它维度，如系统位数（32位、64位）、各操作系统下的各版本。
+2. 各平台下的构建只做一次编译打包。并将制品上传到制品库，以方便后续步骤或阶段使用。
+3. 全局变量与平台相关变量进行分离。
+
 ### 参考：
-* 持续交付的八大原则：https://blog.csdn.net/tony1130/article/details/6673741
-* Jenkins nodejs 插件：https://plugins.jenkins.io/nodejs 
-* Electron 版本管理：https://electronjs.org/docs/tutorial/electron-versioning#semver
+* 持续交付的八大原则：[https://blog.csdn.net/tony1130/article/details/6673741](https://blog.csdn.net/tony1130/article/details/6673741)
+* Jenkins nodejs 插件：[https://plugins.jenkins.io/nodejs](https://plugins.jenkins.io/nodejs)
+* Electron 版本管理：[https://electronjs.org/docs/tutorial/electron-versioning#semver](https://electronjs.org/docs/tutorial/electron-versioning#semver)
+
+
+### 审校
+* LinuxSuRen（[https://github.com/LinuxSuRen](https://github.com/LinuxSuRen)）
 
