@@ -12,6 +12,6 @@ date: 2019-02-13
 
 [Jenkins][jenkins-link-id]
 [Jenkins 中文社区链接](https://jenkins-zh.cn/)
-![图片](../../images/cow.jpg)
+![图片](../images/cow.jpg)
 
 [jenkins-link-id]: https://jenkins.io/zh "Jenkins 中文网站"
