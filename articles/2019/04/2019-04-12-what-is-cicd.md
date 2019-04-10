@@ -2,9 +2,11 @@
 layout: post
 title: "什么是 CI/CD?"
 tags:
-- cicd
+- ci
+- cd
 author: Izzyazeri
 translator: p01son6415
+original: https://dzone.com/articles/what-is-cicd
 ---
 
 CI/CD 的出现改变了开发人员和测试人员发布软件的方式。本文是描述这一变化的系列文章第一篇，
@@ -99,7 +101,7 @@ AWS 上提供了可靠的当前 CI/CD 的展示，亚马逊是云计算的提供
 最受欢迎的自动化工具是 [Jenkins](https://jenkins.io/)（以前的 Hudson），
 这是一个由数百名贡献者和商业公司 [Cloudbees](https://www.cloudbees.com/) 支持的开源项目。
 Cloudbees 甚至聘请了 Jenkins 的创始人，并提供了一些 Jenkins 培训项目和附加组件。
-处理开源项目之外，还有一些更现代化的商业产品例如 CircleCI，Codeship 和 Shippable。
+除了开源项目之外，还有一些更现代化的商业产品例如 CircleCI，Codeship 和 Shippable。
 这些产品各有优缺点，我鼓励开发人员在开发流程中一一尝试它们，以了解它们在您的环境中的工作方式，
 以及它们如何与您的工具、云平台、容器系统等协作。
 
