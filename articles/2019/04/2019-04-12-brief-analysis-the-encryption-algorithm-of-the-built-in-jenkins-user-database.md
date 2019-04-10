@@ -1,7 +1,7 @@
 ---
 title: "简析 Jenkins 专有用户数据库加密算法"
 description: "本文对 Jenkins 专有用户数据库加密算法进行简要分析"
-date: 2019-04-10
+date: 2019-04-12
 tags:
 - jenkins
 author: donhui
@@ -24,7 +24,7 @@ Jenkins 专有用户的数据信息存放位置：$JENKINS_HOME/users/
 ### 用户密码是用什么算法加密的呢？
 那么问题来了，用户密码是用何种加密方式加密的呢？可否通过解密密文得到明文呢？
 
-在 [github](https://github.com/jenkinsci/jenkins) 上查看其源码，通过关键字 #jbcrypt 搜索定位到 HudsonPrivateSecurityRealm.java 这个文件。
+在 [GitHub](https://github.com/jenkinsci/jenkins) 上查看其源码，通过关键字 #jbcrypt 搜索定位到 HudsonPrivateSecurityRealm.java 这个文件。
 HudsonPrivateSecurityRealm.java 具体路径是：jenkins/core/src/main/java/hudson/security/HudsonPrivateSecurityRealm.java
 
 源码片段如下：
