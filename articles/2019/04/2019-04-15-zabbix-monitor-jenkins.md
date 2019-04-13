@@ -60,7 +60,7 @@ Metrics 插件是基于 dropwizard/metrics 实现。它通过4个接口暴露指
 
 由于指标非常之多，我们就不分别介绍了。具体有哪些指标，读者朋友可以从代码仓库中的 metrics.json 文件了解。
 
-### 1.2 Metrics 插件其它接口接口介绍
+### 1.2 Metrics 插件其它接口介绍
 * /ping：接口返回 `pong` 代表 Jenkins 存活，如下图：
   ![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-15e36249b868625a.png)
 * /threads：返回 Jenkins 的线程信息
