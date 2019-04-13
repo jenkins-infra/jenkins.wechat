@@ -93,10 +93,10 @@ Istio ingress 提供了金丝雀发布需要的路由能力（流量转移），
 为了可视化的目的，Flagger 包含一个 Grafana 面板，尽管它在金丝雀发布中不需要。
 可以在本地通过 Kubernetes 端口转发访问它。
 
-然后使用 `admin/admin` 访问 [http://localhost:3000/](http://localhost:3000/)，选择 `canary-analysis` 面板
-- namespace `jx-production`
-- primary `jx-production-myapp-primary`
-- canary `jx-production-myapp`
+然后使用 `admin/admin` 访问 [http://localhost:3000/](http://localhost:3000/)，选择 `canary-analysis` 面板以及
+- namespace 选择 `jx-production`
+- primary 选择 `jx-production-myapp-primary`
+- canary 选择 `jx-production-myapp`
 
 它将为我们提供当前版本和新版本的对比视图，视图中包含不同指标（CPU，内存，请求持续时间，响应错误……）。
 
@@ -104,7 +104,7 @@ Istio ingress 提供了金丝雀发布需要的路由能力（流量转移），
 
 ## 附加说明
 请注意 Istio 默认地将阻止从你的 Pod 访问外部集群（一种预计将在 Istio 1.1 中发生变化的行为）。
-[学习如何控制 Istio ingress 流量](https://istio.io/docs/tasks/traffic-management/egress/)
+[学习如何控制 Istio ingress 流量](https://istio.io/docs/tasks/traffic-management/egress/)。
 
 如果因为指标失败出现自动回滚，生产环境的 Jenkins X GitOps 仓库会过时，仍然使用新版本而不是旧版本。
 这是计划在即将发布的版本中修复的内容。
