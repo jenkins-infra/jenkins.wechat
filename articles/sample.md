@@ -8,7 +8,9 @@ poster: 封面图片
 toc: 这里如果设置为 true 的话，可以生成目录
 date: 2019-02-13
 tags:
-- tag1
+- tag1 这里可以添加多个标签，如：jenkins、ci、cd、pipeline 等，
+用于对文章分类以及通过标签进行筛选，
+已有的标签可以在[这里](https://jenkins-zh.cn/tags/)查看
 - tag2
 ---
 
