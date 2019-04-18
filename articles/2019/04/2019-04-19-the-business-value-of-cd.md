@@ -1,7 +1,7 @@
 ---
 title: "持续交付的商业价值"
 description: "了解整体的持续交付如何帮助你的组织以更低的风险更快地交付和更新软件"
-date: 2019-04-22
+date: 2019-04-19
 tags:
 - cd
 - devops
@@ -11,7 +11,7 @@ translator: donhui
 original: https://dzone.com/articles/the-business-value-of-cd
 ---
 
-持续交付使你能够以更低地风险更快低交付新软件或是更新已有软件。
+持续交付使你能够以更低地风险、更快低交付新软件或是更新已有软件。
 
 降低风险很重要，但是，支持持续交付的流程将转化为对业务更重要的价值：
 - 加速价值时间。
