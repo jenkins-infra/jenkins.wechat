@@ -1,6 +1,6 @@
 ---
 title: "关于 Jenkins master 共享 JENKINS_HOME 目录的实验"
-description: "尝试让Jenkins master高可用"
+description: "尝试让 Jenkins master 高可用"
 date: 2019-04-23
 tags:
 - jenkins
@@ -9,7 +9,7 @@ author: zacker330
 Jenkins master 的高可用是个老大难的问题。和很多人一样，笔者也想过两个 Jenkins master 共享同一个 JENKINS_HOME 的方案。了解 Jenkins 原理的人，都会觉得这个方案不可行。但是真的不可行吗？
 
 工作原因，笔者就亲自做了一次这样的实验。
-2019-04-15-zabbix-monitor-jenkins
+
 ### JENKINS_HOME 介绍
 Jenkins 所有数据都存放目录中，这个目录被称为 JENKINS_HOME 目录。我们可以将 JENKINS_HOME 目录理解为 Jenkins 的数据库。但两个 Jenkins master 共享同一个 JENKINS_HOME 目录，并不像两个应用共享同一个数据库。
 
@@ -75,7 +75,7 @@ jenkins-a 上设置任务 x 定时执行，刷新 jenkins-b 页面，任务 x �
 ![](../../../images/articles/2019/04/2019-04-23-jenkins-master-shared-home/292372-55e80e61f0d36dfb.png)
 
 ### 小结
-可以确认的是，当两个 Jenkins 进程共用同一个 JENKINS_HOME 目录时，其中一个 Jenkins 进程更新了 Jenkins Home 的内容，另一个是不会实时更新的。所以，同时启动两个 Jenkins master 共用同一个 JENKINS_HOME 的方案是不可行的。我们不能在 jenkins-a 挂了后，直接将流量切到 jenkins-b。jenkins-b 必须重启。
+可以确认的是，当两个 Jenkins 进程共用同一个 JENKINS_HOME 目录时，其中一个 Jenkins 进程更新了 JENKINS_HOME 的内容，另一个是不会实时更新的。所以，同时启动两个 Jenkins master 共用同一个 JENKINS_HOME 的方案是不可行的。我们不能在 jenkins-a 挂了后，直接将流量切到 jenkins-b。jenkins-b 必须重启。
 
 最后结论：多个 Jenkins master 共享同一个 JENKINS_HOME 的方案是不可行的。
 
