@@ -7,7 +7,7 @@ tags:
 - jenkins
 author: zacker330
 ---
-> 审校：[王冬辉](https://github.com/donhui)，[赵晓杰](https://github.com/LinuxSuRen)
+> 审校：[donhui](https://github.com/donhui)，[LinuxSuRen](https://github.com/LinuxSuRen)
 
 Jenkins master 的高可用是个老大难的问题。和很多人一样，笔者也想过两个 Jenkins master 共享同一个 JENKINS_HOME 的方案。了解 Jenkins 原理的人，都会觉得这个方案不可行。但是真的不可行吗？
 
