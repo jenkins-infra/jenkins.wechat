@@ -1,7 +1,7 @@
 ---
 title: "关于 Jenkins master 共享 JENKINS_HOME 目录的实验"
 description: "你觉得能通过共享 JENKINS_HOME 目录实现 Jenkins master 的高可用吗？"
-date: 2019-04-25
+date: 2019-04-23
 toc: true
 tags:
 - jenkins
