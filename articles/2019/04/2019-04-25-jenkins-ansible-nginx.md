@@ -1,7 +1,8 @@
 ---
 title: "使用 Jenkins + Ansible 实现自动化部署 Nginx"
 description: "使用 Jenkins + Ansible 实现自动化部署 Nginx"
-date: 2019-04-23
+date: 2019-04-25
+toc: true
 tags:
 - jenkins
 - ansible
@@ -21,9 +22,9 @@ author: zacker330
 
 注意，图中的 `5123 <-> 80` 代表将宿主机的 5123 端口请求转发到虚拟机中的 80 端口。
 
-* Vagrant：虚拟机管理工具，通过它，我们可以使用文本来定义、管理虚拟机。
-* Ansible：自动化运维工具
-* Docker Compose：它是一个用于定义和运行多容器 Docker 应用程序的工具。可以使用YAML文件来配置应用程序的服务。
+* [Vagrant](https://vagrantup.com)：虚拟机管理工具，通过它，我们可以使用文本来定义、管理虚拟机。
+* [Ansible](https://www.ansible.com/)：自动化运维工具
+* [Docker Compose](https://docs.docker.com/compose/)：它是一个用于定义和运行多容器 Docker 应用程序的工具。可以使用YAML文件来配置应用程序的服务。
 
 ## 2. 启动实验环境
 1. 克隆代码并进入文件夹
