@@ -34,7 +34,7 @@ author: zacker330
     ```
 2. 构建 Jenkins agent 的镜像
      需要自定义 Jenkins agent 镜像有两个原因：
-     1. 本次实验，使用 Swarm 插件实现 Jenkins master  与 Jenkins agent 之间的通信，所以 Jenkins agent 需要启动 swarm 客户端。
+     1. 本次实验，使用 Swarm 插件实现 Jenkins master  与 agent 之间的通信，所以 Jenkins agent 需要启动 swarm 客户端。
      2. Jenkins agent 必须支持 Ansible。
     ```bash
    docker build -f JenkinsSlaveAnsibleDockerfile -t jenkins-swarm-ansible .
