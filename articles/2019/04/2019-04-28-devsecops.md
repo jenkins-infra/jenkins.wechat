@@ -1,7 +1,7 @@
 ---
-title: "我们为什么需要 DevSecOps 和工件仓库？"
-description: Helen Beal 在 Nexus 用户大会的演讲
-date: 2019-04-24
+title: "我们为什么需要 DevSecOps 和制品仓库？"
+description: Helen Beal 在 Nexus 用户大会上发表的关于构建 DevSecOps 的建议
+date: 2019-04-28
 tags:
 - security
 - devops
@@ -12,7 +12,7 @@ original: https://dzone.com/articles/why-you-need-devsecops-and-artifact-reposit
 
 [Helen Beal](https://www.linkedin.com/in/helenjbeal/) 曾经在一次讨论什么是 DevSecOps 工程师的会议上发言。令她惊讶的是，在与会人员中，许多人都没有将安全机制引入 DevOps。在与人们讨论之后，她将大家的问题总结为三类：安全机制会制造额外的隔阂；组织中的人很难理解 DevOps，因此安全机制可能会造成更多困惑；可能没有为安全机制预留空间。
 
-当然，Helen 不同意这些观点。她在技术领域从业近20年，专注于软件开发生命周期，对于 DevOps 和DevSecOps 有一些自己的理解。她自称为 Ranger4 的 「DevOps 专员」，因为她帮助那里的组织实现 DevOps。她在世界各地分享知识，并且她将参加我们在 2018 年的 [Nexus User Conference](https://www.sonatype.com/nexus-user-conference-2019) ，讨论工具仓库及其在 DevSecOps 工具链中的作用。。
+当然，Helen 不同意这些观点。她在技术领域从业近20年，专注于软件开发生命周期，对于 DevOps 和DevSecOps 有一些自己的理解。她自称为 Ranger4 的 「DevOps 专员」，因为她帮助那里的组织实现 DevOps。她在世界各地分享知识，并且她将参加我们在 2018 年的 [Nexus User Conference](https://www.sonatype.com/nexus-user-conference-2019) ，讨论工具仓库及其在 DevSecOps 工具链中的角色。
 
 从高层次来看，Helen 为 DevSecOps 提出了一些重要建议：
 
@@ -24,10 +24,10 @@ original: https://dzone.com/articles/why-you-need-devsecops-and-artifact-reposit
 
 Helen 花了一些时间阐述如何培养安全文化，组织在维护系统和人员行为安全时可以采用的一些关键原则和行动。
 
-行为安全使个人和团队能够以前进的安全方式行事。为了培养行为安全，她建议：
+行为安全使个人和团队能够以安全的方式行事。为了培养行为安全，她建议：
 
 - 让人们意识到，失败是一个学习机会
-- 确保团队之间和团队之间有共同的责任和目标
+- 确保团队之间有共同的责任和目标
 - 不要吝啬花时间做实验
 - 使用可协作的平台来分享学习经验和最佳实践
 - 对实验的过程进行回顾，并确保有后续
@@ -41,22 +41,22 @@ Helen 花了一些时间阐述如何培养安全文化，组织在维护系统�
 - 用 ChatOps 来归类问题和事件
 - 使用应用程序性能管理以提早发现问题并警告
 - 降低出现问题波及范围，例如使用功能开关，金丝雀测试，蓝／绿环境和微服务
-- 将产品需求与服务相结合
+- 将产品需求与服务台相结合
 - 让失败成为一种习惯
 
-在讲述 DevSecOps 案例并说明如何灌输安全文化后，她将话题转向如何使用工件仓库。 毕竟，这是一个 Nexus 会议，工件仓库是 Nexus 的特色。
+在讲述 DevSecOps 案例并说明如何灌输安全文化后，她将话题转向如何使用制品仓库。 毕竟，这是一个 Nexus 会议，制品仓库是 Nexus 的特色。
 
-她引用了 Manfred Moser 的话：「开发软件中没有工件仓库和制造业中没有仓库是一样的。」你不会奢望在没有仓库的情况下开办工厂，软件开发也一样。工件仓库保存了你每次构建的结果，并且确保你拥有可用的构建。
+她引用了 Manfred Moser 的话：「开发软件中没有制品仓库和制造业中没有仓库是一样的。」你不会奢望在没有仓库的情况下开办工厂，软件开发也一样。制品仓库保存了你每次构建的结果，并且确保你拥有可用的构建。
 
-工件仓库位于 DevOps 工具链的集成阶段，为了确保你的工具可用它可以是概念性的。
+制品仓库位于 DevOps 工具链的集成阶段，为了确保你的工具可用它可以是概念性的。
 
 ![](../../../images/articles/2019/04/2019-04-24-devsecops/pic1.png)
 
-如果没有开源策略，你就不应该使用工件仓库。工件仓库会自动执行你的开源策略，这样就不会像 35％ 的组织一样有开源策略但忽略它。
+如果没有开源策略，你就不应该使用制品仓库。制品仓库会自动执行你的开源策略，这样就不会像 35％ 的组织一样有开源策略但忽略它。
 
 ![](../../../images/articles/2019/04/2019-04-24-devsecops/pic2.png)
 
-Helen 利用 [Nexus Lifecycle](https://www.sonatype.com/nexus-lifecycle) 来告诉开发人员如何更好地使用工件，降低风险，并协助运维和安全部门确保正确使用软件。
+Helen 利用 [Nexus Lifecycle](https://www.sonatype.com/nexus-lifecycle) 来告诉开发人员如何更好地使用制品，降低风险，并协助运维和安全部门确保正确使用软件。
 
 ![](../../../images/articles/2019/04/2019-04-24-devsecops/pic3.png)
 
