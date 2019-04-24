@@ -24,7 +24,7 @@ author: zacker330
 
 * [Vagrant](https://vagrantup.com)：虚拟机管理工具，通过它，我们可以使用文本来定义、管理虚拟机。
 * [Ansible](https://www.ansible.com/)：自动化运维工具
-* [Docker Compose](https://docs.docker.com/compose/)：它是一个用于定义和运行多容器 Docker 应用程序的工具。可以使用YAML文件来配置应用程序的服务。
+* [Docker Compose](https://docs.docker.com/compose/)：它是一个用于定义和运行多容器 Docker 应用程序的工具。可以使用 YAML 文件来配置应用程序的服务。
 
 ## 2. 启动实验环境
 1. 克隆代码并进入文件夹
@@ -192,5 +192,5 @@ pipeline{
 
 ### 附录
 * 本次实验环境代码：[https://github.com/zacker330/jenkins-ansible-nginx](https://github.com/zacker330/jenkins-ansible-nginx)
-* 简单易懂Ansible系列 —— 解决了什么：[https://showme.codes/2017-06-12/ansible-introduce/](https://showme.codes/2017-06-12/ansible-introduce/)
-* Puppet，Chef，Ansible的共性：[https://showme.codes/2016-01-02/the-nature-of-ansible-puppet-chef/](https://showme.codes/2016-01-02/the-nature-of-ansible-puppet-chef/)
+* 简单易懂 Ansible 系列 —— 解决了什么：[https://showme.codes/2017-06-12/ansible-introduce/](https://showme.codes/2017-06-12/ansible-introduce/)
+* Puppet，Chef，Ansible 的共性：[https://showme.codes/2016-01-02/the-nature-of-ansible-puppet-chef/](https://showme.codes/2016-01-02/the-nature-of-ansible-puppet-chef/)
