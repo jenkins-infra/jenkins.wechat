@@ -8,7 +8,7 @@ author: zacker330
 ---
 
 ### 手工安装 Jenkins 插件的方法
-通常，我们有两种方法安装  Jenkins 插件。第一种方法是到 Jenkins 插件管理页面搜索插件，然后安装。第二种方法是上传 Jenkins 插件的 hpi 文件安装。这两种方法能满足大多数人的需求。
+通常，我们有两种方法安装 Jenkins 插件。第一种方法是到 Jenkins 插件管理页面搜索插件，然后安装。第二种方法是上传 Jenkins 插件的 hpi 文件安装。这两种方法能满足大多数人的需求。
 
 第一种方法，如下图所示：
 ![搜索安装](../../../images/articles/2019/04/2019-05-07-jenkins-install-plugins-shell/pc1.png)
