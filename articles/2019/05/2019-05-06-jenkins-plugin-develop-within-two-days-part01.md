@@ -51,8 +51,8 @@ Jenkins 插件主要用来对 Jenkins 的功能进行扩展。
 插件开发需要首先安装 JDK 和 Maven，这里不做进一步说明。
 
 ### 创建一个插件
-Jenkins 为插件开发提供了 Maven 原型。  
-打开一个命令行终端，切换到你想存放 Jenins 插件的目录，运行如下命令：
+Jenkins 为插件开发提供了 Maven 原型。
+打开一个命令行终端，切换到你想存放 Jenins 插件源代码的目录，运行如下命令：
 ```
 mvn -U archetype:generate -Dfilter=io.jenkins.archetypes:
 ```
@@ -90,8 +90,8 @@ package: io.jenkins.plugins.sample
 可以使用 `mvn verify` 命令验证是否可以构建成功。
 
 ### 构建及运行插件
-`Maven HPI Plugin` 用于构建和打包 Jenkins 插件。  
-它提供了一种便利的方式来运行一个 Jenkins 实例和你的插件：
+`Maven HPI Plugin` 用于构建和打包 Jenkins 插件。
+它提供了一种便利的方式来运行一个已经包含了当前插件的 Jenkins 实例：
 ```
 mvn hpi:run
 ```
@@ -102,11 +102,11 @@ mvn hpi:run
 INFO: Jenkins is fully up and running
 ```
 
-在 Jenkins 中创建一个自由风格的 Job ，然后给它取个名字。  
-然后添加 "Say hello world" 构建步骤，如下图所示：
+在 Jenkins 中创建一个自由风格的任务，然后给它取个名字。
+然后添加 "Say hello world" 构建步骤，如下图所示：  
 ![say hello world](../../../images/articles/2019/05/2019-05-06-jenkins-plugin-develop-within-two-days-part01/say-hello-world.png)
 
-输入一个名字，如：Jenkins ，然后保存该 Job ，  
+输入一个名字，如：Jenkins ，然后保存该任务，
 点击构建，查看构建日志，输出如下所示：
 ```
 Started by user anonymous
@@ -116,13 +116,13 @@ Finished: SUCCESS
 ```
 
 ### 定制开发插件
-Jenkins 插件开发归功于有一系列扩展点。  
+Jenkins 插件开发归功于有一系列扩展点。
 开发人员可以对其进行扩展自定义实现一些功能。
 
 这里有几个重要的概念需要做下说明：
 
 #### 扩展点（ ExtensitonPoint ）
-扩展点是 Jenkins 系统某个方面的接口或抽象类。  
+扩展点是 Jenkins 系统某个方面的接口或抽象类。
 这些接口定义了需要实现的方法，而 Jenkins 插件需要实现这些方法。
 
 笔者所写的插件需要实现 Builder 这个扩展点。
@@ -133,7 +133,7 @@ public class MavenCheck extends Builder {}
 
 #### Descriptor 静态内部类
 Descriptor 静态内部类是一个类的描述者，用于指明这是一个扩展点的实现，
-Jenkins 通过这个描述者才能知道我们写的插件。  
+Jenkins 通过这个描述者才能知道我们写的插件。
 每一个描述者静态类都需要被 @Extension 注解，
 Jenkins 内部会扫描 @Extenstion 注解来获取注册了哪些插件。  
 代码片段如下：
@@ -157,7 +157,7 @@ public static final class DescriptorImpl extends BuildStepDescriptor<Builder> {
 ```
 
 在 DesciptorImpl 实现类中有两个方法需要我们必须要进行重写：
-isApplicable() 和 getDisplayName() 。  
+isApplicable() 和 getDisplayName() 。
 isApplicable() 这个方法的返回值代表这个 Builder 在 Jenkins Project 中是否可用，
 我们可以将我们的逻辑写在其中，例如做一些参数校验，
 最后返回 true 或 false 来决定这个 Builder 是否可用。
@@ -187,8 +187,8 @@ public MavenCheck(boolean check) {
 #### 核心逻辑
 笔者所写的插件的核心逻辑是检查 Maven pom.xml 文件是否包含 SNAPSHOT 版本依赖。
 
-Jenkins 是 Master/Slave 架构，
-这就需要读取 Slave 节点的 workspace 的文件, 
+Jenkins 是 Master/Agent 架构，
+这就需要读取 Agent 节点的 workspace 的文件，
 这是笔者在写插件时遇到的一个难点。
 
 Jenkins 强大之处在于它的生态，目前有上千个插件，
@@ -205,7 +205,7 @@ Jenkins 强大之处在于它的生态，目前有上千个插件，
 以下是对插件的使用简要描述。
   
 如果勾选了下面截图中的选择框，
-Jenkins Job 在构建时将会检查 pom.xml 中是否包含 SNAPSHOT 。
+Jenkins 任务在构建时将会检查 pom.xml 中是否包含 SNAPSHOT 。
 ![maven-snapshot-check-plugin-usage](../../../images/articles/2019/05/2019-05-06-jenkins-plugin-develop-within-two-days-part01/maven-snapshot-check-plugin-usage.png)
 
 如果检查到的话，则会将该次构建状态标记为失败。
