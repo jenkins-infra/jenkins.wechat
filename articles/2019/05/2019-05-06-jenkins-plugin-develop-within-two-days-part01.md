@@ -8,7 +8,10 @@ tags:
 - maven
 - jira
 author: donhui
+poster: 华山之巅
 ---
+
+![华山之巅](../../../images/articles/2019/05/2019-05-06-jenkins-plugin-develop-within-two-days-part01/huashan.png)
 
 本文介绍了笔者首个 Jenkins 插件开发的旅程，
 包括从产生 idea 开始，然后经过插件定制开发，
