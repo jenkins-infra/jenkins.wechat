@@ -8,8 +8,10 @@ tags:
 - maven
 - jira
 author: donhui
-poster: ![journey](../../../images/articles/2019/05/2019-05-08-jenkins-plugin-develop-within-two-days-part02/journey.png)
+poster: 江边落日
 ---
+
+![江边落日](../../../images/articles/2019/05/2019-05-08-jenkins-plugin-develop-within-two-days-part02/sunset.png)
 
 本文分上下两篇，上篇主要介绍了从产生 idea 到插件开发完成的过程；
 下篇将介绍将插件托管到 Jenkins 插件更新中心的一系列过程。
