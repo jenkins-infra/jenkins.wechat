@@ -29,11 +29,22 @@ poster: 华山之巅
 导致这个问题一直被搁置，而这也给笔者留下深刻的印象。
   
 等到再次制定 Maven 规范时，从一开始就考虑
-强制禁止 SNAPSHOT 版本依赖发到生产环境，
+强制禁止 SNAPSHOT 版本依赖发到生产环境。
+
 这里是通过在 Jenkins 构建时做校验实现的。
- 
 因为没有找到提供类似功能的 Jenkins 插件，
 目前这个校验通过 shell 脚本来实现的，
+具体的做法是在 Jenkins 任务中 Maven 构建之前增加一个 Execute shell 的步骤，
+来判断 pom.xml 中是否包含 SNAPSHOT 关键字，如果包含，该次构建状态将被标记为失败。
+脚本内容如下：
+```bash
+#!/bin/bash
+if [[ ` grep -R --include="pom.xml" SNAPSHOT .` =~ "SNAPSHOT" ]]; 
+then echo "SNAPSHOT check failed" && grep -R --include="pom.xml" SNAPSHOT . && exit 1; 
+else echo "SNAPSHOT check success"; 
+fi
+```
+
 恰好前不久在看 Jenkins 插件开发文档，
 那何不通过 Jenkins 插件的方式实现它呢？
 
@@ -176,6 +187,7 @@ getDisplayName() 这个方法返回的是一个 String 类型的值，
   </f:entry>
 </j:jelly>
 ```
+如上所示，需要在 config.jelly 中包含需要传入的参数配置信息的选择框，field 为 check ，这样可以在 Jenkins 进行配置，然后通过 DataBoundConstructor 数据绑定的方式，将参数传递到 Java 代码中。
 服务端 Java 代码片段如下：
 ```
 @DataBoundConstructor
