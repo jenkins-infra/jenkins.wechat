@@ -17,7 +17,7 @@ poster: 江边落日
 下篇将介绍将插件托管到 Jenkins 插件更新中心的一系列过程。
 
 ## 托管插件
-托管插件包括一系列流程步骤。  
+托管插件包括一系列流程步骤。
 笔者完成了它所有步骤（包括非必须的步骤），其中主要有两个标志性任务：
 - 插件代码被托管在 jenkinsci GitHub 组的一个仓库，然后作者拥有它的管理权限。  
   笔者的插件所在仓库为：[jenkinsci/maven-snapshot-check-plugin](https://github.com/jenkinsci/maven-snapshot-check-plugin) 。
@@ -28,7 +28,7 @@ poster: 江边落日
 
 #### 查找类似的插件
 Jenkins 社区欢迎任何人的贡献，但为了让 Jenkins 用户受益，
-它要求查找解决相同或类似问题的插件，看看是否可以与现有的维护人员联手。  
+它要求查找解决相同或类似问题的插件，看看是否可以与现有的维护人员联手。
 可以在 https://plugins.jenkins.io 查看所有的插件，
 以确认是否有类似的插件实现了你计划实现的功能。  
 笔者在之前已进行过查找，并没有找到可以实现笔者计划实现的功能的类似插件。
@@ -50,13 +50,13 @@ Jenkins 制定了一些与插件相关的命名规约。
 
 ##### Group ID
 推荐使用 `io.jenkins.plugins` 或 `org.jenkins-ci.plugins` 作为 groupId 。
-但是不禁止其他组织 ID ，除非它们是恶意的（例如引用与你没有关系的组织）。  
+但是不禁止其他组织 ID ，除非它们是恶意的（例如引用与你没有关系的组织）。
 笔者所写的插件使用的 groupId 为: `org.jenkins-ci.plugins` 。
 
 ##### Java 源码
 Jenkins 项目一般遵循 [Oracle Java 代码规约](https://jenkins.io/doc/developer/publishing/style-guides/www.oracle.com/technetwork/java/codeconvtoc-136057.html)，
 但是并没有很好的强制甚至在核心组件中。
-个别的插件维护者有时会选择使用不同的风格指南作为插件。  
+个别的插件维护者有时会选择使用不同的风格指南作为插件。
 笔者日常使用 IDEA 进行开发，之前安装了「阿里 Java 规约插件」，
 因而使用它作为编码规约。
 
@@ -83,7 +83,7 @@ Jenkins 项目分发的所有插件都需要是免费的开源软件。
 这适用于插件源码及其所有依赖项。
 要确保在 `pom.xml` 文件和仓库中的 `LICENSE` 文件指定协议。
 官方建议使用 MIT license ，它用于 Jenkins 核心和大多数插件和库，
-但是任何 OSI 批准的开源 license 都可以。  
+但是任何 OSI 批准的开源 license 都可以。
 笔者这里使用了 MIT license 。
 
 #### 要求注册
@@ -166,8 +166,8 @@ developers:
 要先确认拥有发布该插件的权限。
 
 #### Maven 要使用的 Artifactory 凭据
-需要告诉 Maven 访问 Artifactory 的凭据。  
-登录 Artifactory ，从用户 profile 中获取`加密的密码`。  
+需要告诉 Maven 访问 Artifactory 的凭据。
+登录 Artifactory ，从用户 profile 中获取`加密的密码`。
 在 ` ~/.m2/settings.xml` 文件配置 server 认证信息，如下所示：
 ```xml
 <settings xmlns="https://maven.apache.org/SETTINGS/1.0.0"
@@ -226,7 +226,7 @@ maven-snapshot-check=builder
 两天的 Jenkins 插件开发之旅（尤其是 04.24 晚上花了很多时间），
 让笔者了解了插件开发的基本知识，并在托管插件的过程中学到一些知识。
 然后在周末花了几个小时总结回顾，并将它写成文档。
-同时也希望此文能给 Jenkins 插件开发者入门带来一点帮助！ 
+同时也希望此文能给 Jenkins 插件开发者入门带来一点帮助！
 
 ## 参考
 在 Jenkins 插件开发过程中，主要以 Jenkins 官方文档为指南：
