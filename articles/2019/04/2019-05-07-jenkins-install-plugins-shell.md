@@ -22,9 +22,9 @@ author: zacker330
 
 ### 自动安装插件的方法
 
-那么，我们如何才能做到 Jenkins 的插件是确定的呢？最好的方式应该是它能像构建工具一样，只要在一个地方定义所有想要插件的版本，然后 Jenkins 就自动安装好了。
+那么，有什么方法能做到即指定插件的版本，又能自动下载它的依赖呢？
 
-幸运的是，这整个逻辑，我们不需要重新实现一遍，Jenkins 的 Docker 镜像的代码仓库里已经有实现。只不过需要我们拿过来小小修改才能使用。笔者创建了相应的代码仓库：jenkins-install-plugins-shell 。链接在文章末尾。
+幸运的是，Jenkins 的 Docker 镜像的代码仓库里的 install-plugins.sh 脚本已经实现。只不过需要我们拿过来小小修改才能使用。笔者修改后创建了相应的代码仓库：jenkins-install-plugins-shell 。链接在文章末尾。
 
 以下是 jenkins-install-plugins-shell 的使用方法：
 1. 将代码 clone 到 JENKINS_HOME 目录中。
