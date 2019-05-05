@@ -5,6 +5,7 @@ date: 2019-05-07
 tags:
 - jenkins
 author: zacker330
+poster: ../../../images/articles/2019/04/2019-05-07-jenkins-install-plugins-shell/poster.png
 ---
 
 ### 手工安装 Jenkins 插件的方法
