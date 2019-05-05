@@ -1,6 +1,6 @@
 ---
 title: "Jenkins 自动化安装插件"
-description: "Jenkins 自动安装插件"
+description: "Jenkins 批量安装指定版本插件"
 date: 2019-05-07
 tags:
 - jenkins
@@ -20,11 +20,13 @@ author: zacker330
 
 第一种方法是无法指定插件的版本。第二种方式必须自己找到该插件的依赖树，一个个依赖的安装。是的，手工上传插件的这种方法，Jenkins 是不会自动下载依赖的。
 
+而且，这两种方式都无法实现批量安装。
+
 ### 自动安装插件的方法
 
-那么，有什么方法能做到即指定插件的版本，又能自动下载它的依赖呢？
+那么，有什么方法能指定插件的版本，又能自动下载它的依赖，还能批量下载呢？
 
-幸运的是，Jenkins 的 Docker 镜像的代码仓库里的 install-plugins.sh 脚本已经实现。只不过需要我们拿过来小小修改才能使用。笔者修改后创建了相应的代码仓库：jenkins-install-plugins-shell 。链接在文章末尾。
+幸运的是，Jenkins 的 Docker 镜像的代码仓库里的 install-plugins.sh 脚本已经实现。只不过需要我们拿过来小小修改才能使用。笔者修改后创建了相应的代码仓库：[jenkins-install-plugins-shell](https://github.com/jenkinsci/docker/blob/master/install-plugins.sh) 。链接在文章末尾。
 
 以下是 jenkins-install-plugins-shell 的使用方法：
 1. 将代码 clone 到 JENKINS_HOME 目录中。
