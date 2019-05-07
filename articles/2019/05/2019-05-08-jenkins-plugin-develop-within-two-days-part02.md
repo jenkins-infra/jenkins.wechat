@@ -8,7 +8,7 @@ tags:
 - maven
 - jira
 author: donhui
-poster: 江边落日
+poster: ../../../images/articles/2019/05/2019-05-08-jenkins-plugin-develop-within-two-days-part02/sunset.png
 ---
 
 ![江边落日](../../../images/articles/2019/05/2019-05-08-jenkins-plugin-develop-within-two-days-part02/sunset.png)
@@ -37,8 +37,8 @@ Jenkins 社区欢迎任何人的贡献，但为了让 Jenkins 用户受益，
 Jenkins 制定了一些与插件相关的命名规约。
 插件开发者要确保遵循这些命名规约。
 
-##### Artifact ID
-插件的 artifact ID 被用于文件基本名称，是 Jenkins 插件和更新站点的唯一标识。  
+##### artifactId
+插件的 artifactId 被用于文件基本名称，是 Jenkins 插件和更新站点的唯一标识。  
 它需要遵循一些发布规约：
 - 使用小写 ID ，并根据需要使用连字符分隔术语。
 - 除非名称有任何意义，否则不要在 ID 中包含 jenkins 或 plugin 。
@@ -48,7 +48,7 @@ Jenkins 制定了一些与插件相关的命名规约。
 如果可以，建议使用简短的描述性名称，如 *Subversion* 。  
 笔者所写的插件的名称为：*Maven SNAPSHOT Check* 。
 
-##### Group ID
+##### groupId
 推荐使用 `io.jenkins.plugins` 或 `org.jenkins-ci.plugins` 作为 groupId 。
 但是不禁止其他组织 ID ，除非它们是恶意的（例如引用与你没有关系的组织）。
 笔者所写的插件使用的 groupId 为: `org.jenkins-ci.plugins` 。
@@ -86,14 +86,14 @@ Jenkins 项目分发的所有插件都需要是免费的开源软件。
 但是任何 OSI 批准的开源 license 都可以。
 笔者这里使用了 MIT license 。
 
-#### 要求注册
+#### 要求注册的账号
 通过 Jenkins 项目更新站点分发的插件需要托管在 [jenkinsci GitHub 组织](https://github.com/jenkinsci)中，
-因此需要在 GitHub 上有一个用户帐户，并且需要有一个公共仓库来存放插件源代码。
+因此需要在 GitHub 上有一个账号，并且需要有一个公共仓库来存放插件源代码。
 
 为了完整地发布你的插件，需要注册一个 [Jenkins 社区帐号](https://accounts.jenkins.io/)，
 它可以让你访问 [JIRA](https://issues.jenkins-ci.org/)，[wiki](https://wiki.jenkins-ci.org/) 和 [Maven 仓库](https://repo.jenkins-ci.org/) 。
 
-### 开启托管请求
+### 发起托管请求
 >注意：Jenkins 官方自动化流程使用更容易实现的 fork + 删除的方式（见下文），而不是转移仓库所有者。
 
 登录到 [JIRA](https://issues.jenkins-ci.org/) 然后在 [HOSTING](https://issues.jenkins-ci.org/browse/HOSTING) 项目创建一个问题。
