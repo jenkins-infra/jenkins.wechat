@@ -9,7 +9,6 @@ tags:
 author: zacker330
 poster: "../../../images/articles/2019/05/2019-05-10-devops-jenkins-credential-manage/devops-platform-lock-jenkins.png"
 ---
-
 ### 背景
 了解到行业内有些团队是基于 Jenkins 开发 DevOps 平台。而基于 Jenkins 实现的 DevOps 平台，就不得不考虑凭证的管理问题。
 
@@ -62,6 +61,8 @@ git branch: 'master',
 DevOps 平台在存储凭证、传输凭证给 Jenkins 时，都需要对凭证进行加密。至于使用何种加密方式，交给读者思考了。
 
 ### 小结
+以上解决方案对 Jenkins 本身的改造几乎没有，我们只通过一个插件就解耦了 Jenkins 的凭证管理和 DevOps 平台的凭证管理。
+
 思路已经有了。具体怎么实现，由于一些原因不能开源，虽然实现起来不算难。还请读者见谅。
 
 最后，希望能和遇到同样问题的同学进行交流。看看是否还可以有更好的设计思路。
