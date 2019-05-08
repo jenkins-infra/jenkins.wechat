@@ -1,13 +1,13 @@
 ---
 title: "基于 Jenkins 的 DevOps 平台应该如何设计凭证管理"
 description: "一种基于 Jenkins 的 DevOps 平台建设思路"
-date: 2019-05-10
+date: 2019-05-14
 toc: true
 tags:
 - jenkins
 - devops
 author: zacker330
-poster: "../../../../images/articles/2019/05/2019-05-10-devops-jenkins-credential-manage/devops-platform-lock-jenkins.png"
+poster: "../../../../images/articles/2019/05/2019-05-14-devops-jenkins-credential-manage/devops-platform-lock-jenkins.png"
 ---
 ### 背景
 了解到行业内有些团队是基于 Jenkins 开发 DevOps 平台。而基于 Jenkins 实现的 DevOps 平台，就不得不考虑凭证的管理问题。
