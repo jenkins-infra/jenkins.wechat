@@ -20,7 +20,7 @@ poster: “../../../images/cow.jpg”
 * 确保远程对象仅通过远程通道被序列化。 确定永远不会设计以 XML 形式持久化到磁盘中的类包括： FilePath, [Stream]TaskListener, and ProcessTree. (issue 47896)
 * 修复在 Linux 代理安装器中看到的一些错误。 (issue 57071)
 * 使得 Debian/Ubuntu 启动器脚本对 Java 11 兼容。 (issue 57096)
-* 开发者：使得mvn -f war hudson-dev:run支持${port}。 (pull 3984)
+* 开发者：使得 mvn -f war hudson-dev:run支持${port}。 (pull 3984)
 
 ## 2.174 (2019-04-21)
 
