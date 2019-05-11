@@ -14,7 +14,7 @@ Jenkins 中文社区是一个开放、包容、活跃的社区，包含大量的
 
 本次福利是《Jenkins 2.x实践指南》x 5，以下是介绍：
 
-![image.png](../../../images/articles/2019/05/2019-05-13-jenkins-book-gift/book-introduce.png)
+![image.png](../../../images/articles/2019/05/2019-05-13-jenkins-book-gift/book-introduce.jpeg)
 
 本次活动书籍均由博文视点（Broadview）提供，特此感谢。
 
