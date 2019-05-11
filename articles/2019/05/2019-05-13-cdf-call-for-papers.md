@@ -34,5 +34,7 @@ oringal: https://linuxfoundation.smapply.io/prog/continuous_delivery_summit_chin
     * 分享在持续交付中改善你们的软件供应链中的安全性的案例和技巧
 * 帮助我们的同时也帮助自己
     描绘你希望看到的 CI/CD 景象
+    
+[点击这里提交你的演讲题目](https://linuxfoundation.smapply.io/prog/continuous_delivery_summit_china_2019/)
 
 [点击这里查看](https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/)其他更多的同场活动。
