@@ -9,7 +9,9 @@ tags:
 author: Ravi Sarma Kasibhatla
 translator: donhui
 original: https://dzone.com/articles/cloud-agnostic-automated-cicd-for-k8s
+poster: "../../../images/articles/2019/04/2019-05-16-cloud-agnostic-automated-cicd-for-k8s/jiuxi.png"
 ---
+![jiuxi](../../../images/articles/2019/04/2019-05-16-cloud-agnostic-automated-cicd-for-k8s/jiuxi.png)
 
 在本文中，我想讨论一种在云环境中为 Kubernetes 工作负载实现自动化端到端 CI/CD 的方法。
 这里可能有其它解决方案，而像 AWS、Microsoft Azure 和 GCP 这样的云提供商也提供了自己的一套框架，以实现与 Kubernetes 相同的目标。
@@ -19,7 +21,7 @@ original: https://dzone.com/articles/cloud-agnostic-automated-cicd-for-k8s
 
 在详细介绍之前，这里有张部署模型的快照：
 
-![](../../../images/articles/2019/04/2019-05-16-cloud-agnostic-automated-cicd-for-k8s/cloud-agnostic-deployment.png)
+![cloud-agnostic-deployment](../../../images/articles/2019/04/2019-05-16-cloud-agnostic-automated-cicd-for-k8s/cloud-agnostic-deployment.png)
 
 ## 持续集成组件
 
@@ -112,4 +114,4 @@ Zabbix Server 被配置为节点/代理自动注册，以便通过自动缩放�
 在提出此方法时，需要考虑生产级环境所需的更改和更新。
 还考虑了其他方面，例如对集群实例的安全访问、升级、备份和恢复，以及根据行业标准提出的分层体系结构建议。
 
-希望本文为您提供一些输入，当您计划为多个云提供商提供生产级环境置备时，可以考虑这些输入。
+希望本文为您提供一些参考，当您计划为多个云提供商提供生产级环境置备时，可以考虑这些参考。
