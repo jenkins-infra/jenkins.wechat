@@ -9,9 +9,9 @@ tags:
 author: Ravi Sarma Kasibhatla
 translator: donhui
 original: https://dzone.com/articles/cloud-agnostic-automated-cicd-for-k8s
-poster: "../../../images/articles/2019/04/2019-05-16-cloud-agnostic-automated-cicd-for-k8s/jiuxi.png"
+poster: "../../../images/articles/2019/04/2019-05-16-cloud-agnostic-automated-cicd-for-k8s/blue.jpg"
 ---
-![jiuxi](../../../images/articles/2019/04/2019-05-16-cloud-agnostic-automated-cicd-for-k8s/jiuxi.png)
+![blue](../../../images/articles/2019/04/2019-05-16-cloud-agnostic-automated-cicd-for-k8s/blue.jpg)
 
 在本文中，我想讨论一种在云环境中为 Kubernetes 工作负载实现自动化端到端 CI/CD 的方法。
 这里可能有其它解决方案，而像 AWS、Microsoft Azure 和 GCP 这样的云提供商也提供了自己的一套框架，以实现与 Kubernetes 相同的目标。
