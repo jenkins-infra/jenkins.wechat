@@ -1,6 +1,6 @@
 ---
-title: "Jenkins 版本发布"
-description: "Jenkins 每周更新版发布"
+title: "19年 GSoC 中的七个项目"
+description: "Jenkins 社区在 Google Summer of Code 中的项目"
 date: 2019-05-15
 tags:
 - jenkins
