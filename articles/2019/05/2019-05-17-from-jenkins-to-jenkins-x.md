@@ -1,7 +1,7 @@
 ---
 title: "从 Jenkins 到 Jenkins X"
 description: "这是一个关于 dailymotion 从 Jenkins 到 Jenkins X 的旅程，我们遇到的问题，以及我们是如何解决它们的故事。"
-date: 2019-05-20
+date: 2019-05-17
 tags:
 - jenkins
 - jenkins x
@@ -15,7 +15,7 @@ original: https://medium.com/dailymotion/from-jenkins-to-jenkins-x-604b6cde0ce3
 poster: “./2019-05-20-from-jenkins-to-jenkins-x/journey.jpeg”
 ---
 
-![journey](./2019-05-20-from-jenkins-to-jenkins-x/journey.jpeg)
+![journey](2019-05-17-from-jenkins-to-jenkins-x/journey.jpeg)
 
 这是一个关于 dailymotion 从 Jenkins 到 Jenkins X 的旅程，我们遇到的问题，以及我们是如何解决它们的故事。
 
@@ -57,7 +57,7 @@ Jenkins X 提供了很多[快速入门和模板](https://github.com/jenkins-x-bu
 ## 在 Kubernetes 上构建镜像
 这些天将给我们带来了一个有趣的话题：在 Kubernetes 集群中构建容器镜像。
 
-![build-image](./2019-05-20-from-jenkins-to-jenkins-x/build-image.jpeg)
+![build-image](2019-05-17-from-jenkins-to-jenkins-x/build-image.jpeg)
 
 Jenkins X 附带了一组"构建打包"，使用 "Docker in Docker" 从容器内部构建镜像。
 但是随着新的容器运行时的到来，Kubernetes 推出了它的[容器运行时接口( CRI )](https://kubernetes.io/docs/setup/cri/)，我们想探索其他的选择。
@@ -83,7 +83,7 @@ Kaniko 维护者是很愿意帮忙的，并且快速地合并了修复，所以�
 这对于快速添加新镜像或编辑现有的镜像非常有用，因为我们知道 Jenkins 会处理好所有的事情。
 
 ## 声明所需资源的重要性
-![containers](./2019-05-20-from-jenkins-to-jenkins-x/containers.jpeg)
+![containers](2019-05-17-from-jenkins-to-jenkins-x/containers.jpeg)
 
 我们在之前的 Jenkins 平台中遇到的一个主要问题来自静态的代理/执行器，在高峰时间有时构建队列很长。
 Kubernetes 之上的 Jenkins 使这个问题很容易解决，主要是在 Kubernetes 集群上运行时，它能支持[集群自动伸缩](https://github.com/kubernetes/autoscaler)。
@@ -116,7 +116,7 @@ spec:
 现在我们已经拥有了所有的工具，并且能够为我们的应用程序构建一个镜像，
 我们准备下一步：将它部署到"预览环境"!
 
-![preview](./2019-05-20-from-jenkins-to-jenkins-x/preview.jpeg)
+![preview](2019-05-17-from-jenkins-to-jenkins-x/preview.jpeg)
 
 Jenkins X 通过重用现有的工具——主要是 Helm ，使得部署预览环境变得很容易，
 只要你遵循一些约定，例如用于镜像标签的值的名称。
@@ -168,7 +168,7 @@ Jenkins X 团队已经[写过关于 Helm 和 Tiller ( Helm 的服务器端组件
 我现在不会详细介绍我们的设置，但别担心，这将是我下一篇博客文章的主题！
 
 ## 迁移
-![sunset](./2019-05-20-from-jenkins-to-jenkins-x/sunset.jpeg)
+![sunset](2019-05-17-from-jenkins-to-jenkins-x/sunset.jpeg)
 
 我们故事的另一个有趣的部分是从 Jenkins 到 Jenkins X 的实际迁移。
 以及我们如何使用两个构建系统处理仓库。
@@ -200,7 +200,7 @@ Jenkins X 团队已经[写过关于 Helm 和 Tiller ( Helm 的服务器端组件
 这就是我们喜欢 Jenkins X 的原因：因为它遵循相同的模式。
 那么，你在等待什么来开始你自己的旅程呢？
 
-![sea-and-canoe](./2019-05-20-from-jenkins-to-jenkins-x/sea-and-canoe.jpeg)
+![sea-and-canoe](2019-05-17-from-jenkins-to-jenkins-x/sea-and-canoe.jpeg)
 
 > 译注：译者曾对 Jenkins X 文档中文本地化做了一些贡献，同时也期待更多的人在 Jenkins X 旅程中，
 > 能够参与到 [Jenkins 中文社区](https://jenkins-zh.cn/about/)以完善 Jenkins X 的中文文档。
