@@ -34,9 +34,9 @@ Jenkins 社区从2009年开始以开源社区的身份参与到 GSoC 中，并�
 
 今年负责 GSoC 的管理员为：
 
-* Martin d’Anjou
-* Jeff Pearce
-* Lloyd Chang
-* Oleg Nenashev
+* [Martin d’Anjou](https://github.com/martinda)
+* [Jeff Pearce](https://github.com/jeffpearce)
+* [Lloyd Chang](https://github.com/lloydchang)
+* [Oleg Nenashev](https://github.com/oleg-nenashev/)
 
 我本人是“多分支流水线对 Gitlab 的支持”项目的领队导师，请大家与我一起期待这七位高校学生的精彩表现，后续社区也会及时发布上面项目的介绍以及进展。
