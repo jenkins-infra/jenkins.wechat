@@ -22,19 +22,19 @@ poster: “./2019-05-20-from-jenkins-to-jenkins-x/journey.jpeg”
 ## 我们的上下文
 在 [dailymotion](https://www.dailymotion.com/) ，我们坚信 devops 最佳实践，并且在 Kubernetes 投入了大量投资。
 我们的部分产品已经部署在 Kubernetes 上，但并不是全部。
-因此，当迁移我们的广告技术平台的时候，我们想要完全采用“ Kubernetes 式”——或者云原生，以追随技术趋势!
+因此，当迁移我们的广告技术平台的时候，我们想要完全采用“ Kubernetes 式”——或者云原生，以追随技术趋势！
 这意味着要重新定义整个 CI/CD 流水线，从静态/永久环境迁移，转向动态按需分配环境。
 我们的目标是**授权给我们的开发人员**，**缩短我们的上线时间**以及**降低我们的运营成本**。
 
 对于新的 CI/CD 平台我们的初始需求是:
 - **尽可能避免从零开始**：我们的开发人员已经习惯使用 Jenkins 和声明式流水线，并且它们可以很好地满足我们当前的需求。
-- **以公共云基础设施为目标**——Google 云平台和 Kubernetes 集群
-- **与 [gitops](https://www.weave.works/technologies/gitops/) 方法论兼容**——因为我们喜欢版本控制、同行评审和自动化。
+- **以公有云基础设施为目标**——Google 云平台和 Kubernetes 集群
+- **与 [gitops](https://www.weave.works/technologies/gitops/) 方法论兼容**——因为我们喜欢版本控制、同行评审和自动化
 
-在 CI/CD 生态系统中有相当多的参与者，但是只有一个符合我们的需求，Jenkins X ，它基于 Jenkins 和 Kubernetes ，原生支持预览环境和 gitops 。
+在 CI/CD 生态系统中有相当多的参与者，但是只有一个符合我们的需求，Jenkins X ，它基于 Jenkins 和 Kubernetes ，原生支持预览环境和 gitops
 
 ## Kubernetes 之上的 Jenkins
-Jenkins X 的设置相当简单，并且[在他们的网站上已经有很好的文档](https://jenkins-x.io/zh/getting-started/create-cluster/)（译注：译者曾对 Jenkins X 文档中文本地化做了一些贡献，同时也期待更多的人参与以完善中文文档）。
+Jenkins X 的设置相当简单，并且[在他们的官方网站上已经有很好的文档](https://jenkins-x.io/zh/getting-started/create-cluster/)（译注：译者曾对 Jenkins X 文档中文本地化做了一些贡献，同时也期待更多的人参与以完善中文文档）。
 由于我们已经使用了 Google Kubernetes Engine (GKE)，所以 `jx` 命令行工具自己创建了所有东西，包括 Kubernetes 集群。
 这里有一个小小的*哇哦效果*，在几分钟内获得一个完整的工作系统是非常令人印象深刻的。
 
@@ -43,24 +43,24 @@ Jenkins X 提供了很多[快速入门和模板](https://github.com/jenkins-x-bu
 我们决定以"艰难的方式"做事情，并重构我们的声明式流水线，使它们与 Jenkins X 兼容。
 
 实际上，这一部分并不针对 Jenkins X ，而是基于 [Kubernetes 插件](https://github.com/jenkinsci/kubernetes-plugin)在 Kubernetes 上运行 Jenkins 。
-如果您习惯使用“经典” Jenkins ，即在裸金属或虚拟机上运行静态代理，那么这里的主要更改是，每个构建都将在自己的短暂的 pod 上执行。
-流水线的每个步骤都可以指定应该在 pod 的哪个容器上执行它。
+如果您习惯使用“经典的” Jenkins ，即在裸金属或虚拟机上运行静态代理，那么这里的主要更改是，每次构建都将在自己的短暂的 pod 上执行。
+流水线的每个步骤都可以指定应该在 pod 的哪个容器上执行。
 [在插件的源代码中有一些流水线的例子](https://github.com/jenkinsci/kubernetes-plugin/tree/master/examples)。
-在这里，我们的"挑战"是定义容器的粒度，以及它们将包含哪些工具：足够的容器，以便我们可以在不同流水线之间重用它们的镜像，但也不能太多，以控制维护量——我们不想花时间重新构建容器镜像。
+在这里，我们的"挑战"是定义容器的粒度，以及它们将包含哪些工具：需要足够的容器，以便我们可以在不同流水线之间重用它们的镜像，但也不能太多，以控制维护量——我们不想花时间重新构建容器镜像。
 
 以前，我们通常在 Docker 容器中运行大多数流水线步骤，当我们需要自定义步骤时，我们在运行中的流水线中构建它，就在运行它之前。
-它比较慢，但是易于维护，因为所有内容都是在源代码中定义的。
+虽然它比较慢，但是易于维护，因为所有内容都是在源代码中定义的。
 例如，升级 Go 运行时的版本可以在一个 pull-request 中完成。
 因此，要预先构建容器镜像听起来像是给现有设置增加了更多的复杂性。
 它还有几个优点：仓库之间的重复更少，构建速度更快，并且不会因为某些第三方托管平台宕机而出现更多构建错误。
 
 ## 在 Kubernetes 上构建镜像
-这些天将给我们带来了一个有趣的话题：在 Kubernetes 集群中构建容器镜像。
+这些天将给我们带来一个有趣的话题：在 Kubernetes 集群中构建容器镜像。
 
 ![build-image](2019-05-17-from-jenkins-to-jenkins-x/build-image.jpeg)
 
 Jenkins X 附带了一组"构建打包"，使用 "Docker in Docker" 从容器内部构建镜像。
-但是随着新的容器运行时的到来，Kubernetes 推出了它的[容器运行时接口( CRI )](https://kubernetes.io/docs/setup/cri/)，我们想探索其他的选择。
+但是随着新的容器运行时的到来，Kubernetes 推出了它的[容器运行时接口( CRI )](https://kubernetes.io/docs/setup/cri/)，我们想要探索其他的选择。
 [Kaniko](https://github.com/GoogleContainerTools/kaniko) 是最成熟的解决方案，符合我们的需求/技术栈。
 我们很兴奋……
 
@@ -72,7 +72,7 @@ Jenkins X 附带了一组"构建打包"，使用 "Docker in Docker" 从容器内
 Kaniko 维护者是很愿意帮忙的，并且快速地合并了修复，所以一天之后一个被修复的 Kaniko 镜像就已经可用了。
 - 第二个问题是，我们不能使用同一个 Kaniko 容器构建两个不同的镜像。
 这是因为 Jenkins 并没有按照预期的方式使用 Kaniko ——因为我们需要先启动容器，然后再运行构建。
-这一次，我们找到了一个针对谷歌的解决方案:声明我们所需要的尽可能多的 Kaniko 容器来构建镜像，但是我们不喜欢它。
+这一次，我们找到了一个针对谷歌的解决方案：声明我们所需要的尽可能多的 Kaniko 容器来构建镜像，但是我们不喜欢它。
 所以回到源代码，再一次，一旦我们理解了根本原因，[修复就很容易了](https://github.com/GoogleContainerTools/kaniko/pull/370)。
 
 我们测试了一些解决方案来为 CI 流水线构建定制的"工具"镜像，
@@ -114,7 +114,7 @@ spec:
 
 ## Jenkins X 上的预览环境
 现在我们已经拥有了所有的工具，并且能够为我们的应用程序构建一个镜像，
-我们准备下一步：将它部署到"预览环境"!
+我们准备下一步：将它部署到"预览环境"！
 
 ![preview](2019-05-17-from-jenkins-to-jenkins-x/preview.jpeg)
 
@@ -126,7 +126,7 @@ Jenkins X 通过重用现有的工具——主要是 Helm ，使得部署预览�
 预览环境是通过使用 jx 命令行工具进行部署的，该工具负责部署 Helm chart ，并以评论的形式，将所公开服务的 URL 添加到 Github pull-request 中。
 这一切都非常好，而且对于我们第一个使用纯 http 的 POC 来说很有效。
 但现在是2018年（译注：作者是在2018年写的这篇文章），没有人再使用 http 了。
-让我们加密吧!
+让我们加密吧！
 多亏了 cert-manager，当在 kubernetes 中创建 ingress 资源时，我们可以自动为我们的新域名获得一个 SSL 证书。
 我们试图在我们的设置中启用 `tls-acme` 标志——与 cert-manager 进行绑定，但是它不起作用。
 这给了我们一个机会来看看 Jenkins X 的源代码——它也是用 Go 开发的。
@@ -155,7 +155,7 @@ Jenkins X 团队已经[写过关于 Helm 和 Tiller ( Helm 的服务器端组件
 当然，我们不能像在虚拟机上管理 Jenkins 那样管理在 Kubernetes 中运行的 Jenkins ！
 
 因此，我们没有手动编辑 `configmap` ，而是后退一步，查看全局。
-这个 `configmap` 本身由 [jenkins-x-platform`](https://github.com/jenkins-x/jenkins-x-platform) 管理，
+这个 `configmap` 本身由 [jenkins-x-platform](https://github.com/jenkins-x/jenkins-x-platform) 管理，
 因此升级平台将重置我们的自定义更改。
 我们需要将我们的"定制"存储在安全的地方并跟踪我们的更改。
 我们可以用 Jenkins X 的方式，用一个 umbrella chart 来安装/配置一切，
@@ -187,7 +187,7 @@ Jenkins X 团队已经[写过关于 Helm 和 Tiller ( Helm 的服务器端组件
 并非所有功能和所支持的平台—— Git 托管平台或 Kubernetes 托管平台——都足够稳定。
 但是，如果您准备投入足够的时间来深入研究，并选择适合您的使用场景的稳定特性和平台，
 那么您将能够使用 CI/CD 等所需的一切来改进您的流水线。
-这将提高您的上线时间，降低您的成本，如果您对测试也很认真，那么请对您的软件质量充满信心。
+这将缩短您的上线时间，降低您的成本，如果您对测试也很认真，那么请对您的软件质量充满信心。
 
 一开始，我们说这是我们从 Jenkins 到 Jenkins X 的旅程。但我们的旅程并未结束，我们还在旅行中。
 部分原因是我们的目标仍在移动：Jenkins X 仍处于大的发展阶段，而且它本身正在朝着 Serverless 的方向前进，
