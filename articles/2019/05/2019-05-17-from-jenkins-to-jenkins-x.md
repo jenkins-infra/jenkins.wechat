@@ -1,6 +1,6 @@
 ---
 title: "从 Jenkins 到 Jenkins X"
-description: "这是一个关于 dailymotion 从 Jenkins 到 Jenkins X 的旅程，我们遇到的问题，以及我们是如何解决它们的故事。"
+description: "这是一个关于 dailymotion 从 Jenkins 到 Jenkins X 的旅程，我们遇到的问题，以及我们是如何解决它们的故事"
 date: 2019-05-17
 tags:
 - jenkins
@@ -20,11 +20,11 @@ poster: “./2019-05-20-from-jenkins-to-jenkins-x/journey.jpeg”
 这是一个关于 dailymotion 从 Jenkins 到 Jenkins X 的旅程，我们遇到的问题，以及我们是如何解决它们的故事。
 
 ## 我们的上下文
-在 [dailymotion](https://www.dailymotion.com/) ，我们坚信 devops 最佳实践，并且在 Kubernetes 进行了大量投资。
+在 [dailymotion](https://www.dailymotion.com/) ，我们坚信 devops 最佳实践，并且在 Kubernetes 投入了大量投资。
 我们的部分产品已经部署在 Kubernetes 上，但并不是全部。
 因此，当迁移我们的广告技术平台的时候，我们想要完全采用“ Kubernetes 式”——或者云原生，以追随技术趋势!
 这意味着要重新定义整个 CI/CD 流水线，从静态/永久环境迁移，转向动态按需分配环境。
-我们的目标是**授权给我们的开发人员**，**缩短我们的上市时间**以及**降低我们的运营成本**。
+我们的目标是**授权给我们的开发人员**，**缩短我们的上线时间**以及**降低我们的运营成本**。
 
 对于新的 CI/CD 平台我们的初始需求是:
 - **尽可能避免从零开始**：我们的开发人员已经习惯使用 Jenkins 和声明式流水线，并且它们可以很好地满足我们当前的需求。
@@ -34,7 +34,7 @@ poster: “./2019-05-20-from-jenkins-to-jenkins-x/journey.jpeg”
 在 CI/CD 生态系统中有相当多的参与者，但是只有一个符合我们的需求，Jenkins X ，它基于 Jenkins 和 Kubernetes ，原生支持预览环境和 gitops 。
 
 ## Kubernetes 之上的 Jenkins
-Jenkins X 的设置相当简单，并且[在他们的网站上已经有很好的文档](https://jenkins-x.io/getting-started/create-cluster/)（译注：译者曾对 Jenkins X 文档中文本地化做了一些贡献，同时也期待更多的人参与以完善中文文档）。
+Jenkins X 的设置相当简单，并且[在他们的网站上已经有很好的文档](https://jenkins-x.io/zh/getting-started/create-cluster/)（译注：译者曾对 Jenkins X 文档中文本地化做了一些贡献，同时也期待更多的人参与以完善中文文档）。
 由于我们已经使用了 Google Kubernetes Engine (GKE)，所以 `jx` 命令行工具自己创建了所有东西，包括 Kubernetes 集群。
 这里有一个小小的*哇哦效果*，在几分钟内获得一个完整的工作系统是非常令人印象深刻的。
 
@@ -122,16 +122,16 @@ Jenkins X 通过重用现有的工具——主要是 Helm ，使得部署预览�
 只要你遵循一些约定，例如用于镜像标签的值的名称。
 最好是从"包"中提供的  Helm charts 复制/粘贴。
 如果你不熟悉 Helm ，它基本上是一个 Kubernetes 应用程序包管理器。
-每个应用程序都打包为一个" chart "，然后可以通过使用 helm 命令行工具作为一个 "release" 被部署。
+每个应用程序都打包为一个 "chart" ，然后可以通过使用 helm 命令行工具作为一个 "release" 被部署。
 预览环境是通过使用 jx 命令行工具进行部署的，该工具负责部署 Helm chart ，并以评论的形式，将所公开服务的 URL 添加到 Github pull-request 中。
 这一切都非常好，而且对于我们第一个使用纯 http 的 POC 来说很有效。
-但现在是 2018 年（译注：作者是在2018年写的这篇文章），没有人再使用 http 了。
+但现在是2018年（译注：作者是在2018年写的这篇文章），没有人再使用 http 了。
 让我们加密吧!
 多亏了 cert-manager，当在 kubernetes 中创建 ingress 资源时，我们可以自动为我们的新域名获得一个 SSL 证书。
 我们试图在我们的设置中启用 `tls-acme` 标志——与 cert-manager 进行绑定，但是它不起作用。
-这给了我们一个机会来看看 Jenkins X的 源代码——它也是用 Go 开发的。
+这给了我们一个机会来看看 Jenkins X 的源代码——它也是用 Go 开发的。
 [稍作修复之后](https://github.com/jenkins-x/jx/pull/2129)都好了，
-现在我们可以使用 [let 's encrypt](https://letsencrypt.org/) 提供的自动化证书来享受安全的预览环境。
+现在我们可以使用 [let's encrypt](https://letsencrypt.org/) 提供的自动化证书来享受安全的预览环境。
 
 我们在预览环境中遇到的另一个问题与上述环境的清理有关。
 每个打开一个 pull-request ，就创建一个预览环境，因此在 pull-request 被合并或关闭时应该删除预览环境。
@@ -148,7 +148,7 @@ Jenkins X 团队已经[写过关于 Helm 和 Tiller ( Helm 的服务器端组件
 它运行得很好，几天后，我注意到我们的 OKTA 集成已经不再存在了。
 我正忙着做其他事情，所以我只是问我的同事他是否做了一些改变，然后继续做其他事情。
 但几天后再次发生时，我开始调查。
-我注意到的第一件事是 Jenkins  Pod 最近重新启动过。
+我注意到的第一件事是 Jenkins Pod 最近重新启动过。
 但是我们有一个持久化的存储，我们的任务仍然在那里，所以是时候仔细看看了！
 事实证明，[用于安装 Jenkins 的 Helm chart](https://github.com/jenkins-x/charts/tree/jenkins/stable/jenkins) 有一个启动脚本，
 它从 Kubernetes `configmap` 重置了 Jenkins 配置。
@@ -160,7 +160,7 @@ Jenkins X 团队已经[写过关于 Helm 和 Tiller ( Helm 的服务器端组件
 我们需要将我们的"定制"存储在安全的地方并跟踪我们的更改。
 我们可以用 Jenkins X 的方式，用一个 umbrella chart 来安装/配置一切，
 但是这种方法有一些缺点：它不支持 "secret" ——
-我们将有一些敏感的值存储在我们的 Git 仓库中——
+我们将一些敏感的值存储在我们的 Git 仓库中——
 它"隐藏"了所有的 sub-charts 。
 所以，如果我们列出所有已安装的 Helm releases ，我们将只看到一个。
 但是还有其他基于 Helm 的工具，它们更对 Gitops 更友好。
@@ -187,7 +187,7 @@ Jenkins X 团队已经[写过关于 Helm 和 Tiller ( Helm 的服务器端组件
 并非所有功能和所支持的平台—— Git 托管平台或 Kubernetes 托管平台——都足够稳定。
 但是，如果您准备投入足够的时间来深入研究，并选择适合您的使用场景的稳定特性和平台，
 那么您将能够使用 CI/CD 等所需的一切来改进您的流水线。
-这将提高您的上市时间，降低您的成本，如果您对测试也很认真，那么请对您的软件质量充满信心。
+这将提高您的上线时间，降低您的成本，如果您对测试也很认真，那么请对您的软件质量充满信心。
 
 一开始，我们说这是我们从 Jenkins 到 Jenkins X 的旅程。但我们的旅程并未结束，我们还在旅行中。
 部分原因是我们的目标仍在移动：Jenkins X 仍处于大的发展阶段，而且它本身正在朝着 Serverless 的方向前进，
