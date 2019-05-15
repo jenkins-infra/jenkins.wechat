@@ -8,10 +8,10 @@ tags:
 - ansible
 - springboot
 author: zacker330
-poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/292372-3d64f9fe7b80ed98.png"
+poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/poster.png"
 ---
 
-![image.png](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/292372-3d64f9fe7b80ed98.png)
+![image.png](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/poster.png)
 
 
 本文要点：
@@ -19,7 +19,7 @@ poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/
 1. 使用 Docker 容器运行构建逻辑。
 1. 自动化整个实验环境：包括 Jenkins 的配置，Jenkins slave 的配置等。
 
-##1. 代码仓库安排
+## 1. 代码仓库安排
 本次实验涉及以下多个代码仓库：
 ```
 % tree -L 1
@@ -41,7 +41,7 @@ poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/
 
 所有代码，均放在 GitHub: [https://github.com/cd-in-practice](https://github.com/cd-in-practice)
 
-##2. 实验环境准备
+## 2. 实验环境准备
 笔者使用 Docker Compose + Vagrant 进行实验。环境包括以下几个系统：
 * Jenkins * 1
    Jenkins master，全自动安装插件、默认用户名密码：admin/admin。
@@ -60,18 +60,18 @@ poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/
 
 实验环境近期的总体结构图如下：
 
-![实验环境近期的总体结构](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/292372-4997bae2b8c86b7c.png)
+![实验环境近期的总体结构](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/architecture.png)
 
 之所以说是“近期的”，是因为上图与本篇介绍的结构有小差异。本篇文章还没有介绍 Nginx 与 Springboot 配置共用，但是总体不影响读者理解。
 
-##3. Springboot 应用流水线介绍
+## 3. Springboot 应用流水线介绍
 Springboot 流水线有两个阶段：
 1. 构建并上传制品
 2. 部署应用
 
 流水线的所有逻辑都写在 [Jenkinsfile](https://github.com/cd-in-practice/1-springboot/blob/master/Jenkinsfile) 文件。接下来，分别介绍这两个阶段。
 
-###3.1 构建并上传制品
+### 3.1 构建并上传制品
 此阶段核心代码：
 ```groovy
 docker.image('jenkins-docker-maven:3.6.1-jdk8')
@@ -87,7 +87,7 @@ docker.image('jenkins-docker-maven:3.6.1-jdk8')
 
 而 `mvn versions:set -DnewVersion=${APP_VERSION}` 的作用是更改 `pom.xml` 文件中的版本。这样就可以实现每次提交对应一个版本的效果。
 
-###3.2 部署应用
+### 3.2 部署应用
 > 注意： 这部分需要一些 Ansible 的知识。
 
 首先看部署脚本的入口 [1-springboot/deploy/playbook.yaml](https://github.com/cd-in-practice/1-springboot/blob/master/deploy/playbook.yaml)：
@@ -150,7 +150,7 @@ stage("build and upload"){
 ```
 之所以说是“简易”，是因为部署时只指定了制品的版本，并没有指定的部署逻辑和配置的版本。这三者的版本要同步，部署才真正做到准确。
 
-##4. 配置管理
+## 4. 配置管理
 所有的配置项都放在 [1-env-conf](https://github.com/cd-in-practice/1-env-conf) 仓库中。Ansible 执行部署时会读取此仓库的配置。
 
 将配置放在 Git 仓库中有两个好处：
@@ -161,20 +161,20 @@ stage("build and upload"){
 
 本文重点不在配置管理，后面会有文章重点介绍。
 
-##5. 实验环境详细介绍
+## 5. 实验环境详细介绍
 事实上，整个实验，工作量大的地方有两处：一是 Springboot 流水线本身的设计；二是整个实验环境的自动化。读者朋友之所以能一两条简单的命令就能启动整个实验环境，是因为笔者做了很多自动化的工作。笔者认为有必要在本篇介绍这些工作。接下来的文章将不再详细介绍。
 
-###5.1 解决流水线中启动的 Docker 容器无法访问 http://artifactory
+### 5.1 解决流水线中启动的 Docker 容器无法访问 http://artifactory
 
 流水线中，我们需要将制品上传到 artifactory（settings.xml 配置的仓库地址是 http://artifactory:8081），但是发现无法解析 host。这是因为流水线中的 Docker 容器所在网络与 Docker compose 创建的网络不同。所以，解决办法就是让流水线中的 Docker 容器加入到 Docker compose 的网络。
 
 具体解决办法就是在启动容器时，加入参数：`--network 1-cd-platform_cd-in-practice`
 
-###5.2 Jenkins 初次启动初始化
+### 5.2 Jenkins 初次启动初始化
 
 在没有做任何设置的情况启动 Jenkins，会出现一个配置向导。这个过程必须是手工的。笔者希望这一步也是自动化的。Jenkins 启动时会执行 `init.groovy.d/`目录下的 Groovy 脚本。
 
-###5.3 虚拟机中如何能访问到 http://artifactory ？
+### 5.3 虚拟机中如何能访问到 http://artifactory ？
 
 http://artifactory 部署在 Docker 容器中。Springboot 应用的制品要部署到虚拟机中，需要从 http://artifactory 中拉取制品，也就是要在虚拟机里访问容器里提供的服务。虚拟机与容器之间的网络是不通的。那怎么办呢？笔者的解决方案是使用宿主机的 IP 做中转。具体做法就是在虚拟机中加一条 host 记录：
 ```ruby
@@ -186,7 +186,7 @@ end
 
 网络结构可以总结为下图：
 
-![image.png](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/292372-1aa3f538b4c5edbd.png)
+![image.png](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/network.png)
 
 ## 后记
 目前遗留问题：
