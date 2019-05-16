@@ -1,5 +1,5 @@
 ---
-title: **Jenkins角色控制（小黄锁）探微**
+title: **Jenkins角色权限控制Role-Based-Strategy（小黄锁）探微**
 description: 利用Jenkins自带插件实现小规模（两百人以内）权限管理。
 author: eryajf
 original: [原文链接](http://www.eryajf.net/1445.html "原文链接")
