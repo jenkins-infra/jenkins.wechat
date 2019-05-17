@@ -1,5 +1,5 @@
 ---
-title: "使用 Jenkins + Ansible 实现 Springboot 自动化部署101"
+title: "使用 Jenkins + Ansible 实现 Spring Boot 自动化部署101"
 description: ""
 date: 2019-05-20
 toc: true
@@ -15,9 +15,9 @@ poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/
 
 
 本文要点：
-1. 设计一条 Springboot 最基本的流水线：包括构建、制品上传、部署。
+1. 设计一条 Spring Boot 最基本的流水线：包括构建、制品上传、部署。
 1. 使用 Docker 容器运行构建逻辑。
-1. 自动化整个实验环境：包括 Jenkins 的配置，Jenkins slave 的配置等。
+1. 自动化整个实验环境：包括 Jenkins 的配置，Jenkins agent 的配置等。
 
 ## 1. 代码仓库安排
 本次实验涉及以下多个代码仓库：
@@ -25,7 +25,7 @@ poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/
 % tree -L 1
 ├── 1-cd-platform # 实验环境相关代码
 ├── 1-env-conf # 环境配置代码-实现配置独立
-└── 1-springboot # Springboot 应用的代码及其部署代码
+└── 1-springboot # Spring Boot 应用的代码及其部署代码
 ```
 
 1-springboot 的目录结构如下：
@@ -39,7 +39,7 @@ poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/
 └── src # 业务代码
 ```
 
-所有代码，均放在 GitHub: [https://github.com/cd-in-practice](https://github.com/cd-in-practice)
+所有代码，均放在 GitHub：[https://github.com/cd-in-practice](https://github.com/cd-in-practice)
 
 ## 2. 实验环境准备
 笔者使用 Docker Compose + Vagrant 进行实验。环境包括以下几个系统：
@@ -50,7 +50,7 @@ poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/
 * Artifactory * 1
   一个商业版的制品库。笔者申请了一个 30 天的商业版。
 
-使用 Vagrant  是为了启动虚拟机，用于部署 Springboot 应用。如果你的开发机器无法使用 Vagrant，使用 VirtualBox 也可以达到同样的效果。但是有一点需要注意，那就是网络。如果在虚拟机中要访问 Docker 容器内提供的服务，需要在 DNS 上或者 hosts 上做相应的调整。所有的虚拟机的镜像使用 Centos7。
+使用 Vagrant 是为了启动虚拟机，用于部署 Spring Boot 应用。如果你的开发机器无法使用 Vagrant，使用 VirtualBox 也可以达到同样的效果。但是有一点需要注意，那就是网络。如果在虚拟机中要访问 Docker 容器内提供的服务，需要在 DNS 上或者 hosts 上做相应的调整。所有的虚拟机的镜像使用 Centos7。
 
 另，接下来笔者的所有教程都将使用 Artifactory 作为制品库。**在此申明，笔者没有收 JFrog——研发 Artifactory 产品的公司——任何广告费。** 笔者只是想试用商业产品，以便了解商业产品是如何应对制品管理问题的。
 
@@ -100,9 +100,9 @@ docker.image('jenkins-docker-maven:3.6.1-jdk8')
     - {"role": "ansible-role-java", "java_home": "{{JAVA_HOME}}"}
     - springboot
 ```
-先安装 JDK，再安装 springboot。JDK 的安装，使用了现成 Ansible role: [https://github.com/geerlingguy/ansible-role-java](https://github.com/geerlingguy/ansible-role-java)。
+先安装 JDK，再安装 Spring Boot。JDK 的安装，使用了现成 Ansible role: [https://github.com/geerlingguy/ansible-role-java](https://github.com/geerlingguy/ansible-role-java)。
 
-重点在 springboot 部署的核心逻辑。它主要包含以下几部分：
+重点在 Spring Boot 部署的核心逻辑。它主要包含以下几部分：
 
 1. 创建应用目录。
 1. 从制品库下载指定版本的制品。
@@ -162,7 +162,7 @@ stage("build and upload"){
 本文重点不在配置管理，后面会有文章重点介绍。
 
 ## 5. 实验环境详细介绍
-事实上，整个实验，工作量大的地方有两处：一是 Springboot 流水线本身的设计；二是整个实验环境的自动化。读者朋友之所以能一两条简单的命令就能启动整个实验环境，是因为笔者做了很多自动化的工作。笔者认为有必要在本篇介绍这些工作。接下来的文章将不再详细介绍。
+事实上，整个实验，工作量大的地方有两处：一是 Spring Boot 流水线本身的设计；二是整个实验环境的自动化。读者朋友之所以能一两条简单的命令就能启动整个实验环境，是因为笔者做了很多自动化的工作。笔者认为有必要在本篇介绍这些工作。接下来的文章将不再详细介绍。
 
 ### 5.1 解决流水线中启动的 Docker 容器无法访问 http://artifactory
 
@@ -176,7 +176,7 @@ stage("build and upload"){
 
 ### 5.3 虚拟机中如何能访问到 http://artifactory ？
 
-http://artifactory 部署在 Docker 容器中。Springboot 应用的制品要部署到虚拟机中，需要从 http://artifactory 中拉取制品，也就是要在虚拟机里访问容器里提供的服务。虚拟机与容器之间的网络是不通的。那怎么办呢？笔者的解决方案是使用宿主机的 IP 做中转。具体做法就是在虚拟机中加一条 host 记录：
+http://artifactory 部署在 Docker 容器中。Spring Boot 应用的制品要部署到虚拟机中，需要从 http://artifactory 中拉取制品，也就是要在虚拟机里访问容器里提供的服务。虚拟机与容器之间的网络是不通的。那怎么办呢？笔者的解决方案是使用宿主机的 IP 做中转。具体做法就是在虚拟机中加一条 host 记录：
 ```ruby
 machine.vm.provision "shell" do |s|
     s.inline = "echo '192.168.52.1 artifactory' >> /etc/hosts"
@@ -197,4 +197,4 @@ end
 
 ## 附录
 1. 使用 Jenkins + Ansible 实现自动化部署 Nginx：[https://showme.codes/2019-04-22/jenkins-ansible-nginx/](https://showme.codes/2019-04-22/jenkins-ansible-nginx/)
-2. 简单易懂Ansible系列 —— 解决了什么[https://showme.codes/2017-06-12/ansible-introduce/](https://showme.codes/2017-06-12/ansible-introduce/)
+2. 简单易懂 Ansible 系列 —— 解决了什么：[https://showme.codes/2017-06-12/ansible-introduce/](https://showme.codes/2017-06-12/ansible-introduce/)
