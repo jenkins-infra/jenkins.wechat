@@ -78,7 +78,7 @@ docker.image('jenkins-docker-maven:3.6.1-jdk8')
 .inside("--network 1-cd-platform_cd-in-practice -v $HOME/.m2:/root/.m2") {
     sh """
       mvn versions:set -DnewVersion=${APP_VERSION}
-      mvn clean test install
+      mvn clean test package
       mvn deploy
     """
 }
