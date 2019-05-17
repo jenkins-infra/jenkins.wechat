@@ -1,6 +1,6 @@
 ---
 title: "使用 Jenkins + Ansible 实现 Spring Boot 自动化部署101"
-description: ""
+description: "实现 Spring Boot 最基本的流水线"
 date: 2019-05-20
 toc: true
 tags:
@@ -196,5 +196,5 @@ end
 这些遗留问题在后期会逐个解决。就像现实一样，经常需要面对各种遗留项目的遗留问题。
 
 ## 附录
-1. 使用 Jenkins + Ansible 实现自动化部署 Nginx：[https://showme.codes/2019-04-22/jenkins-ansible-nginx/](https://showme.codes/2019-04-22/jenkins-ansible-nginx/)
+1. 使用 Jenkins + Ansible 实现自动化部署 Nginx：[https://jenkins-zh.cn/wechat/articles/2019/04/2019-04-25-jenkins-ansible-nginx/](https://jenkins-zh.cn/wechat/articles/2019/04/2019-04-25-jenkins-ansible-nginx/)
 2. 简单易懂 Ansible 系列 —— 解决了什么：[https://showme.codes/2017-06-12/ansible-introduce/](https://showme.codes/2017-06-12/ansible-introduce/)
