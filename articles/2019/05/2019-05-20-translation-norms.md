@@ -1,9 +1,9 @@
 ---
 title: "转载规范及声明"
 description: "为了保护本站文章的原创性，请规范转载，违者必究"
-date: 2019-05-17
+date: 2019-05-20
 tags:
-- 转载规范
+- spec
 author: yJunS
 poster: "./2019-05-20-translation-norms/banquan.jpg"
 ---
