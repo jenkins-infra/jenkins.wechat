@@ -97,6 +97,9 @@ Jenkins Pipeline 案例如下：
 ```
 pipeline {
     agent any
+    tools {
+        jdk 'JDK1.8'
+    }
     stages {
         stage('Checkout'){
             steps{
