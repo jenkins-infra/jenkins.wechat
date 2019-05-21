@@ -87,11 +87,11 @@ JAVA_OPTS="$JAVA_OPTS -javaagent:/path/jacocoagent.jar=includes=*,output=tcpserv
 在 tcpserver 模式下，端口必须可用，这意味着如果多个 JaCoCo agent 在同一台机器上运行，则必须指定不同的端口。port 默认值为 6300 。
 
 ### 3、创建及配置 Jenkins Pipeline 任务
-Jenkins 任务大致有几个步骤：拉取代码，构建，dump 应用执行数据（ jacoco.exec ），生成代码覆盖率报告。
+Jenkins 任务大致有几个步骤：拉取代码，构建，dump 应用执行数据（ jacoco.exec ），解析 JaCoCo 产生的 jacoco.exec 文件，然后生成覆盖率报告（HTML 格式）。
 拉取代码这里无需多说，配置下从代码仓库（SVN/Git）和分支地址就可以了，比较简单。
 构建这里用了 Jenkins Pipeline Maven Integration Plugin ，笔者这里所用的 Maven 命令是 mvn clean package -Dmaven.test.skip=true 。
 dump 应用执行数据这里有多种方式：Ant、CLI、Maven，因为Java 应用是用 Maven 构建的，这里选择了 Maven Jacoco Plugin。
-生成代码覆盖率报告笔者这里使用了 Jenkins Jacoco Plugin。
+解析 JaCoCo 产生的 jacoco.exec 文件，然后生成覆盖率报告（HTML 格式）笔者这里使用了 Jenkins Jacoco Plugin。
 
 Jenkins Pipeline 案例如下：
 ```
@@ -128,7 +128,7 @@ pipeline {
     }
 }
 ```
-Jacoco 覆盖率报告，部分截图如下：
+JaCoCo 覆盖率报告，部分截图如下：
 
 ![coverage-summary](./2019-05-22-jacoco-coverage-for-functional-test/coverage-summary.png)
 
