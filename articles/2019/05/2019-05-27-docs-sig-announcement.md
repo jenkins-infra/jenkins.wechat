@@ -17,7 +17,7 @@ poster: "./2019-05-27-docs-sig-announcement/Jenkins_Needs_You-02.png"
 我们很高兴地宣布 Jenkins 文档特别兴趣小组的成立。
 文档特别兴趣小组鼓励贡献者和外部社区创建和 review Jenkins 文档。
 
-更多详情和计划，请参见：[文档特别兴趣小组简介](/sigs/docs)。
+更多详情和计划，请参见：[文档特别兴趣小组简介](https://jenkins.io/sigs/docs/)。
 
 ## 我能帮什么忙呢？
 
