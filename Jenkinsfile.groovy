@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    options {
+        disableConcurrentBuilds()
+        quietPeriod 30
+    }
+
     stages{
         stage("文章格式校验"){
             when {
@@ -14,6 +19,24 @@ pipeline {
                             checkArticleMeta(env.changePath)
                         }
                     }
+                }
+            }
+        }
+        stage("preview"){
+            when {
+                changeRequest target: 'master'
+            }
+
+            steps{
+                script{
+                    def branch = "wechat-$BRANCH_NAME"
+                    branch = branch.toLowerCase()
+                    def prNum = "$BRANCH_NAME".replace('PR-','')
+                    build job: 'jenkins-zh/jenkins-zh/master', parameters: [string(name: 'previewUpstream', value: branch),string(name: 'previewUpstreamPR', value: prNum)]
+                    pullRequest.createStatus(status: 'success',
+                        context: 'continuous-integration/jenkins/pr-merge/preview',
+                        description: 'Website preview',
+                        targetUrl: "http://" + branch + ".preview.jenkins-zh.cn")
                 }
             }
         }
