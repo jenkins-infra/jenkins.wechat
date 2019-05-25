@@ -6,13 +6,18 @@ tags:
 - documentation
 - docs
 - community
+keywords:
+- Jenkins
+- Jenkins文档特别兴趣小组
+- Jenkins文档
+- Jenkins X文档
 author: markewaite
 original: https://jenkins.io/blog/2019/05/11/docs-sig-announcement/
 translator: donhui
 poster: "./2019-05-27-docs-sig-announcement/Jenkins_Needs_You-02.png"
 ---
 
-![Jenkins_Needs_You](./2019-05-27-docs-sig-announcement/Jenkins_Needs_You-02.png)
+![Jenkins_Needs_You](Jenkins_Needs_You-02.png)
 
 我们很高兴地宣布 Jenkins 文档特别兴趣小组的成立。
 文档特别兴趣小组鼓励贡献者和外部社区创建和 review Jenkins 文档。
