@@ -37,8 +37,8 @@ Jenkins 文档特别兴趣小组希望从以下方面得到您的帮助：
 
 ## 我该如何评估 pull request？
 
-Jenkins 项目的 pull requests 会在 [Jenkins 文档仓库](https://github.com/jenkins-infra/jenkins.io/pulls)进行评审。
+Jenkins 项目的 pull requests 会在 [Jenkins 文档仓库](https://github.com/jenkins-infra/jenkins.io/pulls)进行 review 。
 使用您的凭据登录到 GitHub，向 pull requests 中添加评论。
 
-Jenkins X 项目的 pull requests 会在 [Jenkins X 档仓库](https://github.com/jenkins-x/jx-docs/pulls)进行评审。
+Jenkins X 项目的 pull requests 会在 [Jenkins X 档仓库](https://github.com/jenkins-x/jx-docs/pulls)进行 review 。
 使用您的凭据登录到 GitHub，向 pull requests 中添加评论。
