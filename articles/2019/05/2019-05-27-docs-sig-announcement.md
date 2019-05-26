@@ -8,9 +8,9 @@ tags:
 - community
 keywords:
 - Jenkins
-- Jenkins文档特别兴趣小组
-- Jenkins文档
-- Jenkins X文档
+- Jenkins 文档特别兴趣小组
+- Jenkins 文档
+- Jenkins X 文档
 author: markewaite
 original: https://jenkins.io/blog/2019/05/11/docs-sig-announcement/
 translator: donhui
