@@ -3,6 +3,9 @@ title: "如何对 Jenkins 共享库进行单元测试"
 description: "包括该单元测试框架的原理介绍"
 date: 2019-05-28
 toc: true
+keywords: 
+- Jenkins 共享库技术
+- 单元测试
 tags:
 - jenkins
 author: zacker330
