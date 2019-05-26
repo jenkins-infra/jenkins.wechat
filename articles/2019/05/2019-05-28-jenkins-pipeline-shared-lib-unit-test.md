@@ -6,7 +6,7 @@ toc: true
 tags:
 - jenkins
 author: zacker330
-poster: "/2019-05-28-jenkins-pipeline-shared-lib-unit-test/poster.png"
+poster: "2019-05-28-jenkins-pipeline-shared-lib-unit-test/poster.png"
 ---
 
 ![image.png](2019-05-28-jenkins-pipeline-shared-lib-unit-test/poster.png)
@@ -15,7 +15,7 @@ poster: "/2019-05-28-jenkins-pipeline-shared-lib-unit-test/poster.png"
 Jenkins 共享库是除了 Jenkins 插件外，另一种扩展 Jenkins 流水线的技术。通过它，可以定义轻松的自定义步骤，还可以对现有的流水线逻辑进行一定程度的抽象与封装。至于如何写及如何使用它，读者朋友可以移步附录中的官方文档。
 
 ## 对共享库进行单元测试的原因
-但是如何对它进行单元测试呢？共享库越来越大时，你不得不考虑的问题。因为如果你不在早期就开始单元测试，共享库后期可能就会发展成如下图所示的“艺术品”——能工作，但是脆弱到没有人敢动。
+但是如何对它进行单元测试呢？共享库越来越大时，你不得不考虑这个问题。因为如果你不在早期就开始单元测试，共享库后期可能就会发展成如下图所示的“艺术品”——能工作，但是脆弱到没有人敢动。
 
 ![image.png](2019-05-28-jenkins-pipeline-shared-lib-unit-test/stone.png)
 
@@ -40,7 +40,7 @@ Jenkins 共享库是除了 Jenkins 插件外，另一种扩展 Jenkins 流水线
 |       +- foo
 |           +- bar.json    # static helper data for org.foo.Bar
 ```
-以上是共享库官方文档介绍的代码仓库结构。整个代码库可以分成两部分：src 目录部分和 vars 目录部分。它们的测试脚手架的搭建是不一样的。
+以上是共享库官方文档介绍的代码仓库结构。整个代码库可以分成两部分：src 目录部分和 vars 目录部分。它们的测试脚手架的搭建方式是不一样的。
 
 src 目录中的代码与普通的 Java 类代码本质上没有太大的区别。只不过换成了 Groovy 类。
 
@@ -164,7 +164,7 @@ class SayHelloTest extends BasePipelineTest {
 
 此时，我们最简单的共享库的单元测试脚手架就搭建好了。
 
-但是，实际工作中遇到场景并不会这么简单。面对更复杂的场景，必须了解 Jenkins Pipeline Unit testing framework 的原理。由此可见，写单元测试也是需要成本的。至于收益，仁者见仁了。
+但是，实际工作中遇到场景并不会这么简单。面对更复杂的场景，必须了解 Jenkins Pipeline Unit testing framework 的原理。由此可见，写单元测试也是需要成本的。至于收益，仁者见仁，智者见智了。
 
 ## Jenkins Pipeline Unit testing framework 原理
 上文中的单元测试实际上做了三件事情：
