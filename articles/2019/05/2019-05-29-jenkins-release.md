@@ -1,6 +1,6 @@
 ---
-title: "Jenkins 版本发布"
-description: "Jenkins 每周更新版发布"
+title: "Jenkins 2.176~2.178版本更新"
+description: "Jenkins 每周更新版2.176~2.178更新内容"
 date: 2019-05-29
 tags:
 - jenkins
@@ -9,10 +9,10 @@ keywords:
 - Jenkins 版本发布
 - Jenkins 2.178发布
 author: donhui
-poster: “../../../images/cow.jpg”
+poster: “./2019-05-29-jenkins-release/qingshanlake.jpg”
 ---
 
-![](../../../images/cow.jpg)
+![qingshanlake](qingshanlake.jpg)
 
 ## 2.178 (2019-05-20)
 
