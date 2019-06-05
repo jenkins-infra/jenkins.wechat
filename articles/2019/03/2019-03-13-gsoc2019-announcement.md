@@ -14,7 +14,7 @@ date: 2019-03-13
 toc: true
 ---
 
-![Jenkins GSoC](../../../images/gsoc/jenkins-gsoc-logo_small.png)
+![Jenkins GSoC](jenkins-gsoc-logo_small.png)
 
 作为 Jenkins GSoC 管理员团队的代表，我很高兴地宣布 Jenkins 在[2019年的 Google Summer of Code](https://summerofcode.withgoogle.com/)上 **已经被接受**。
 今年，我们邀请了学生和导师加入 Jenkins 社区，并一起努力增强 Jenkins 生态圈。
