@@ -6,7 +6,9 @@ tags:
 - jenkins
 - pipeline
 keywords:
-- jenkins pipeline workshop
+- jenkins 
+- pipeline 
+- workshop
 author: 社区小编辑
 poster: "pipeline-example.png"
 ---
@@ -17,7 +19,7 @@ poster: "pipeline-example.png"
 
 群里不温不火，不时有人抛出几个关于 Jenkins 流水线的问题。比如以下聊天记录：
 
-![](chat-record.png)
+![Jenkins 中文社区技术交流微信群模拟聊天截图](chat-record.png)
 
 而这些问题都共同说明另一个问题：Jenkins 的流水线的普及度还很低。大家都苦恼着不知道如何写 Jenkins 流水线呢。
 
@@ -26,11 +28,9 @@ poster: "pipeline-example.png"
 * 流水线高级部分讲解及其练习。
 * 案例实战（注意啦，可是有案例的。不是虚的。）
 
-问题来了？谁来主讲呢？
+问题来了？谁是这次工作坊的教练呢？
 
-![赵晓杰](xiaojie.png)
-
-**赵晓杰**：jenkinsci Contribute，Jenkins 中文社区发起人。
+**赵晓杰**：jenkinsci Contributor，Jenkins 中文社区发起人。
 
 想参加的同学，请点击阅读原文报名参加。
 
