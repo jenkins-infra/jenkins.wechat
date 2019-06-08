@@ -1,6 +1,6 @@
 ---
-title: "在线分型 - 作为一名开源贡献者是如何使用 GitHub 的"
-description: "这是一场开源有缘人的在线分享、交流会"
+title: "在线分享 - 作为一名开源贡献者是如何使用 GitHub 的？"
+description: "这是一场开源事业有缘人的在线分享、交流会"
 date: 2019-06-09
 - 在线分享
 keywords:
