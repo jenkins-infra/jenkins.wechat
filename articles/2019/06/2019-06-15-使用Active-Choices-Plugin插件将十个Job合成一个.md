@@ -1,3 +1,5 @@
+[TOC]
+
 使用Active-Choices-Plugin插件将十个Job合成一个
 
 - - -
@@ -14,7 +16,6 @@
 
 ![](http://t.eryajf.net/imgs/2019/06/f983c6b68e6eae00.jpg)
 
-
 现在Spring Cloud越来越火爆，许多公司也都在如火如荼投入使用中，而微服务最大的一个特点，就是多，同一大项目之下，可能会被拆分成十几二十几个子服务，对于运维而言，可能也需要一个对应一个地在Jenkins中创建十几二十几个Job。
 
 刚刚还在一个博主的自我介绍里看到这样一句话：`喜欢一切优雅的运维方式···`
@@ -23,10 +24,10 @@
 
 ## 1，环境说明
 
-主机：CentOS-7.5
-Jdk：jdk1.8.0_192
-Tomcat：8
-Jenkins：2.177
+- 主机：CentOS-7.5
+- Jdk：jdk1.8.0_192
+- Tomcat：8
+- Jenkins：2.177
 
 如上环境的准备工作本文就不赘述了。
 
@@ -61,57 +62,68 @@ Jenkins：2.177
 
 两个项目的情况如下：
 
-- eureka
- - Gitlab地址：`git@192.168.10.0:ishangjie/ishangjie-eureka-server.git`
- - port：8761
- - 包名：ishangjie-eureka-server-1.0.0.jar
-- user
- - Gitlab地址：`git@192.168.10.0:ishangjie/ishangjie-user-service.git`
- - port：6666
- - 包名：ishangjie-user-service-1.0.0.jar
+### 1，eureka
+
+- Gitlab地址：git@192.168.10.0:ishangjie/ishangjie-eureka-server.git
+- port：8761
+- 包名：ishangjie-eureka-server-1.0.0.jar
+ 
+### 2，user
+
+- Gitlab地址：git@192.168.10.0:ishangjie/ishangjie-user-service.git
+- port：6666
+- 包名：ishangjie-user-service-1.0.0.jar
 
 从刚刚这些配置里边可以看出，有不少共同点，也有不少不同点，我们只需把眼光放在不同点上，通过一些统一的变量控制，就能达到二合一的目的。
 
-## 5，正式配置。
-
 另外说明一点，这个项目已经部署在k8s环境当中，因此我的脚本内容也就展示成了k8s项目部署的流程了。
 
-### 1，创建项目。
+## 5，创建项目。
 
 首先创建一个`自由风格`的Jenkins项目，然后配置一下项目构建保存历史。
 
 ![](http://t.eryajf.net/imgs/2019/06/f6767c80a3ddb68a.png)
 
-### 2，参数化构建。
+## 6，字符参数。
 
-首先添加两个常规的参数。
-
-- 1，字符参数。
  添加一个名为`branch`的字符参数以用于控制代码分支的变量。
+
 ![](http://t.eryajf.net/imgs/2019/06/82bfacac6389f116.png)
-- 2，选项参数。
+
+## 7，选项参数。
+
  添加一个名为`mode`的选项参数以用于控制部署或者回滚的变量。
+
  ![](http://t.eryajf.net/imgs/2019/06/2a7c7828d43d930d.png)
-- 3，选择参数。
- - 1，主动选择参数
-  首先添加一个主动选择参数，用于控制项目名称这个变量。
- ![](http://t.eryajf.net/imgs/2019/06/0657ccd4dc11cd27.png)
-    - `Name`：project
-	- `Groovy Script`:
-	  ```
+
+## 8，选择参数。
+
+###  1，主动选择参数
+
+首先添加一个主动选择参数，用于控制项目名称这个变量。
+
+![](http://t.eryajf.net/imgs/2019/06/0657ccd4dc11cd27.png)
+
+- `Name`：project
+- `Groovy Script`:
+```
 return[
 "eureka",
 "user"
 ]
 ```
-    - `Description`：选择对应的应用名称部署对应的应用。
-	- `Choice Type`：Radio Buttons
- - 2，主动选择反应参数
-  接着添加一个主动选择反应参数，用于控制项目类型这个变量。
- ![](http://t.eryajf.net/imgs/2019/06/e13d4ed83cb54897.png)
-   - `Name`：type
-	- `Groovy Script`:
-	  ```
+- `Description`：选择对应的应用名称部署对应的应用。
+- `Choice Type`：Radio Buttons
+
+### 2，主动选择反应参数
+
+接着添加一个主动选择反应参数，用于控制项目类型这个变量。
+
+![](http://t.eryajf.net/imgs/2019/06/e13d4ed83cb54897.png)
+
+`Name`：type
+- `Groovy Script`:
+```
 A=["server"]
 B=["service"]
 if(project.equals("eureka")){
@@ -120,24 +132,28 @@ return A
 return B
 }
 ```
-    - `Description`：跟随项目的选择自动弹出对应类型
-	- `Choice Type`：Single Select
-	- `Referenced parameters`：project
- - 3，主动选择反应参数
-  然后再添加一个主动选择反应参数，用于控制项目端口这个变量。
-  ![](http://t.eryajf.net/imgs/2019/06/5929f13722973422.png)
-    - `Name`：port
-	- `Groovy Script`:
-	  ```
+- `Description`：跟随项目的选择自动弹出对应类型
+- `Choice Type`：Single Select
+- `Referenced parameters`：project
+
+### 3，主动选择反应参数
+
+然后再添加一个主动选择反应参数，用于控制项目端口这个变量。
+
+![](http://t.eryajf.net/imgs/2019/06/5929f13722973422.png)
+
+- `Name`：port
+- `Groovy Script`:
+```
 if(project.equals("eureka")){
 return ["8761"]
 } else if (project.equals("user")){
 return ["6666"]
 }
 ```
-    - `Description`：跟随跟随项目的选择自动弹出对应端口
-	- `Choice Type`：Single Select
-	- `Referenced parameters`：project
+- `Description`：跟随跟随项目的选择自动弹出对应端口
+- `Choice Type`：Single Select
+- `Referenced parameters`：project
 
 这样，对应的参数都创建完毕了，大概有以下几个小的注意点需要注意：
 
@@ -145,7 +161,7 @@ return ["6666"]
 - 2，创建了一个主动选择参数，和两个主动选择反应参数，是因为我们的实际需求需要两个真实有效的参数，如果最后的port项选择了主动选择反应参考参数，那么到后边是无法显式使用的。
 - 3，注意后两个跟随参数中的`Referenced parameters`，都需要填写主动参数的名称，才能够前后贯通，实现联动。
 
-### 3，Git地址配置。
+## 9，Git地址配置。
 
 接着就该添加Git地址了，同样，这个地方也应该合理利用项目标准化的优势，合理应用变量来进行配置。
 
@@ -153,7 +169,7 @@ return ["6666"]
 
 ![](http://t.eryajf.net/imgs/2019/06/2e8ddad5dbed5fad.png)
 
-### 4，执行脚本。
+## 10，执行脚本。
 
 接下来就该通过脚本来完成构建的主要流程了。
 
@@ -221,13 +237,13 @@ echoGreen "部署完成！"
 - 4，尽量将所有构建过程的内容都写到Jenkins这里来，以便于后期问题排查与分析。
 - 5，因为这是实验，因此没有添加回滚功能，如果添加的话，就针对mode参数做一个判断即可。
 
-### 5，构建后操作。
+## 11，构建后操作。
 
 因为是多个项目在同一个`WORKSPACE`下工作，因此，为了避免出现不可预知问题，这里添加了构建后清空`WORKSPACE`的选项。
 
 ![](http://t.eryajf.net/imgs/2019/06/9eb0a066ef08c1da.png)
 
-## 6，效果展示。
+## 12，效果展示。
 
 一切配置完成之后，就可以尝试一下点击构建了。
 
