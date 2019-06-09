@@ -32,7 +32,7 @@ Jenkins角色权限控制Role-Based-Strategy（小黄锁）探微
 
 Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenkins.io/display/JENKINS/Role+Strategy+Plugin "Role-Based Strategy")。点击链接可以跳转到插件对应的官方文档。
 
-直接在系统管理当中选择插件，搜索之后直接安装即可。因为在Jenkins配置当中插件对应的图标是一个黄色的小锁，因此我亲切的将之称为`小黄锁`。
+直接在系统管理当中选择插件管理，搜索之后直接安装即可。因为在Jenkins配置当中插件对应的图标是一个黄色的小锁，因此我亲切的将之称为`小黄锁`。
 
 ## 3，启用此功能。
 
