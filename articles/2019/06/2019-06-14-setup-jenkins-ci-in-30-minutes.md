@@ -21,7 +21,7 @@ poster: "./2019-06-15-setup-jenkins-ci-in-30-minutes/788b731c3a30bba88e622c162ec
 
 * 我们使用了 Ubuntu 18.04;
 * 必须安装 Docker，有关安装说明，请参见[此处](https://docs.docker.com/install/linux/docker-ce/ubuntu/) ;
-* 我们需要在 Docker 注册表来推送我们的 Docker 镜像。最简单的方法是在[DockerHub](https://hub.docker.com/)上创建一个帐户。你可以免费创建帐户。也不会收到垃圾广告邮件;
+* 我们需要在 Docker registry来推送我们的 Docker 镜像。最简单的方法是在[DockerHub](https://hub.docker.com/)上创建一个帐户。你可以免费创建帐户。也不会收到垃圾广告邮件;
 * 构建任务的 Spring Boot 应用程序。我们将使用前一篇[文章](https://mydeveloperplanet.com/2018/05/16/build-and-deploy-a-spring-boot-app-on-minikube-part-1/)中的 Spring Boot MVC 应用程序。源代码可以在[GitHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到，相应的Docker图像可以在[DockerHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到。该应用程序包含 `http://localhost:8080/hello` 上的一个 HTTP 端点，并只返回一条 `Hello Kubernetes` 欢迎消息。
 ## 2.运行 Jenkins CI
 我们将使用 [Jenkins CI Docker](https://hub.docker.com/r/jenkins/jenkins/) 官方镜像运行 Jenkins 服务。完整的文档可以在[这里](https://github.com/jenkinsci/docker/blob/master/README.md)找到。用以下命令启动容器:
@@ -33,7 +33,7 @@ $ docker run -p 8080:8080 --name myjenkins -v jenkins_home:/var/jenkins_home -v 
 让我们来仔细看看我们正在做什么:
 
 * -p 8080:8080：我们将内部 Jenkins 端口（冒号后）映射到外部端口，该端口可从我们的 Docker 主机访问;
-* --name myjenkins：我们为容器提供一个名称;否则，Docker将为你生成一个名称。最好给它起个名字;这样，你可以轻松地启动和停止容器;
+* --name myjenkins：我们为容器提供一个名称;否则，Docker将为你生成一个名称。最好给它起个名字；这样，你可以轻松地启动和停止容器;
 * -v jenkins_home:/var/jenkins_home：我们希望将内部 Jenkins 主目录(冒号之后)映射到 Docker 主机上的一个目录。通过这种方式，Jenkins 数据将被保存在我们的主机上，这让我们有机会备份数据;
 * -v jenkins_downloads:/var/jenkins_home/downloads：我们需要在Jenkins中安装额外的工具; 因此，我们创建一个目录来复制 `*.tar.gz` 文件。在这篇文章的后面，我们将清楚地知道我们将使用目录做什么;
 * jenkins/jenkins:lts：要使用的 Docker 镜像。我们将使用 LTS 版本，但如果你愿意，也可以使用不太稳定的版本。在撰写本文时，v2.150.1 是 LTS 版本。
@@ -188,7 +188,7 @@ srw-rw---- 1 jenkins jenkins 0 Jan 6 11:45 /var/run/docker.sock
 
 现在，`jenkins` 是所有者，我们不会再得到 `Permission Denied` 的错误。
 
-为了将 Docker 镜像推入 Docker 注册表，我们需要通过 `settings.xml` 将凭据提供给 Maven。我们可以通过配置文件提供程序插件轻松地提供 `settings.xml`。去 *Manage Jenkins – Manage plugins* 并安装插件(不重启安装)。
+为了将 Docker 镜像推入 Docker registry，我们需要通过 `settings.xml` 将凭据提供给 Maven。我们可以通过配置文件提供程序插件轻松地提供 `settings.xml`。去 *Manage Jenkins – Manage plugins* 并安装插件(不重启安装)。
 
 转到 *Manage Jenkins – Managed files*，然后单击 *Add a new Config*。创建 *Global Maven settings.xml* 并使用 DockerHub 帐户凭据添加以下部分：
 
@@ -209,7 +209,7 @@ srw-rw---- 1 jenkins jenkins 0 Jan 6 11:45 /var/run/docker.sock
 
 ![jenkins-job-scm](jenkins-job-scm.png)
 
-在 *Build* 部分，我们添加了一个 *Invoke top-level Maven targets* 的构建步骤。我们将调用以下 Maven 目标来构建我们的应用程序并将 Docker 镜像推送到 Docker 注册表：
+在 *Build* 部分，我们添加了一个 *Invoke top-level Maven targets* 的构建步骤。我们将调用以下 Maven 目标来构建我们的应用程序并将 Docker 镜像推送到 Docker registry：
 
 ```
 $ clean install dockerfile:push
@@ -219,7 +219,7 @@ $ clean install dockerfile:push
 
 ![jenkins-job-build-1](jenkins-job-build-1.png)
 
-手动为我们的工作启动构建，这将创建 jar 文件，创建我们的 Docker 镜像，并将其推送到 Docker 注册表。
+手动为我们的工作启动构建，这将创建 jar 文件，创建我们的 Docker 镜像，并将其推送到 Docker registry。
 
-六，结论
-在本文中，我们提供了一种让 Jenkins 实例运行的快速方法，包括执行 Maven 构建、创建 Docker 镜像并将其推入 Docker 注册表的构建作业。请注意，这不是一种安全的方法，但是对于实验用例来说，它并没有太大的危害。现在我们已经有了一个完全运行的 Jenkins 实例，我们可以使用它来测试新的 Jenkins 插件。
+## 6.结论
+在本文中，我们提供了一种让 Jenkins 实例运行的快速方法，包括执行 Maven 构建、创建 Docker 镜像并将其推入 Docker registry的构建作业。请注意，这不是一种安全的方法，但是对于实验用例来说，它并没有太大的危害。现在我们已经有了一个完全运行的 Jenkins 实例，我们可以使用它来测试新的 Jenkins 插件。
