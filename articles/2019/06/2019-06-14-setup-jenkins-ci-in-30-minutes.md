@@ -19,9 +19,9 @@ poster: "./2019-06-15-setup-jenkins-ci-in-30-minutes/788b731c3a30bba88e622c162ec
 ## 1.先决条件
 开始之前，我们需要以下先决条件：
 
-* 我们使用了 Ubuntu 18.04;
-* 必须安装 Docker，有关安装说明，请参见[此处](https://docs.docker.com/install/linux/docker-ce/ubuntu/) ;
-* 我们需要在 Docker registry来推送我们的 Docker 镜像。最简单的方法是在[DockerHub](https://hub.docker.com/)上创建一个帐户。你可以免费创建帐户。也不会收到垃圾广告邮件;
+* 我们使用了 Ubuntu 18.04；
+* 必须安装 Docker，有关安装说明，请参见[此处](https://docs.docker.com/install/linux/docker-ce/ubuntu/)；
+* 我们需要在 Docker registry来推送我们的 Docker 镜像。最简单的方法是在[DockerHub](https://hub.docker.com/)上创建一个帐户。你可以免费创建帐户。也不会收到垃圾广告邮件；
 * 构建任务的 Spring Boot 应用程序。我们将使用前一篇[文章](https://mydeveloperplanet.com/2018/05/16/build-and-deploy-a-spring-boot-app-on-minikube-part-1/)中的 Spring Boot MVC 应用程序。源代码可以在[GitHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到，相应的Docker图像可以在[DockerHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到。该应用程序包含 `http://localhost:8080/hello` 上的一个 HTTP 端点，并只返回一条 `Hello Kubernetes` 欢迎消息。
 ## 2.运行 Jenkins CI
 我们将使用 [Jenkins CI Docker](https://hub.docker.com/r/jenkins/jenkins/) 官方镜像运行 Jenkins 服务。完整的文档可以在[这里](https://github.com/jenkinsci/docker/blob/master/README.md)找到。用以下命令启动容器:
@@ -32,10 +32,10 @@ $ docker run -p 8080:8080 --name myjenkins -v jenkins_home:/var/jenkins_home -v 
 
 让我们来仔细看看我们正在做什么:
 
-* -p 8080:8080：我们将内部 Jenkins 端口（冒号后）映射到外部端口，该端口可从我们的 Docker 主机访问;
-* --name myjenkins：我们为容器提供一个名称;否则，Docker将为你生成一个名称。最好给它起个名字；这样，你可以轻松地启动和停止容器;
-* -v jenkins_home:/var/jenkins_home：我们希望将内部 Jenkins 主目录(冒号之后)映射到 Docker 主机上的一个目录。通过这种方式，Jenkins 数据将被保存在我们的主机上，这让我们有机会备份数据;
-* -v jenkins_downloads:/var/jenkins_home/downloads：我们需要在Jenkins中安装额外的工具; 因此，我们创建一个目录来复制 `*.tar.gz` 文件。在这篇文章的后面，我们将清楚地知道我们将使用目录做什么;
+* -p 8080:8080：我们将内部 Jenkins 端口（冒号后）映射到外部端口，该端口可从我们的 Docker 主机访问；
+* --name myjenkins：我们为容器提供一个名称；否则，Docker将为你生成一个名称。最好给它起个名字；这样，你可以轻松地启动和停止容器；
+* -v jenkins_home:/var/jenkins_home：我们希望将内部 Jenkins 主目录(冒号之后)映射到 Docker 主机上的一个目录。通过这种方式，Jenkins 数据将被保存在我们的主机上，这让我们有机会备份数据；
+* -v jenkins_downloads:/var/jenkins_home/downloads：我们需要在Jenkins中安装额外的工具； 因此，我们创建一个目录来复制 `*.tar.gz` 文件。在这篇文章的后面，我们将清楚地知道我们将使用目录做什么；
 * jenkins/jenkins:lts：要使用的 Docker 镜像。我们将使用 LTS 版本，但如果你愿意，也可以使用不太稳定的版本。在撰写本文时，v2.150.1 是 LTS 版本。
 在此之后，你可以通过其名称停止和启动容器：
 
