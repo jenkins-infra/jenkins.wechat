@@ -14,15 +14,15 @@ toc: true
 poster: "./2019-06-15-setup-jenkins-ci-in-30-minutes/788b731c3a30bba88e622c162ec0ea54.jpg"
 ---
 
-你想在本地设置中使用 Jenkins CI 进行实验吗？在本文中，我们将设置一个本地 Jenkins CI 服务，为一个简单的 Spring Boot Maven 项目创建一个构建任务，并将创建的 Docker 镜像推送到 DockerHub。这将是一个本地实验的设置，但如果你想尝试一个 Jenkins 插件，它会非常方便。
+你想在本地设置中使用 Jenkins CI 进行实验吗？在本文中，我们将设置一个本地 Jenkins CI 服务，为一个简单的 Spring Boot Maven 项目创建一个构建工作，并将创建的 Docker 镜像推送到 DockerHub。这将是一个本地实验的设置，但如果你想尝试一个 Jenkins 插件，它会非常方便。
 
 ## 1.先决条件
 开始之前，我们需要以下先决条件：
 
 * 我们使用了 Ubuntu 18.04；
 * 必须安装 Docker，有关安装说明，请参见[此处](https://docs.docker.com/install/linux/docker-ce/ubuntu/)；
-* 我们需要在 Docker registry来推送我们的 Docker 镜像。最简单的方法是在[DockerHub](https://hub.docker.com/)上创建一个帐户。你可以免费创建帐户。也不会收到垃圾广告邮件；
-* 构建任务的 Spring Boot 应用程序。我们将使用前一篇[文章](https://mydeveloperplanet.com/2018/05/16/build-and-deploy-a-spring-boot-app-on-minikube-part-1/)中的 Spring Boot MVC 应用程序。源代码可以在[GitHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到，相应的Docker图像可以在[DockerHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到。该应用程序包含 `http://localhost:8080/hello` 上的一个 HTTP 端点，并只返回一条 `Hello Kubernetes` 欢迎消息。
+* 我们需要在 Docker registry 来推送我们的 Docker 镜像。最简单的方法是在[DockerHub](https://hub.docker.com/)上创建一个帐户。你可以免费创建帐户。也不会收到垃圾广告邮件；
+* 构建工作的 Spring Boot 应用程序。我们将使用前一篇[文章](https://mydeveloperplanet.com/2018/05/16/build-and-deploy-a-spring-boot-app-on-minikube-part-1/)中的 Spring Boot MVC 应用程序。源代码可以在[GitHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到，相应的Docker图像可以在[DockerHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到。该应用程序包含 `http://localhost:8080/hello` 上的一个 HTTP 端点，并只返回一条 `Hello Kubernetes` 欢迎消息。
 ## 2.运行 Jenkins CI
 我们将使用 [Jenkins CI Docker](https://hub.docker.com/r/jenkins/jenkins/) 官方镜像运行 Jenkins 服务。完整的文档可以在[这里](https://github.com/jenkinsci/docker/blob/master/README.md)找到。用以下命令启动容器:
 
@@ -202,8 +202,8 @@ srw-rw---- 1 jenkins jenkins 0 Jan 6 11:45 /var/run/docker.sock
 </servers>
 ```
 
-## 5.创建构建任务
-最后要做的是创建我们的构建任务。转到 Jenkins CI 主页，然后单击 *New Item*。我们将把构建工作命名为 *MyKubernetesPlanet*，并选择一个 *Freestyle Project*。
+## 5.创建构建工作
+最后要做的是创建我们的构建工作。转到 Jenkins CI 主页，然后单击 *New Item*。我们将把构建工作命名为 *MyKubernetesPlanet*，并选择一个 *Freestyle Project*。
 
 在构建工作的配置部分，我们转到 *Source Code Management* 部分，并填写 Git URL [https://github.com/mydeveloperplanet/mykubernetesplanet.git](https://github.com/mydeveloperplanet/mykubernetesplanet.git) 和 branch `*/feature/jenkinsci`。
 
@@ -222,4 +222,4 @@ $ clean install dockerfile:push
 手动为我们的工作启动构建，这将创建 jar 文件，创建我们的 Docker 镜像，并将其推送到 Docker registry。
 
 ## 6.结论
-在本文中，我们提供了一种让 Jenkins 实例运行的快速方法，包括执行 Maven 构建、创建 Docker 镜像并将其推入 Docker registry的构建作业。请注意，这不是一种安全的方法，但是对于实验用例来说，它并没有太大的危害。现在我们已经有了一个完全运行的 Jenkins 实例，我们可以使用它来测试新的 Jenkins 插件。
+在本文中，我们提供了一种让 Jenkins 实例运行的快速方法，包括执行 Maven 构建、创建 Docker 镜像并将其推入 Docker registry 的构建作业。请注意，这不是一种安全的方法，但是对于实验用例来说，它并没有太大的危害。现在我们已经有了一个完全运行的 Jenkins 实例，我们可以使用它来测试新的 Jenkins 插件。
