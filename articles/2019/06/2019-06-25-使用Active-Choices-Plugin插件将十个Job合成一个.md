@@ -9,7 +9,7 @@
 - description: 使用Active-Choices-Plugin插件将十个Job合成一个。
 - author: eryajf
 - original: [原文链接](http://www.eryajf.net/2075.html "原文链接")
-- date: 2019-06-15
+- date: 2019-06-25
 - tags: Jenkins，plugin
 
 - - -
