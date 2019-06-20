@@ -1,16 +1,14 @@
-Jenkins角色权限控制Role-Based-Strategy（小黄锁）探微
-
-- - -
-
-- title: **Jenkins角色权限控制Role-Based-Strategy（小黄锁）探微**
-- description: 利用Jenkins自带插件实现小规模（两百人以内）权限管理。
-- author: eryajf
-- date: 2019-06-22
-- tags: 
-  - Jenkins
-  - plugin
-
-- - -
+---
+title:"Jenkins角色权限控制Role-Based-Strategy（小黄锁）探微"
+description:"利用Jenkins自带插件实现小规模（两百人以内）权限管理"
+author: eryajf
+date: 2019-06-22
+tags: 
+- Jenkins
+- plugin
+toc: true
+poster: "./2019-06-22-Jenkins角色权限控制Role-Based-Strategy(小黄锁)探微/Role-Based Strategy_1.png"
+---
 
 ![](http://t.eryajf.net/imgs/2019/05/2edabcc2be850178.jpg)
 
