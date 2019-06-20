@@ -1,5 +1,4 @@
-- - -
-
+---
 title: "使用Active-Choices-Plugin插件将十个Job合成一个"
 description: "使用Active-Choices-Plugin插件将十个Job合成一个"
 date: 2019-06-26
@@ -9,7 +8,7 @@ tags:
 author: eryajf
 toc: true
 poster: "./2019-06-26-使用Active-Choices-Plugin插件将十个Job合成一个/the_one.jpg"
-- - -
+---
 
 ![](http://t.eryajf.net/imgs/2019/06/f983c6b68e6eae00.jpg)
 
