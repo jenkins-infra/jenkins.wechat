@@ -10,7 +10,7 @@ toc: true
 poster: "./2019-06-22-Jenkins角色权限控制Role-Based-Strategy(小黄锁)探微/Role-Based Strategy_1.png"
 ---
 
-![](http://t.eryajf.net/imgs/2019/05/2edabcc2be850178.jpg)
+![](Role-Based Strategy_1.png)
 
 如果公司比较小，有可能所有环境（此处的环境指测试，预发，线上）的Jenkins都在一台之上，那么在这种情况下，做好Jenkins项目视图以及权限的控制就显得非常重要了。
 
@@ -42,7 +42,7 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 详细情况如下图所示：
 
-![](http://t.eryajf.net/imgs/2019/06/06391c8c413dce31.png)
+![](Role-Based Strategy_2.png)
 
 配置完成之后点击保存，再去`系统配置`里边就能看到`小黄锁`（Manage and Assign Roles）出现啦。
 
@@ -52,7 +52,7 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 先看我准备的一些项目。
 
-![](http://t.eryajf.net/imgs/2019/06/70e7121dfbdff7c1.png)
+![](Role-Based Strategy_3.png)
 
 当然常规来说，我们肯定都是一个项目一个项目创建，然后创建的时候就已经进行了规划分类，现在为了讲解，我先创建了这么8个项目。
 
@@ -65,15 +65,15 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 可以直接点击左侧的新建视图来进行项目的分类管理。
 
-![](http://t.eryajf.net/imgs/2019/06/4e0a933473da1be6.png)
+![](Role-Based Strategy_4.png)
 
 如上操作，创建视图：
 
-![](http://t.eryajf.net/imgs/2019/06/201f782a19a9024a.png)
+![](Role-Based Strategy_5.png)
 
 将对应的项目选中即可，虽然这步操作与今天的主题关系不大，但是也是日常管理的一个重要项，整理完毕之后，如下图：
 
-![](http://t.eryajf.net/imgs/2019/06/c66c3bb3a27140f1.png)
+![](Role-Based Strategy_6.png)
 
 ## 5，管理角色。
 
@@ -87,7 +87,7 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 默认的admin就是拥有所有权限，我们可以创建一个开发用户并配置其权限。
 
-![](http://t.eryajf.net/imgs/2019/06/fb22a4ac5be62c4e.png)
+![](Role-Based Strategy_7.png)
 
 以上配置的意思是`develop用户`对Jenkins全局都是`只能看不能摸`的权限。
 
@@ -99,13 +99,13 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 如下图所示：
 
-![](http://t.eryajf.net/imgs/2019/06/187e0ce143aa3371.png)
+![](Role-Based Strategy_8.png)
 
 现在插件最新版本已经支持点击正则规则查看匹配到的项目，从而验证自己所写的规则是否符合需求所要求的。
 
 现在点击一下，可以看到符合我们需要的规则：
 
-![](http://t.eryajf.net/imgs/2019/06/ae51ab9aa43621d1.png)
+![](Role-Based Strategy_9.png)
 
 一般情况下，只要建立项目的时候`名称足够规范`，那么这里的权限设置也都比较简单的，通过对项目进行正则匹配即可，权限的话，酌情进行分配，如上所分配的权限，是最基础的读，构建，以及取消的权限，就足够日常开发使用了。
 
@@ -119,7 +119,7 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 点击系统管理，管理用户，即可进入用户数据库，用户注册页面如下：
 
-![](http://t.eryajf.net/imgs/2019/06/f0262f56ea049f42.png)
+![](Role-Based Strategy_10.png)
 
 * 1，用户名：个人用户名的中文拼音。如张三：zhangsan，李四：lisi。
 * 2，密码：自定义。
@@ -132,7 +132,7 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 如下图：
 
-![](http://t.eryajf.net/imgs/2019/06/39a975fc1991136d.png)
+![](Role-Based Strategy_11.png)
 
 ## 7，分配角色。
 
@@ -140,7 +140,7 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 先上最终配置，然后再来讲解：
 
-![](http://t.eryajf.net/imgs/2019/06/85e30b0be7d2b69d.png)
+![](Role-Based Strategy_12.png)
 
 当我们需要对一个新注册用户授权的时候，需要做两件事情：
 
@@ -159,11 +159,11 @@ Jenkins的角色控制依赖于插件：[Role-Based Strategy](https://wiki.jenki
 
 究竟是不是如我所说的这样呢，我们登陆一下张三的账号看下是不是真的。
 
-![](http://t.eryajf.net/imgs/2019/06/d9c346367a48cb9a.png)
+![](Role-Based Strategy_13.png)
 
 接着再来看看李四的情况。
 
-![](http://t.eryajf.net/imgs/2019/06/1b983f225b12c7cb.png)
+![](Role-Based Strategy_14.png)
 
 ok，到这里，基本上经过这样一趟洗礼之后，如果你看的认真并照做了的话，相信你就已经掌握Jenkins当中的角色控制啦！！
 
