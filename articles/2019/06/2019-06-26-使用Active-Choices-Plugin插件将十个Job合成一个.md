@@ -1,5 +1,4 @@
 ---
-
 title: "使用Active-Choices-Plugin插件将十个Job合成一个"
 description: "使用Active-Choices-Plugin插件将十个Job合成一个"
 date: 2019-06-26
