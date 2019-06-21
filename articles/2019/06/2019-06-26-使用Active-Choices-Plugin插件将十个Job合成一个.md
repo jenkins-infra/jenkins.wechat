@@ -1,4 +1,4 @@
-- - -
+---
 
 title: "使用Active-Choices-Plugin插件将十个Job合成一个"
 description: "使用Active-Choices-Plugin插件将十个Job合成一个"
@@ -9,9 +9,9 @@ tags:
 author: eryajf
 toc: true
 poster: "./2019-06-26-使用Active-Choices-Plugin插件将十个Job合成一个/the_one.jpg"
-- - -
+---
 
-![](http://t.eryajf.net/imgs/2019/06/f983c6b68e6eae00.jpg)
+![](the_one.jpg)
 
 现在Spring Cloud越来越火爆，许多公司也都在如火如荼投入使用中，而微服务最大的一个特点，就是多，同一大项目之下，可能会被拆分成十几二十几个子服务，对于运维而言，可能也需要一个对应一个地在Jenkins中创建十几二十几个Job。
 
@@ -38,7 +38,7 @@ poster: "./2019-06-26-使用Active-Choices-Plugin插件将十个Job合成一个/
 
 插件安装之后，可以在项目配置中的参数化配置中看到一些新增了的选项。
 
-![](http://t.eryajf.net/imgs/2019/06/3bdcc6f1dd2cb249.png)
+![](Active-Choices-plugin1.png)
 
 - 1，Active Choices Parameter（主动选择参数）
   Active Choices参数使用Groovy脚本或Scriptler目录中的脚本动态生成构建参数的值选项列表。
@@ -79,19 +79,19 @@ poster: "./2019-06-26-使用Active-Choices-Plugin插件将十个Job合成一个/
 
 首先创建一个`自由风格`的Jenkins项目，然后配置一下项目构建保存历史。
 
-![](http://t.eryajf.net/imgs/2019/06/f6767c80a3ddb68a.png)
+![](Active-Choices-plugin2.png)
 
 ## 6，字符参数。
 
  添加一个名为`branch`的字符参数以用于控制代码分支的变量。
 
-![](http://t.eryajf.net/imgs/2019/06/82bfacac6389f116.png)
+![](Active-Choices-plugin3.png)
 
 ## 7，选项参数。
 
  添加一个名为`mode`的选项参数以用于控制部署或者回滚的变量。
 
- ![](http://t.eryajf.net/imgs/2019/06/2a7c7828d43d930d.png)
+ ![](Active-Choices-plugin4.png)
 
 ## 8，选择参数。
 
@@ -99,7 +99,7 @@ poster: "./2019-06-26-使用Active-Choices-Plugin插件将十个Job合成一个/
 
 首先添加一个主动选择参数，用于控制项目名称这个变量。
 
-![](http://t.eryajf.net/imgs/2019/06/0657ccd4dc11cd27.png)
+![](Active-Choices-plugin5.png)
 
 - `Name`：project
 - `Groovy Script`:
@@ -116,7 +116,7 @@ return[
 
 接着添加一个主动选择反应参数，用于控制项目类型这个变量。
 
-![](http://t.eryajf.net/imgs/2019/06/e13d4ed83cb54897.png)
+![](Active-Choices-plugin6.png)
 
 `Name`：type
 - `Groovy Script`:
@@ -137,7 +137,7 @@ return B
 
 然后再添加一个主动选择反应参数，用于控制项目端口这个变量。
 
-![](http://t.eryajf.net/imgs/2019/06/5929f13722973422.png)
+![](Active-Choices-plugin7.png)
 
 - `Name`：port
 - `Groovy Script`:
@@ -164,13 +164,13 @@ return ["6666"]
 
 具体如下图所示：
 
-![](http://t.eryajf.net/imgs/2019/06/2e8ddad5dbed5fad.png)
+![](Active-Choices-plugin8.png)
 
 ## 10，执行脚本。
 
 接下来就该通过脚本来完成构建的主要流程了。
 
-```
+```shell
 #!/bin/bash
 source /etc/profile
 #
@@ -238,12 +238,12 @@ echoGreen "部署完成！"
 
 因为是多个项目在同一个`WORKSPACE`下工作，因此，为了避免出现不可预知问题，这里添加了构建后清空`WORKSPACE`的选项。
 
-![](http://t.eryajf.net/imgs/2019/06/9eb0a066ef08c1da.png)
+![](Active-Choices-plugin9.png)
 
 ## 12，效果展示。
 
 一切配置完成之后，就可以尝试一下点击构建了。
 
-![](http://t.eryajf.net/imgs/2019/06/844b41ed44f6e15e.gif)
+![](Active-Choices-plugin10.gif)
 
 好了，这就是本期的分享，当然，关于这个插件，这里也只是介绍了其中一种一个思路，可能还有很多种其他的方案，期待各位发挥思维发掘更多妙用。
