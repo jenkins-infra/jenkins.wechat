@@ -21,6 +21,7 @@ poster: "./2019-07-04-performance-testing-jenkins/reflection.jpg"
 ---
 
 ![reflection](reflection.jpg)
+
 ## Jenkins 插件的微基准测试框架
 
 作为我 [Google 编程夏令营](https://jenkins.io/projects/gsoc/2019/role-strategy-performance/)的一部分，我一直致力于改进角色策略插件（Role Strategy Plugin）的性能。
