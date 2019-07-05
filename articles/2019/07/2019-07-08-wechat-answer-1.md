@@ -73,7 +73,7 @@ post {
 
 这时，应该使用 [HTTPRequest](https://wiki.jenkins.io/display/JENKINS/HTTP+Request+Plugin) 插件，它是平台无关的。
 
-### 4. 怎么把 slave 的内容copy到master机器上？
+### 4. 怎么把 slave 的内容 copy 到 master 机器上？
 > 因为比如我用有一个windows节点，然后我代码拉取后，需要进行一些测试，测试完成后生成数据和HTML报告，这部分测试全都在节点上完成，我想把测试完成后到数据发到master上，然后由master生成html报告
 
 #### 回答
