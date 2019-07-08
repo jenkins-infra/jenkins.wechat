@@ -23,7 +23,7 @@ poster: "./2019-07-10-phase-1-multibranch-pipeline-support-for-gitlab/tea.jpg"
 ![tea](tea.jpg)
 
 这是在 GSoC 2019中的一个 Jenkins 项目。
-我们正致力于增加[多分支流水线任务和文件夹组织对 GitLab](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline/)的支持。
+我们正致力于增加[多分支流水线任务和文件夹组织对 GitLab ](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline/)的支持。
 这个计划是创建以下插件：
 * [GitLab API 插件](https://github.com/jenkinsci/gitlab-api-plugin) - 包装 GitLab Java APIs。
 * [GitLab 分支源插件](https://github.com/baymac/gitlab-branch-source-plugin) - 包括两个包：
@@ -104,7 +104,7 @@ mvn hpi:run -Djetty.port=<port> # to run on your desired port number
     * `Server URL` - 包含指向 Gitlab 服务器的 URL 。默认设置为 "https://gitlab.com" 。用户可以修改它以输入其 Gitlab 服务器 URL ，例如 https://gitlab.gnome.org/、http://gitlab.example.com:7990 等等。
     * `Credentials` - 包含类型为 GitLab Personal Access Token 的凭据条目列表。当没有添加凭证时，它显示 "-none-" 。用户可以通过单击 "Add" 按钮添加凭证。
     * `Web Hook` - 此字段是一个复选框。如果希望插件在与 Gitlab 项目相关的任务上设置 Webhook ，请选中此框。该插件监听相关 Gitlab 项目的 URL ，当 Gitlab 服务器中发生事件时，服务器将向设置 Web Hook 的 URL 发送事件触发器。如果您希望在 Gitlab 项目上持续集成（或持续交付），那么您可能希望自动设置它。  
-6. 添加一个 Personal Access Token 凭据(自动生成 Personal Access Token 请参考[下一个部分](#creating-personal-access-token-within-jenkins)):
+6. 添加一个 Personal Access Token 凭据(自动生成 Personal Access Token 请参考[下一个部分](#在-jenkins-内创建个人访问令牌)):
     * 用户需要添加一个 `GitLab Personal Access Token` 类型凭证条目用来安全地将 token 保存在 Jenkins 内部。
         * 在你的 GitLab 服务器生成一个 `Personal Access Token`
             * 从右上角选择配置文件下拉菜单
