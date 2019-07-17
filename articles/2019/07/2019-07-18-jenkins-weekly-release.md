@@ -26,14 +26,14 @@ poster: “./2019-07-09-jenkins-release/great-wall.jpeg”
 
 ## 2.183 (2019-06-30)
 * 在 Jenkins 的 URL 配置增加对 IPv6 地址的支持。 (issue 58041)
-* 更新 args4j 2.0.31 到 2.33. (issue 57959)
+* 更新 args4j 2.0.31 到 2.33。 (issue 57959)
 * 开发者：允许插件为 CodeMirror 文本域控制提供 onBlur() 的支持。 (issue 58240)
 * 开发者：使得 WindowsUtil 可以让插件使用。 (pull 4038)
 * 内部：更新 maven-war-plugin 3.0.0 到 3.2.3 (issue 47127)
 
 ## 2.182 (2019-06-23)
 * 当删除目录时，移除 Windows 下的只读标记。 (issue 57855)
-* 更新 Remoting 3.29 到 3.33. (issue 57959, issue 50095, issue 57713, 完整变更日志)
+* 更新 Remoting 3.29 到 3.33。 (issue 57959, issue 50095, issue 57713, 完整变更日志)
 
 ## 2.181 (2019-06-16)
 * 插件管理界面中，允许对有可选依赖的插件禁用。 (issue 33843)
