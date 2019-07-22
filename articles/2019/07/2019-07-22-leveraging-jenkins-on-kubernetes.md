@@ -15,7 +15,7 @@ author:   Juan Ignacio Giro
 original: https://dzone.com/articles/leveraging-jenkins-on-kubernetes
 translator: y.wang
 toc: true  
-poster: "./2019-07-22-leveraging-jenkins-on-kubernetes/1.jpg"
+poster: "./2019-07-22-leveraging-jenkins-on-kubernetes/sea.jpg"
 ---
 
 ![sea](sea.jpg)
