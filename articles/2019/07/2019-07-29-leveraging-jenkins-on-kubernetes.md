@@ -37,13 +37,13 @@ Jenkins 是 CI/CD 的同义词，它是自动化开发、部署应用程序和�
 
 ## 在 Jenkins 中设置一个流水线
 
-​获得 Jenkins 只是一个开始，下一步是在Jenkins本身内配置 CI / CD 流水线。 你可以先运行Minikube Service Jenkins ，然后使用其 Web UI 访问 Jenkins。
+​让 Jenkins 启动只是一个开始，下一步是在 Jenkins 内配置 CI/CD 流水线。 你可以先运行 `minikube service Jenkins` ，然后使用其 Web UI 访问 Jenkins。
 
 ​然后，您可以选择安装必要的插件。 根据您要创建的流水线，您可能需要下载并安装合适的插件，以实现流水线自动化以及更好的管理。必须使用 [Kubernetes 插件](https://plugins.jenkins.io/kubernetes)。
 
-​另一个值得讨论的插件是 [Kubernetes Continuous Deploy 插件](https://plugins.jenkins.io/kubernetes-cd)，它专门为处理流水线的连续交付设计的。 该插件将处理为测试创建新的pods以及测试和部署之间的转换。
+​另一个值得讨论的插件是 [Kubernetes Continuous Deploy 插件](https://plugins.jenkins.io/kubernetes-cd)，它专门为处理流水线的持续交付设计的。 该插件将处理为测试创建新的 pods 以及测试和部署之间的转换。
 
-​配置完所有插件后，重新启动 Jenkins。 Jenkins 提供的一个很好的功能能够自动执行这些手动更改，因此下次您配置 CI/CD 系统（例如，在基础结构迁移的情况下）时，不必再次通过手动更改。 您只需接收一个具有与以前相同配置和插件的实例。嵌入到 Jenkins Docker 映像和 Jenkins 配置文件 config.xml 中的脚本 install_plugins.sh 实现了这一功能。
+​配置完所有插件后，重新启动 Jenkins。 Jenkins 提供的一个很好的功能能够自动执行这些手动更改，因此下次您配置 CI/CD 系统（例如，在基础结构迁移的情况下）时，不必再次通过手动更改。 您只需接收一个具有与以前相同配置和插件的实例。嵌入到 Jenkins Docker 镜像和 Jenkins 配置文件 config.xml 中的脚本 install_plugins.sh 实现了这一功能。
 
 ​现在，您可以继续创建您的第一个流水线，为它分配凭据，并开始在流水线内部进行开发。记住， Jenkins 并不总是从本地存储中提取代码；您需要在第一次配置时手动发出推送请求。
 
