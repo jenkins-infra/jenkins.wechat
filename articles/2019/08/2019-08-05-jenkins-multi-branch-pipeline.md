@@ -4,9 +4,9 @@ description: "如果没有适当的解决方案，在大型企业可能难以创
 author: Aytunc BEKEN
 translator: shenxianpeng
 original: https://dzone.com/articles/maintaining-multi-branch-pipelines-in-large-scale
-poster: "./2019-07-27-jenkins-multi-branch-pipeline/cover.jped"
+poster: "./2019-08-08-jenkins-multi-branch-pipeline/cover.jped"
 toc: ture
-date: 2019-07-27
+date: 2019-08-05
 tags:
 - Jenkins
 - multi-branch
