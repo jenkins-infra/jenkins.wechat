@@ -12,6 +12,10 @@ tags:
 - multi-branch
 - Pipeline
 - remote-file
+keywords:
+- Jenkins 多分支流水线
+- Jenkins
+- remote-file
 ---
 
 Jenkins 是 DevOps 领域里非常好的 CI/CD 工具，它凭借其独特的功能，几乎可以满足你一切的的业务要求。其中一个独特的功能是多分支流水线(Multi-branch 流水线)，可以动态配置流水线。但是，随着公司的发展，单独的多分支流水线并不能完全满足你的所有需求，特别是在涉及大型企业时，你需要考虑流水线的集中管理，治理，稳定性，限制和安全性等其他事项。因此对于具有 Jenkins 流水线的大规模 CI/CD 环境，你需要添加之前没有想到的更多功能。
