@@ -4,8 +4,8 @@ description: "持续测试究竟是什么？你又如何实现它呢？"
 author: Sushil Kumar
 translator: tomatofrommars
 original: https://dzone.com/articles/continuous-testing-what-why-and-how
-poster: "./2019-08-04-continuous-testing-what-why-and-how/1440x950_canvas_test_automation.jpg"
-date: 2019-08-04
+poster: "./2019-08-14-continuous-testing-what-why-and-how/1440x950_canvas_test_automation.jpg"
+date: 2019-08-14
 tags:
 - 测试
 - 持续测试
@@ -15,7 +15,7 @@ tags:
 toc: true
 ---
 
-![图片](./2019-08-04-continuous-testing-what-why-and-how/1440x950_canvas_test_automation.jpg)
+![图片](./2019-08-14-continuous-testing-what-why-and-how/1440x950_canvas_test_automation.jpg)
 
 敏捷，DevOps 和持续交付已然存在于现今每个技术人员的词汇当中。我们都想要像硅谷里的巨头和初创公司一样，敏捷开发，快速发布软件，做出创新的产品。
 向敏捷转型在多方面都已有总结，并且到了能被顺利实践的程度。然而，测试仍然是一个有思想困惑和实践挑战的领域。 当软件发布周期从以年、月缩短到以周、天为单位，或者更短时；
@@ -23,7 +23,7 @@ toc: true
 
 鉴于大多数 DevOps 实践仍然把测试视为软件生产中最令人头疼的瓶颈，显然，这是一个常见的挑战。
 
-![图片](./2019-08-04-continuous-testing-what-why-and-how/continuous-testing-main-hold-ups.png)
+![图片](./2019-08-14-continuous-testing-what-why-and-how/continuous-testing-main-hold-ups.png)
 
 持续测试就是答案，但持续测试究竟是什么？你又如何实现它呢？
 维基百科定义[持续测试](https://en.wikipedia.org/wiki/Continuous_testing)为「在软件交付流水线中执行自动化测试的过程，目的是为了获得关于预发布软件业务风险的即时反馈」。
@@ -36,7 +36,7 @@ toc: true
 事实上很多[持续交付的最佳实践](https://www.blazemeter.com/blog/5-ci-cd-best-practices-for-better-code-quality)都会告诉你，你不能简单的在没有持续测试的情况下去做持续交付。
 如果你认为你的迭代时间不允许你去做一个综合的测试，很有可能是你对它的理解[有误](https://www.testingexcellence.com/testing-agile-sprint-short/)。
 
-![图片](./2019-08-04-continuous-testing-what-why-and-how/testing-embedded-throughout-sdlc.png)
+![图片](./2019-08-14-continuous-testing-what-why-and-how/testing-embedded-throughout-sdlc.png)
 
 ## 七个步骤实现持续测试
 ### 1. 尽早规划测试，甚至早于写代码
