@@ -10,7 +10,7 @@ tags:
 - 招募
 keywords:
 - cd
-- hackson
+- hackathon
 - 志愿者
 poster: "./2019-08-09-volunteer-recruitment/needyou.jpeg"
 ---
@@ -23,15 +23,15 @@ poster: "./2019-08-09-volunteer-recruitment/needyou.jpeg"
 * Jenkins 中文社区
 
 ## 合作方
-* Cloudbees
+* CloudBees
 * 码云
 * 开源社
 
 ## 志愿者招募
-如有意愿参与黑客松活动的小伙伴，欢迎踊跃报名。我们会认真、仔细地筛选符合条件的报名者。
+如有意愿参与黑客松活动，欢迎踊跃报名。我们会认真、仔细地筛选符合条件的报名者。
 
 ### 报名方式
-发邮件到[event@jenkins-zh.cn](mailto:event@jenkins-zh.cn?subject=持续交付黑客松--志愿者报名)，内容如下，请如实填写（注： Github ID 示例：https://github.com/githubId）：
+发送邮件到[event@jenkins-zh.cn](mailto:event@jenkins-zh.cn?subject=持续交付黑客松--志愿者报名)，内容如下，请如实填写（注： GitHub ID 示例：https://github.com/githubId）：
 ```
 活动名称：
 姓名：
@@ -40,7 +40,8 @@ poster: "./2019-08-09-volunteer-recruitment/needyou.jpeg"
 职业：
 联系电话：
 微信号：
-Github ID:
+GitHub ID:
+T 恤尺码:
 个人擅长：
 参加志愿者的初衷：
 
