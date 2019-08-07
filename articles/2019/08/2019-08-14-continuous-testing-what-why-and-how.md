@@ -36,7 +36,7 @@ toc: true
 事实上很多[持续交付的最佳实践](https://www.blazemeter.com/blog/5-ci-cd-best-practices-for-better-code-quality)都会告诉你，你不能简单的在没有持续测试的情况下去做持续交付。
 如果你认为你的迭代时间不允许你去做一个综合的测试，很有可能是你对它的理解[有误](https://www.testingexcellence.com/testing-agile-sprint-short/)。
 
-![嵌入测试到过程中](testing-embedded-throughout-sdlc.png)
+![测试嵌入到软件开发周期](testing-embedded-throughout-sdlc.png)
 
 ## 七个步骤实现持续测试
 ### 1. 尽早规划测试，甚至早于写代码
