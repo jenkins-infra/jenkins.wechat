@@ -32,9 +32,7 @@
 
 1、在看板上找到感兴趣的文章([任务看板地址](https://github.com/orgs/jenkins-zh/projects/2)	)
 
-![img](../images/readme/github1.png) 
-
- 
+![img](../images/readme/github1.png)  
 
 2、找管理员开通编辑看板功能 (管理员开通) 
 
@@ -42,9 +40,7 @@
 
 ![img](../images/readme/ReviewInProgress.png) 
 
-![img](../images/readme/EditNote.png) 
-
- 
+![img](../images/readme/EditNote.png)  
 
 4、主要翻译标题+内容，参考[翻译规范](https://github.com/jenkins-zh/translation-spec/blob/master/specification.md)，超链接需要附上。
 
@@ -54,9 +50,7 @@
 
 7、打开工程，请认仔细读工程中 README.md文档。里面有详细介绍了翻译后的文章要放在那里，怎么命名，Markdown格式问题等。
 
-![img](../images/readme/ReadMe.png) 
-
- 
+![img](../images/readme/ReadMe.png)  
 
 8、添加翻译的文章
 
