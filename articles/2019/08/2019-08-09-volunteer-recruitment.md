@@ -28,6 +28,7 @@ poster: "./2019-08-09-volunteer-recruitment/needyou.jpeg"
 * CloudBees
 * 码云
 * 开源社
+* 微软
 
 ## 志愿者招募
 如有意愿参与黑客松活动，欢迎踊跃报名。我们会认真、仔细地筛选符合条件的报名者。
