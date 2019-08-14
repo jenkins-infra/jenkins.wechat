@@ -5,6 +5,10 @@ date: 2019-08-15
 tags:
 - pipeline
 - blueocean
+keywords:
+- pipeline
+- blueocean
+- jenkins
 toc: true
 author: dwnusbaum
 translator: linuxsuren
