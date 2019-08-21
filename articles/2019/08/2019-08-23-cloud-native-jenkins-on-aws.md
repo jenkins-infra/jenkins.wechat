@@ -1,7 +1,7 @@
 ---
 title: "AWS 上的云原生 Jenkins"
 description: "我们如何运用 Terraform、Packer、Docker、Vault、和 ELB、ASG、ALB 或 EFS 等 AWS 服务实现 Jenkins Cloud-native，以及我们一路走来的收获"
-date: 2019-07-01
+date: 2019-08-23
 tags:
 - AWS
 keywords:
