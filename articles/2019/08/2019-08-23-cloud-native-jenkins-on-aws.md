@@ -10,7 +10,7 @@ author: Alberto Alvarez
 original: https://medium.com/bench-engineering/cloud-native-jenkins-on-aws-b5c957c4fe18
 translator: 
 toc: true
-poster: "./2019-06-27-introducing-the-jenkins-templating-engine/JTE.jpg"
+poster: "butler-in-action.png"
 ---
 
 ![“Butler in action” by Bernyce Hollingworth](butler-in-action.png)
