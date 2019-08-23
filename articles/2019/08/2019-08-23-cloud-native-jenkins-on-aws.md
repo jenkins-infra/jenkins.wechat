@@ -1,6 +1,6 @@
 ---
 title: "AWS 上的云原生 Jenkins"
-description: "我们如何运用 Terraform、Packer、Docker、Vault、和 ELB、ASG、ALB 或 EFS 等 AWS 服务实现 Jenkins Cloud-native，以及我们一路走来的收获"
+description: "我们如何运用 Terraform、Packer、Docker、Vault、ELB、ASG、ALB 或 EFS 等 AWS 服务实现 Jenkins Cloud-native，以及我们一路走来的收获"
 date: 2019-08-23
 tags:
 - AWS
@@ -41,7 +41,7 @@ docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins
 
 这是一种有效的方法，但我们认为这个方法不能达到我们的标准，因为 jenkins_home 不仅包括状态，还包括配置。Block storage 拥有大量用户案例，但一个小小的配置修改就必须进行 snapshot 恢复操作，这似乎并不算是好的解决方案。此外，我们并不是想转移问题：外部存储无法免去手动配置、凭据储存在文件系统等问题。
 
-## SCM救援
+## SCM 救援
 过去，我们用了 [Jenkins 备份插件](https://plugins.jenkins.io/backup)，该插件基本上把配置修改备份在源码控制里，允许配置恢复。这个插件的设计想法很棒，但我们决定不使用它，因为我们无法轻松控制哪些数据实现备份，而且该插件自2011年就没有任何更新了。
 
 这样的话，如果我们把 jenkins_home 创建成个人 Git repo，并自动提交对 Jenkins 所做的修改呢？此处的关键是排除单独储存的任何二进制文件、secrets 或大型文件（稍后详细介绍）。我们的 .gitignore 文件如下所示：
