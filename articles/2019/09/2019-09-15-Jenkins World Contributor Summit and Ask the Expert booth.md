@@ -20,7 +20,7 @@ tags:
 
 ![jenkins-world-contributor-summit](cover.jpeg)
 
-Jenkins 15周岁啦！Jenkins World 将 DevOps 思想领袖、IT 主管、持续交付实践者以及 Jenkins 社区和生态系统齐聚这场全球活动，让与会者有机会学习、探索以及面对面交流，帮助塑造 Jenkins 的下一次发展以及针对DevOps的解决方案.
+Jenkins 15周岁啦！Jenkins World 将 DevOps 思想领袖、IT 主管、持续交付实践者以及 Jenkins 社区和生态系统齐聚这场全球活动，让与会者有机会学习、探索以及面对面交流，帮助塑造 Jenkins 的下一次发展以及针对 DevOps 的解决方案.
 
 此外，Jenkins 贡献者峰会也于旧金山举行。Jenkins 贡献者峰会是现有贡献者以及未来贡献者围绕 Jenkins 项目，以最新思考和最大努力来共同探讨、学习和协作的地方。上午峰会安排是由核心贡献者进行一系列展示介绍。这些介绍突出了每项工作的内容，以及社区成员可以提供哪些帮助。下午分组讨论会上，与同好小组进行了深入讨论，并同子项目贡献者进行合作。
 
