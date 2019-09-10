@@ -6,7 +6,7 @@ translator: shunw19
 original: https://jenkins.io/blog/2019/08/25/jenkinsworld-contrib-summit-ask-the-expert-booth/
 poster: "./2019-09-15-jenkins-world-contributor-summit/cover.jpeg"
 toc: false
-date: 2019-08-25
+date: 2019-09-15
 tags:
 - jenkinsworld
 - devopsworld2019
@@ -16,7 +16,6 @@ tags:
 - events
 - contributorsummit
 - asktheexperts
-
 ---
 
 ![jenkins-world-contributor-summit](cover.jpeg)
@@ -45,32 +44,32 @@ GSoC 学生 Natasha Stopa 介绍了她的项目——Plugin Installation Manager
 
 ![jenkins-world-contributor-summit](slide.jpeg)
 
-# 主展厅
+## 主展厅
 从第二天起，我和其他几位 Jenkins 组织管理者将在 Jenkins 社区的权威答疑（Ask the Expert）展位。
 
 ![jenkins-world-contributor-summit](author-pic.png)
 
-这真的是一场非常有意思的体验，让我有机会了解社区正在做什么，帮助他们解决面对的问题。问题涉及的范围很广，从 Jenkins X 到我负责维护的种种插件，如 Jenkins Prometheus 和  Sysdig Secure 扫描插件。也有很多关于 Kubernetes 的问题。有很多关于 Kubernetes 使用情况提高的市场营销方面的数据，但对 Kubernetes 上 Jenkins 的超高兴趣度真的让我大吃一惊。当然，也有机会拍点儿自拍。
+这真的是一场非常有意思的体验，让我有机会了解社区正在做什么，帮助他们解决面对的问题。问题涉及的范围很广，从 Jenkins X 到我负责维护的种种插件，如 Jenkins Prometheus 和  Sysdig Secure Scanning 插件。也有很多关于 Kubernetes 的问题。有很多关于 Kubernetes 使用情况提高的市场营销方面的数据，但对 Kubernetes 上 Jenkins 的超高兴趣度真的让我大吃一惊。当然，也有机会拍点儿自拍。
 
 ![jenkins-world-contributor-summit](pic.png)
 
-午餐时段的demo开始，我们的流程很紧凑。第一个上台的是超棒的 Mark Waite，他来谈谈 Git 插件。很多人在 Jenkins 上用 git。非常感谢 Mark 的分享。
+午餐时段的 demo 开始，我们的流程很紧凑。第一个上台的是超棒的 Mark Waite，他来谈谈 Git 插件。很多人在 Jenkins 上用 git。非常感谢 Mark 的分享。
 
 ![jenkins-world-contributor-summit](presentation.jpg)
 
-下一位是Jenkins 组织管理者 Martin d’Anjou，他介绍了 GSoC。让人难以相信的是，GSoC 也和 Jenkins 一样成立15周年了！
+下一位是 Jenkins 组织管理者 Martin d’Anjou，他介绍了 GSoC。让人难以相信的是，GSoC 也和 Jenkins 一样成立15周年了！
 
 ![jenkins-world-contributor-summit](gsoc-presentation.jpeg)
 
-Natasha Stopa 是参与 GSoC 的学生，她介绍了自己的项目Plugin Installation Manager Library/CLI Tool。Natasha 真的在这个插件上做了很多努力，能在她的展示中看到结果和支持真的是太棒了。
+Natasha Stopa 是参与 GSoC 的学生，她介绍了自己的项目 Plugin Installation Manager Library/CLI Tool。Natasha 真的在这个插件上做了很多努力，能在她的展示中看到结果和支持真的是太棒了。
 
 ![jenkins-world-contributor-summit](natasha.jpeg)
 
-最后压轴的就是我了。我展示了正在维护的Sysdig Secure 扫描 Jenkins 插件。感谢每一位当场的朋友。
+最后压轴的就是我了。我展示了正在维护的 Sysdig Secure Scanning 的 Jenkins 插件。感谢每一位当场的朋友。
 
 ![jenkins-world-contributor-summit](author-presentation.jpeg)
 
-就在午餐demo之后，我顺道去看了下 Jenkins 开放区。这对社区而言，是讨论议题、自主活动的机会。我真的非常享受这次讨论会，觉得该形式在与会人员中的接受程度很好。
+就在午餐 demo 之后，我顺道去看了下 Jenkins 开放区。这对社区而言，是讨论议题、自主活动的机会。我真的非常享受这次讨论会，觉得该形式在与会人员中的接受程度很好。
 
 ![jenkins-world-contributor-summit](jenkins-open-space.jpeg)
 
@@ -78,8 +77,8 @@ Natasha Stopa 是参与 GSoC 的学生，她介绍了自己的项目Plugin Insta
 
 ![jenkins-world-contributor-summit](attendee-pic.png)
 
-# 结语
-这是一场无与伦比的非凡体验。非常感谢 CloudBees、Jenkins 社区、GSoC、Tracy Miranda、Alyssa Tong和我的公司 Sysdig。
+## 结语
+这是一场无与伦比的非凡体验。非常感谢 CloudBees、Jenkins 社区、GSoC、Tracy Miranda、Alyssa Tong 和我的公司 Sysdig。
 
 想到 Jenkins 成立15周年，真是太了不起了！我们完成了那么多事情，未来也格外灿烂。非常感谢让我有幸为社区服务，成为社区的一部分。未来还有更多个15年！
 
