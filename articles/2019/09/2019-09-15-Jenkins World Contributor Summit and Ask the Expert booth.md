@@ -88,13 +88,13 @@ Natasha Stopa 是参与 GSoC 的学生，她介绍了自己的项目 Plugin Inst
 如果你想和大家聊天讨论，可以在这找到我们：(https://jenkins.io/chat/)
 如果你想给我们发邮件,请发送至:(https://jenkins.io/mailing-lists/)
 
-# 现场照片
+## 现场照片
 ![jenkins-world-contributor-summit](event-one.png)
 ![jenkins-world-contributor-summit](event-two.png)
 ![jenkins-world-contributor-summit](event-three.png)
 ![jenkins-world-contributor-summit](ask-the-experts.png)
 
-#关于作者
+## 关于作者
 Marky Jackson (https://jenkins.io/blog/authors/markyjackson-taulia/)
 
 该作者没有设置个人简介，请参阅下方社交媒体链接。
