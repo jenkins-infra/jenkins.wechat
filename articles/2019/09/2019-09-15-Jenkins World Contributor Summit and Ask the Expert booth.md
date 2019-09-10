@@ -27,7 +27,7 @@ Jenkins 15周岁啦！Jenkins World 将 DevOps 思想领袖、IT 主管、持续
 我非常荣幸能成为其中一员。
 ![jenkins-world-contributor-summit](pass-card.jpeg)
 
-# 第一天
+## 第一天
 第一天以贡献者峰会开场。这让大家有机会聚在一起讨论对社区的贡献，把脑海中熟悉的名字和本人对上号。大多数人我只通过视频聊天和在 gitter 上见过，所以当时我特别激动。我们聚在一起了解 Jenkins 开源画卷的起点。
 
 ![jenkins-world-contributor-summit](day-one-start.jpeg)
@@ -40,7 +40,7 @@ GSoC 学生 Natasha Stopa 介绍了她的项目——Plugin Installation Manager
 
 ![jenkins-world-contributor-summit](gsoc-student.jpeg)
 
-讨论会结尾是博思艾伦咨询公司（Booz Allen Hamilton）的 Steven Terrana 的展示和精彩的 Jenkins 模板引擎。如果你还没有试过这个，请一定不要错过 (https://github.com/boozallen/jenkins-templating-engine)。
+讨论会结尾是博思艾伦咨询公司（Booz Allen Hamilton）的 Steven Terrana 的展示和精彩的 Jenkins 模板引擎。如果你还没有试过这个，请一定不要错过[https://github.com/boozallen/jenkins-templating-engine] (https://github.com/boozallen/jenkins-templating-engine)。
 
 ![jenkins-world-contributor-summit](slide.jpeg)
 
