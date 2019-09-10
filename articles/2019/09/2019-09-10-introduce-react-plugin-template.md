@@ -1,10 +1,11 @@
 ---
 title: "React Plugin Template，让你可以使用 React 来编写 Jenkins 插件"
+description: "React Plugin Template，让你可以使用 React 来编写 Jenkins 插件"
 date: 2019-09-10
 tags:
 - react
-- 插件
-- 模板
+- plugin
+- template
 - gsoc
 - gsoc2019
 author: jackshen
