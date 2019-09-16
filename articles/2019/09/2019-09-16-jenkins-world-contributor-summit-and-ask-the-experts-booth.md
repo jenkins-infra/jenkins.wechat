@@ -1,6 +1,6 @@
 ---
 title: "Jenkins World 贡献者峰会及权威答疑展位"
-description: "本文为 Jenkins World 贡献者峰会活动期间的记录。“
+description: "本文为 Jenkins World 贡献者峰会活动期间的记录“
 author: Marky Jackson
 translator: shunw19
 original: https://jenkins.io/blog/2019/08/25/jenkinsworld-contrib-summit-ask-the-expert-booth/
