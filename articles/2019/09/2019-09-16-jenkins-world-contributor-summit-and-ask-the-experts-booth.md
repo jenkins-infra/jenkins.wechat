@@ -1,5 +1,5 @@
 ---
-title: "Jenkins World 贡献者峰会及权威答疑展位"
+title: "Jenkins World 贡献者峰会及专家答疑展位"
 description: "本文为 Jenkins World 贡献者峰会活动期间的记录“
 author: Marky Jackson
 translator: shunw19
@@ -45,7 +45,7 @@ GSoC 学生 Natasha Stopa 介绍了她的项目——Plugin Installation Manager
 ![jenkins-world-contributor-summit](slide.png)
 
 ## 主展厅
-从第二天起，我和其他几位 Jenkins 组织管理者将在 Jenkins 社区的权威答疑（Ask the Expert）展位。
+从第二天起，我和其他几位 Jenkins 组织管理者将在 Jenkins 社区的专家答疑（Ask the Expert）展位。
 
 ![jenkins-world-contributor-summit](author-pic.png)
 
