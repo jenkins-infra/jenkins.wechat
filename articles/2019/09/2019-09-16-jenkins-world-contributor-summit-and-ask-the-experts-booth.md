@@ -18,7 +18,7 @@ tags:
 - asktheexperts
 ---
 
-![jenkins-world-contributor-summit](cover.jpeg)
+![jenkins-world-contributor-summit](ask-the-experts.png)
 
 Jenkins 15周岁啦！Jenkins World 将 DevOps 思想领袖、IT 主管、持续交付实践者以及 Jenkins 社区和生态系统齐聚这场全球活动，让与会者有机会学习、探索以及面对面交流，帮助塑造 Jenkins 的下一次发展以及针对 DevOps 的解决方案。
 
