@@ -12,6 +12,7 @@ author: jackshen
 poster: "plugin-ui.jpg"
 ---
 模板地址
+
 [React Plugin Template](https://github.com/jenkinsci/react-plugin-template)
 https://github.com/jenkinsci/react-plugin-template
 
@@ -21,9 +22,9 @@ https://github.com/jenkinsci/react-plugin-template
 
 链接：
 
-GSoC：Working Hours UI Improvement https://summerofcode.withgoogle.com/projects/#6112735123734528 
+[GSoC：Working Hours UI Improvement](https://summerofcode.withgoogle.com/projects/#6112735123734528) https://summerofcode.withgoogle.com/projects/#6112735123734528 
 
-Github：Working Hours 插件 https://github.com/jenkinsci/working-hours-plugin
+[Github：Working Hours 插件](https://github.com/jenkinsci/working-hours-plugin) https://github.com/jenkinsci/working-hours-plugin
 
 
 ## 概述
@@ -95,7 +96,7 @@ Jenkins 使用了一个叫做 Stapler的框架来处理请求。你可以使用�
 
 链接
 
-Stapler Reference http://stapler.kohsuke.org/reference.html.
+[Stapler Reference](http://stapler.kohsuke.org/reference.html) http://stapler.kohsuke.org/reference.html.
 
 ### 示例 handler
 
