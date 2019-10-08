@@ -9,10 +9,10 @@ pipeline {
     }
 
     stages{
-        when {
-            branch 'master'
-        }
         stage("Notify"){
+            when {
+                branch 'master'
+            }
             steps{
                 withCredentials([string(credentialsId: '0404af2d-8738-402e-922d-5acee65d3059', variable: 'TOKEN')]) {
                     sh '''
