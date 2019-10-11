@@ -8,7 +8,7 @@ tags:
 keywords:
 - DEVOPS JENKINS
 author:  Abhyudaya Sharma
-translator: wenjunzhangp
+translator: wenjunzhangp test
 ---
 
 在我的 Google Summer of Code Projec t期间，我创建了全新的 Folder Auth 插件，可轻松管理 Folders 插件对文件夹中组织的项目的权限。这个新插件旨在通过易于管理的角色进行快速权限检查。该插件的1.0版本刚刚发布，可以从您的 Jenkins 更新中心下载。
