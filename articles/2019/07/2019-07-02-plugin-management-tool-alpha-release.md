@@ -13,10 +13,10 @@ translator: zhaoying818
 ---
 
 _"人人都在重复造轮子，部分像实现插件管理的"细节"（签名元数据，制品校验和，从核心独立出来的插件...）。
-很明显， Jenkins 应该为实时 Jenkins 实例之外的插件安装提供充足的工具。"_ jira:JENKINS-53767[]
+很明显， Jenkins 应该为实时 Jenkins 实例之外的插件安装提供充足的工具。"_ [JENKINS-53767](https://issues.jenkins-ci.org/browse/JENKINS-53767)
 
 
-我的 link:/projects/gsoc/2019/plugin-installation-manager-tool-cli/[Google Summer of Code project] 项目试图解决这个问题，方法是创建一个库，该库将在 Jenkins 的不同实现中统一插件管理逻辑，并提供一个可以使用户轻松下载插件并在 Jenkins 启动之前查看插件信息的 CLI 工具。 
+我的 [Google Summer of Code project](https://jenkins.io/projects/gsoc/2019/plugin-installation-manager-tool-cli/) 项目试图解决这个问题，方法是创建一个库，该库将在 Jenkins 的不同实现中统一插件管理逻辑，并提供一个可以使用户轻松下载插件并在 Jenkins 启动之前查看插件信息的 CLI 工具。 
 我很高兴分享我们刚刚发布的 Alpha 版本，您可以在[此处](https://github.com/jenkinsci/plugin-installation-manager-tool/releases)查看！
 
 
