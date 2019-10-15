@@ -28,13 +28,13 @@ _"人人都在重复造轮子，部分像实现插件管理的"细节"（签名�
 
 模仿官方 Jenkins Docker 镜像中 [install-plugins.sh](https://github.com/jenkinsci/docker/blob/master/install-plugins.sh) 脚本中的操作，新的插件管理库接收插件列表、它们的版本和（或） URL，从中可以下载插件，并下载所需的插件及其依赖。插件从更新中心下载到指定目录，然后可以加载到 Jenkins 中。当前，可以通过 plugins.txt 文件和（或） -plugins 的 cli 选项指定要下载的插件，我们计划进一步扩展可以接收的输入格式。 还支持用于不同更新中心的[自定义版本说明符](https://github.com/jenkinsci/docker#plugin-version-format)。
 
-image::/images/post-images/gsoc-plugin-management-tool/pluginstxt.png[Example plugins.txt File]
+![Example plugins.txt File](pluginstxt.png)
 
 该库将首先检查当前是否在用户指定的下载位置或用户指定的 Jenkins war 文件中安装了任何请求的插件。如果要求更高版本或更高版本作为依赖项，则将忽略或升级已安装的插件。确定插件下载 URL 后，库将下载插件并解析和下载其依赖。
 
-image::/images/post-images/gsoc-plugin-management-tool/downloadexample.png[Example of Downloading Plugins]
+![Example of Downloading Plugins](downloadexample.png)
 
-image::/images/post-images/gsoc-plugin-management-tool/downloadedplugins.png[Plugin Download Directory]
+![Plugin Download Directory](downloadedplugins.png)
 
 这仅仅是个开始：插件管理器库和 cli 工具仍在开发中。 有关 CLI 选项以及如何运行该工具的最新信息，请参见[存储库 README.md ](https://github.com/jenkinsci/plugin-installation-manager-tool/blob/master/README.md)。 即将提供更强大的输入解析，对安全警告和可用更新的支持，Docker集成以及其他功能！
 
