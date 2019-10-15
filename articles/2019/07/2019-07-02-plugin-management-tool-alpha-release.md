@@ -1,7 +1,17 @@
 ---
 layout: post
 title: "Alpha 版本的插件管理库和 CLI 工具"
+description: "Alpha 版本的插件管理库和 CLI 工具"
+date: 2019-07-02
+original: "https://jenkins.io/blog/2019/07/02/plugin-management-tool-alpha-release/"
 tags:
+- plugins
+- pluginmanagement
+- platform-sig
+- cli
+- gsoc
+- gsoc2019
+keywords:
 - plugins
 - pluginmanagement
 - platform-sig
@@ -10,6 +20,10 @@ tags:
 - gsoc2019
 author: stopalopa
 translator: zhaoying818
+poster: 
+- pluginstxt.png
+- downloadexample.png
+- downloadedplugins.png
 ---
 
 _"人人都在重复造轮子，部分像实现插件管理的"细节"（签名元数据，制品校验和，从核心独立出来的插件...）。
