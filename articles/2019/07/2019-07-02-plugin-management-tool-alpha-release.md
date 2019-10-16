@@ -35,7 +35,7 @@ _"人人都在重复造轮子，部分像实现插件管理的"细节"（签名�
 
 ## GSoC 1 期更新
 
-当我考虑将[插件管理器](https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/PluginManager.java)从 Jenkins 核心中撤出时，由于依赖项的复杂性和数量，这最终成为了最具挑战性的第一步。相反，我们决定首先将 Jenkins Docker 中的 [install-plugins.sh bash 脚本](https://github.com/jenkinsci/docker/blob/master/install-plugins.sh)转换为 Java。 install-plugins.sh 脚本存在多个问题，即它是 bash 脚本并且扩展性有限，此外，它不会检索所有最新的更新中心的元数据。
+当我考虑将[插件管理器](https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/PluginManager.java)从 Jenkins 核心中移出时，由于依赖项的复杂性和数量，这最终成为了最具挑战性的第一步。相反，我们决定首先将 Jenkins Docker 中的 [install-plugins.sh bash 脚本](https://github.com/jenkinsci/docker/blob/master/install-plugins.sh)转换为 Java。 install-plugins.sh 脚本存在多个问题，即它是 bash 脚本并且扩展性有限，此外，它不会检索所有最新的更新中心的元数据。
 
 ## Alpha 版本详情
 
