@@ -53,7 +53,7 @@ _"人人都在重复造轮子，部分像实现插件管理的"细节"（签名�
 
 ## 链接和反馈
 
-欢迎通过[插件安装管理器 CLI 工具 Gitter 聊天](https://gitter.im/jenkinsci/plugin-installation-manager-cli-tool)或 [Jenkins 开发者邮件列表](mailto:jenkinsci-dev@googlegroups.com)与我们联系。我希望收到您的问题，评论和反馈！我们在世界标准时间下午6点（星期二和星期四）开会。
+欢迎通过[插件安装管理器 CLI 工具 Gitter 聊天室](https://gitter.im/jenkinsci/plugin-installation-manager-cli-tool)或 [Jenkins 开发者邮件列表](mailto:jenkinsci-dev@googlegroups.com)与我们联系。我希望收到您的问题，评论和反馈！我们在世界标准时间下午6点（星期二和星期四）开会。
 
 * [Phase 1 Presentation Slides](https://docs.google.com/presentation/d/12Bo8w9SinrG5n82w-Unjx4MNq0mjkHFEOMc3Jf6rTQQ/edit#slide=id.p1)
 * [Phase 1 Recorded Demo](https://youtu.be/MDs0Vr7gnnA?t=196)
