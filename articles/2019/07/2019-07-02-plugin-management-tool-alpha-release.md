@@ -19,10 +19,7 @@ keywords:
 - gsoc2019
 author: stopalopa
 translator: zhaoying818
-poster: 
-- pluginstxt.png
-- downloadexample.png
-- downloadedplugins.png
+poster: devopsworld.jpg
 ---
 
 _"人人都在重复造轮子，部分像实现插件管理的"细节"（签名元数据，制品校验和，从核心独立出来的插件...）。
