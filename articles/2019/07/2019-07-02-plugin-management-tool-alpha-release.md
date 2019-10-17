@@ -1,7 +1,7 @@
 ---
 title: "Alpha 版本的插件管理库和 CLI 工具"
 description: "Alpha 版本的插件管理库和 CLI 工具"
-date: 2019-07-02
+date: 2019-10-25
 original: "https://jenkins.io/blog/2019/07/02/plugin-management-tool-alpha-release/"
 tags:
 - plugins
