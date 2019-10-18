@@ -22,6 +22,8 @@ translator: zhaoying818
 poster: devopsworld.jpg
 ---
 
+![devopsworld File](devopsworld.jpg)
+
 _"人人都在重复造轮子，部分像实现插件管理的"细节"（签名元数据，制品校验和，从核心独立出来的插件...）。
 很明显， Jenkins 应该为实时 Jenkins 实例之外的插件安装提供充足的工具。"_ [JENKINS-53767](https://issues.jenkins-ci.org/browse/JENKINS-53767)
 
