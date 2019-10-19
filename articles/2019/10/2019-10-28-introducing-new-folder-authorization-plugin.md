@@ -69,14 +69,14 @@ jenkins:
 ```
 ## 带有 Swagger 支持的 REST API
 
-该插件提供 REST API ，用于通过 Swagger.json 管理具有 OpenAPI 规范的角色。您可以在 [SwaggerHub](https://app.swaggerhub.com/apis/abhyudaya/folder-auth/1.0.0s) 上签出 Swagger API 。SwaggerHub 提供了多种语言的存根，可以下载并用于与插件进行交互。您还可以使用 [curl](https://curl.haxx.se/) 从命令行查看一些示例请求。
+该插件提供 REST API ，用于通过 Swagger.json 管理具有 OpenAPI 规范的角色。您可以在 [SwaggerHub](https://app.swaggerhub.com/apis/abhyudaya/folder-auth/1.0.0s) 上查看 Swagger API 。SwaggerHub 提供了多种语言的存根，可以下载并用于与插件进行交互。您还可以使用 [curl](https://curl.haxx.se/) 从命令行查看一些示例请求。
 
 ![swagger](swagger.png)
 ![swagger2](swagger2.png)
 
 ## 接下来做什么
 
-在不久的将来，我想改进用户界面，使插件更容易使用。我还想改进 api 、文档和更多优化，以提高插件的性能。
+在不久的将来，我想改进用户界面，使插件更容易使用。我还希望改进 API 、文档和更多的优化来提高插件的性能。
 
 ## 链接和反馈
 
@@ -85,13 +85,6 @@ jenkins:
 * [Presentation slides for second phase evaluations](https://drive.google.com/file/d/1IVe3T8WdTILmb62PAIJveR4KbBWzPt1k/view?usp=sharing)
 * [Documentation for the Folder Auth Plugin](https://github.com/jenkinsci/folder-auth-plugin/blob/master/README.md)
 * [Demo of the Folder Authorization plugin](https://www.youtube.com/watch?v=tAUHfYYQrpo)
-
-## 关于作者
-
-# Abhyudaya Sharma
-
- Abhyudaya 是印度 Shiv Nadar 大学的计算机科学学生。他正在参与谷歌2019代码之夏，以 [Role Strategy Plugin](https://github.com/jenkinsci/role-strategy-plugin) 的性能。
- [GitHub](https://github.com/AbhyudayaSharma)
 
 
 
