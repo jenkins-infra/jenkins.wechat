@@ -9,7 +9,10 @@ keywords:
 - JENKINS FOLDER-AUTH-PLUGIN
 author:  Abhyudaya Sharma
 translator: wenjunzhangp
+poster: “./2019-10-28-introducing-new-folder-authorization-plugin/cover.jpg”
 ---
+
+![cover](cover.jpg)
 
 在我的 [Google Summer of Code Project](https://jenkins.io/projects/gsoc/2019/role-strategy-performance) 期间，我创建了全新的 [Folder Auth](https://plugins.jenkins.io/folder-auth) 插件，可轻松管理 [Folders plugin](https://plugins.jenkins.io/cloudbees-folder) 对文件夹中组织的项目的权限。这个新插件旨在通过易于管理的角色进行快速权限检查。该插件的1.0版本刚刚发布，可以从您的 Jenkins 更新中心下载。
 
