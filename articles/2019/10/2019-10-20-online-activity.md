@@ -6,7 +6,7 @@ keywords:
 - 线上活动
 author: linuxsuren
 toc: true
-poster: ""
+poster: "eagle.jpeg"
 ---
 
 ![eagle](eagle.jpeg)
