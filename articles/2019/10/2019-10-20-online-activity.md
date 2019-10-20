@@ -1,5 +1,5 @@
 ---
-title: "Jenkins 线上技术交流～多分支流水线"
+title: "Jenkins 线上技术交流"
 description: "各种技术群里交流不过瘾？线上技术交流期待你的参与！"
 date: 2019-10-20
 keywords:
