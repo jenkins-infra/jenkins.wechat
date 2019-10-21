@@ -85,6 +85,3 @@ jenkins:
 * [Presentation slides for second phase evaluations](https://drive.google.com/file/d/1IVe3T8WdTILmb62PAIJveR4KbBWzPt1k/view?usp=sharing)
 * [Documentation for the Folder Auth Plugin](https://github.com/jenkinsci/folder-auth-plugin/blob/master/README.md)
 * [Demo of the Folder Authorization plugin](https://www.youtube.com/watch?v=tAUHfYYQrpo)
-
-
-
