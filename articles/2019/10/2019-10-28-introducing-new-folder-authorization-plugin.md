@@ -16,7 +16,7 @@ poster: “./2019-10-28-introducing-new-folder-authorization-plugin/cover.jpg”
 
 在我的 [Google Summer of Code Project](https://jenkins.io/projects/gsoc/2019/role-strategy-performance) 期间，我创建了全新的 [Folder Auth](https://plugins.jenkins.io/folder-auth) 插件，可轻松管理 [Folders plugin](https://plugins.jenkins.io/cloudbees-folder) 对文件夹中组织的项目的权限。这个新插件旨在通过易于管理的角色进行快速权限检查。该插件的 1.0 版本刚刚发布，可以从您的 Jenkins 更新中心下载。
 
-该插件的灵感来自角色策略插件，可改善性能并简化角色管理。开发该插件是为了克服 [Role Strategy Plugin](https://plugins.jenkins.io/role-strategy) 在许多角色上的性能限制。同时，该插件通过文件夹解决了 Jenkins 中组织项目最受欢迎的方式之一。该插件还具有一个新的 UI，将来会有更多改进。
+该插件的灵感来自角色策略插件，可改善性能并简化角色管理。开发该插件是为了解决 [Role Strategy Plugin](https://plugins.jenkins.io/role-strategy) 在许多角色上的性能限制。同时，该插件通过文件夹解决了 Jenkins 中组织项目最受欢迎的方式之一。该插件还具有一个新的 UI，将来会有更多改进。
 
 该插件支持三种类型的角色，分别适用于 Jenkins 中的不同位置。
 * 全局角色：适用于 Jenkins 的所有地方
@@ -28,10 +28,10 @@ poster: “./2019-10-28-introducing-new-folder-authorization-plugin/cover.jpg”
 ## 角色策略插件的性能改进
 与角色策略插件不同，此插件不使用正则表达式来查找匹配的项目和代理，从而改善了我们的性能并简化了管理员的工作。为了减少需要管理的角色数量，通过文件夹角色授予文件夹的权限将继承其所有子项。这对于通过单个角色访问多个项目很有用。同样，一个代理角色可以应用于多个代理，并分配给多个用户。
 
-此插件旨在在权限检查中胜过“角色策略插件”。使用我在 GSoC 项目第一阶段中创建的 [micro-benchmark framework](https://jenkins.io/blog/2019/06/21/performance-testing-jenkins/) 微基准框架进行了评估。两个插件的相同配置的基准测试表明，与角色策略 2.13 中的全局角色相比，对 500 个全局角色而言，权限检查的速度最高快   934 倍，后者本身包含了一些性能改进。将文件夹角色与“角色策略”的项目角色进行比较，可以对在 150 个用户的实例上组织在两层深度文件夹中的 250 个项目进行的权限检查，将访问作业的速度提高了将近 15 倍。您可以在[此处](https://github.com/jenkinsci/folder-auth-plugin/pull/13)查看基准和结果比较 。
+此插件旨在在权限检查中胜过“角色策略插件”。使用我在 GSoC 项目第一阶段中创建的 [micro-benchmark framework](https://jenkins.io/blog/2019/06/21/performance-testing-jenkins/) 微基准框架进行了评估。两个插件的相同配置的基准测试表明，与角色策略 2.13 中的全局角色相比，权限检查的速度最高快 934 倍，后者本身包含了一些性能改进。将文件夹角色与“角色策略”的项目角色进行比较，可以对在 150 个用户的实例上组织在两层深度文件夹中的 250 个项目进行的权限检查，将访问作业的速度提高了将近 15 倍。您可以在[此处](https://github.com/jenkinsci/folder-auth-plugin/pull/13)查看基准和结果比较 。
 
 ## Jenkins 配置作为代码支持
-该插件支持 Jenkins 的“代码配置”功能，因此您无需通过 Web UI 即可配置权限。YAML 配置如下所示：
+该插件支持 Jenkins 的“代码即配置”功能，因此您无需通过 Web UI 即可配置权限。YAML 配置如下所示：
 
 ``` javascript
 jenkins:
