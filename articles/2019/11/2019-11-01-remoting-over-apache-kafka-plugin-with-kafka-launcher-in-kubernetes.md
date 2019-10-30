@@ -48,7 +48,7 @@ mvn hpi:run
 
 ## Helm Chart
 
- Apache-Kafka 插件上远程处理的 Helm 图表基于 [stable/jenkins](https://github.com/helm/charts/tree/master/stable/jenkins) 图表和 [incubator/kafka](https://github.com/helm/charts/tree/master/incubator/kafka) 图表。截至目前，该图表仍在[进行中](https://github.com/jenkinsci/remoting-kafka-plugin/pull/62)，因为它仍在等待第 2 阶段的 CloudAPI 实现。但是，您可以使用一个独立的远程 Kafka 代理查看演示图表：
+ Apache-Kafka 插件上远程处理的 Helm 图表基于 [stable/jenkins](https://github.com/helm/charts/tree/master/stable/jenkins) 图表和 [incubator/kafka](https://github.com/helm/charts/tree/master/incubator/kafka) 图表。截至目前，该图表仍在[开发中](https://github.com/jenkinsci/remoting-kafka-plugin/pull/62)，因为它仍在等待第 2 阶段的 CloudAPI 实现。但是，您可以使用一个独立的远程 Kafka 代理查看演示图表：
 
 ``` javascript
 git clone -b demo-helm-phase-1 https://github.com/longngn/remoting-kafka-plugin.git
@@ -68,7 +68,7 @@ jenkins:
         launcher:
           kafka: {}
 ```
-* 启动单个 Remoting Kafka Agent 窗格。
+* 启动单个 Remoting Kafka Agent pod 。
 您可以通过运行 kubectl 来检查图表状态，例如:
 ``` javascript
 $ kubectl get all -n demo-helm
