@@ -5,10 +5,10 @@ date: 2019-11-06
 original: "https://www.linkedin.com/pulse/building-new-operating-model-devops-jon-hammant/"
 tags:
 - DevOps
-- operating model
+- 运营转型
 keywords:
 - DevOps
-- operating model
+- 运营转型
 author: Jon Hammant
 translator: zhaoying818
 poster: devops.jpg
