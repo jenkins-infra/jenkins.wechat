@@ -4,9 +4,9 @@ description: "在 Kubernetes 中通过 Apache Kafka 插件远程处理 Kafka 启
 date: 2019-11-01
 original: "https://jenkins.io/blog/2019/07/11/remoting-kafka-kubernetes-phase-1/"
 tags:
-- remoting kafka kubernetes helm developer gsoc gsoc2019
+- kafka kubernetes helm
 keywords:
-- remoting kafka kubernetes helm developer gsoc gsoc2019
+- Remoting kafka kubernetes
 author:  Long Nguyen
 translator: wenjunzhangp
 poster: “./2019-11-01-remoting-over-apache-kafka-plugin-with-kafka-launcher-in-kubernetes/cover.jpg”
@@ -14,25 +14,25 @@ poster: “./2019-11-01-remoting-over-apache-kafka-plugin-with-kafka-launcher-in
 
 ![cover](cover.jpg)
 
-我是越南 FPT 大学的龙阮。 [Remoting over Apache Kafka with Kubernetes features](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features/) 是我在谷歌 2019 代码之夏的项目。这是我第一次为 Jenkins 做贡献，我非常兴奋地宣布在第一阶段已经完成的功能。
+[Remoting over Apache Kafka with Kubernetes features](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features/) 是我在谷歌活动中开发的项目。这是我第一次为 Jenkins 做贡献，我非常兴奋地宣布在第一阶段已经完成的功能。
 
 ## 项目介绍
 
-当前版本的 [Remoting over Apache Kafka plugin](https://github.com/jenkinsci/remoting-kafka-plugin) 远程处理需要用户手动配置整个系统，包括 zookeeper 、 kafka 和远程处理代理。它也不支持动态代理配置，因此很难实现可伸缩性。我的项目旨在解决两个问题：
-* 提供 Apache-Kafka 集群的现成解决方案。
-*  Kubernetes 集群中的动态代理配置。
+当前版本的 [Remoting over Apache Kafka plugin](https://github.com/jenkinsci/remoting-kafka-plugin) 远程处理需要用户手动配置整个系统，包括 zookeeper 、 kafka 和远程处理代理。它也不支持动态代理配置，因此很难实现具有伸缩性的扩展。我的项目旨在解决两个问题：
+1. 提供 Apache-Kafka 集群的现成解决方案。
+2.  Kubernetes 集群中的动态代理配置。
 
 ## 当前状态
 
 * 支持凭据的 Kubernetes 连接器。
-* 在 Kubernetes 特性中完全实现了 Apache-Kafka 配置。
+*  Kubernetes 功能中的 ApacheKafka 预配功能已完全实现。
 *  Helm chart 部分实现。
 
 ##  Kubernetes 中的 Apache-Kafka 配置
 
-此功能是 2.0 版本的一部分，因此尚未正式发布。您可以通过使用 [Experimental Update Center](https://jenkins.io/doc/developer/publishing/releasing-experimental-updates/) 更新到 2.0.0-alpha 版本或直接从 master branch 构建来尝试该功能：
+此功能是 2.0 版本的一部分，因此尚未正式发布。您可以通过使用 [Experimental Update Center](https://jenkins.io/doc/developer/publishing/releasing-experimental-updates/) 更新到 2.0.0-alpha 版本或直接从 master 分支构建来尝试该功能：
 
-``` javascript
+```
 git clone https://github.com/jenkinsci/remoting-kafka-plugin.git
 cd remoting-kafka-plugin/plugin
 mvn hpi:run
@@ -42,24 +42,24 @@ mvn hpi:run
 
 ![kafka-provisioning-kubernetes-ui](kafka-provisioning-kubernetes-ui.png)
 
-当用户单击“在 Kubernetes 上启动 Kafka ”按钮时， Jenkins 将根据信息创建一个 Kubernetes 客户机，然后从资源中应用 zookeeper 和 kafka yaml 规范文件。
+当用户单击 `Start Kafka on Kubernetes` 按钮时， Jenkins 将根据信息创建一个 Kubernetes 客户机，然后从 `resources` 中应用 zookeeper 和 kafka yaml 规范文件。
 
 ![kafka-provisioning-kubernetes-architecture](kafka-provisioning-kubernetes-architecture)
 
 ## Helm Chart
 
- Apache-Kafka 插件上远程处理的 Helm 图表基于 [stable/jenkins](https://github.com/helm/charts/tree/master/stable/jenkins) 图表和 [incubator/kafka](https://github.com/helm/charts/tree/master/incubator/kafka) 图表。截至目前，该图表仍在[开发中](https://github.com/jenkinsci/remoting-kafka-plugin/pull/62)，因为它仍在等待第 2 阶段的 CloudAPI 实现。但是，您可以使用一个独立的远程 Kafka 代理查看演示图表：
+ Apache-Kafka 插件上远程处理的 Helm 图表基于 [stable/jenkins](https://github.com/helm/charts/tree/master/stable/jenkins) 图表和 [incubator/kafka](https://github.com/helm/charts/tree/master/incubator/kafka) 图表。截至目前，该图表仍在[开发中](https://github.com/jenkinsci/remoting-kafka-plugin/pull/62)，因为它仍在等待第 2 阶段的 Cloud API 实现。但是，您可以使用一个独立的远程 Kafka 代理查看演示图表：
 
-``` javascript
+```
 git clone -b demo-helm-phase-1 https://github.com/longngn/remoting-kafka-plugin.git
 cd remoting-kafka-plugin
 K8S_NODE=<your Kubernetes node IP> ./helm/jenkins-remoting-kafka/do.sh start
 ```
 
-命令 do.sh start 将执行以下步骤：
-* 安装图标( Jenkins Kafka )。
+命令 `do.sh start` 将执行以下步骤：
+* 安装图标(Jenkins Kafka)。
 * 通过应用下面的 JCasC 在 Jenkins master 上启动一台 Kafka 计算机。
-``` javascript
+```
 jenkins:
   nodes:
     - permanent:
@@ -69,8 +69,8 @@ jenkins:
           kafka: {}
 ```
 * 启动单个 Remoting Kafka Agent pod 。
-您可以通过运行 kubectl 来检查图表状态，例如:
-``` javascript
+您可以通过运行 `kubectl` 来检查图表状态，例如:
+```
 $ kubectl get all -n demo-helm
 NAME                                    READY   STATUS    RESTARTS   AGE
 pod/demo-jenkins-998bcdfd4-tjmjs        2/2     Running   0          6m30s
