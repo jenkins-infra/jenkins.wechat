@@ -38,11 +38,11 @@ cd remoting-kafka-plugin/plugin
 mvn hpi:run
 ```
 
-在全局配置页面上，用户可以输入 Kubernetes 服务器信息和凭据。然后他们只需单击一个按钮就可以启动 ApacheKafka 。
+在全局配置页面上，用户可以输入 Kubernetes 服务器信息和凭据。然后他们只需点击一个按钮就可以启动 ApacheKafka 。
 
 ![kafka-provisioning-kubernetes-ui](kafka-provisioning-kubernetes-ui.png)
 
-当用户单击 `Start Kafka on Kubernetes` 按钮时， Jenkins 将根据信息创建一个 Kubernetes 客户机，然后从 `resources` 中应用 zookeeper 和 kafka yaml 规范文件。
+当用户点击 `Start Kafka on Kubernetes` 按钮时， Jenkins 将根据信息创建一个 Kubernetes 客户机，然后从 `resources` 中应用 zookeeper 和 kafka yaml 规范文件。
 
 ![kafka-provisioning-kubernetes-architecture](kafka-provisioning-kubernetes-architecture)
 
@@ -57,7 +57,7 @@ K8S_NODE=<your Kubernetes node IP> ./helm/jenkins-remoting-kafka/do.sh start
 ```
 
 命令 `do.sh start` 将执行以下步骤：
-* 安装图标(Jenkins Kafka)。
+* 安装图表（与 Jenkins 和 Kafka 一起使用）。
 * 通过应用下面的 JCasC 在 Jenkins master 上启动一台 Kafka 计算机。
 ```
 jenkins:
