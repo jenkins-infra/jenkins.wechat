@@ -1,7 +1,7 @@
 ---
 title: "在 Kubernetes 中通过 Apache Kafka 插件远程处理 Kafka 启动程序"
 description: "在 Kubernetes 中通过 Apache Kafka 插件远程处理 Kafka 启动程序"
-date: 2019-11-01
+date: 2019-11-08
 original: "https://jenkins.io/blog/2019/07/11/remoting-kafka-kubernetes-phase-1/"
 tags:
 - kafka kubernetes helm
@@ -9,12 +9,12 @@ keywords:
 - Remoting kafka kubernetes
 author:  Long Nguyen
 translator: wenjunzhangp
-poster: “./2019-11-01-remoting-over-apache-kafka-plugin-with-kafka-launcher-in-kubernetes/cover.jpg”
+poster: “./2019-11-08-remoting-over-apache-kafka-plugin-with-kafka-launcher-in-kubernetes/cover.jpg”
 ---
 
 ![cover](cover.jpg)
 
-[Remoting over Apache Kafka with Kubernetes features](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features/) 是我在谷歌活动中开发的项目。这是我第一次为 Jenkins 做贡献，我非常兴奋地宣布在第一阶段已经完成的功能。
+我是越南 FPT 大学的 Long Nguyen ，我的 Google Summer of Code 2019 项目是 [Remoting over Apache Kafka with Kubernetes features](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features/) 。这是我第一次为 Jenkins 做贡献，我非常兴奋地宣布在第一阶段已经完成的功能。
 
 ## 项目介绍
 
