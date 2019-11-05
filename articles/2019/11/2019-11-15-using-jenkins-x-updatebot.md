@@ -2,7 +2,7 @@
 title: "了解如何使用 Jenkins-X UpdateBot"
 description: "了解如何使用 Jenkins-X UpdateBot 自动执行对依赖版本的更新。"
 date: 2019-11-15
-original: "https://dzone.com/articles/using-jenkins-x-updatebot/"
+original: "https://dzone.com/articles/using-jenkins-x-updatebot"
 tags:
 - Jenkins-X
 - UpdateBot
