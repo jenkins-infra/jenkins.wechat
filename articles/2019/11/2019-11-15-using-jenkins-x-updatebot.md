@@ -19,7 +19,7 @@ poster: “./2019-11-15-using-jenkins-x-updatebot/cover.jpg”
 
 [Jenkins-X UpdateBot](https://github.com/jenkins-x/updatebot) 是用于在项目源代码中自动更新依赖项版本的工具。假设您正在构建两个项目 A 和 B，B 使用 A 作为依赖项。A 的发布过程可以使用 UpdateBot 更新项目 B 的源，以使用 A 的新版本。在 pull request 中使用 UpdateBot，可以测试和检查更改或自动合并更改。
 
-在 [Jenkins-X platform](https://jenkins-x.io/about/) 中，`UpdateBot` 由 Jenkinsfile 中的 UpdateBot 命令自动显示和调用。但是 UpdateBot 也可以在 Jenkins-X 之外使用，并且单独运行它可以帮助了解它可以做什么并测试版本替换。因此，让我们用一个简单的测试项目来尝试一下。
+在 [Jenkins-X platform](https://jenkins-x.io/about/) 中，`UpdateBot` 由 Jenkinsfile 中的 `UpdateBot` 命令自动显示和调用。但是 UpdateBot 也可以在 Jenkins-X 之外使用，并且单独运行它可以帮助了解它可以做什么并测试版本替换。因此，让我们用一个简单的测试项目来尝试一下。
 
 ## 配置演示
 
