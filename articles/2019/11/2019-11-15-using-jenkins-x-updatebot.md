@@ -12,7 +12,7 @@ keywords:
 - 自动执行依赖版本更新
 author: Ryan Dawson
 translator: wenjunzhangp
-poster: “./2019-11-15-using-jenkins-x-updatebot/cover.jpg”
+poster: "./2019-11-15-using-jenkins-x-updatebot/cover.jpg"
 ---
 
 ![cover](cover.jpg)
