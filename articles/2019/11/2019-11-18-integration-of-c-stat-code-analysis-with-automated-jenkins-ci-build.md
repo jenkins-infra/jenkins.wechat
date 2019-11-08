@@ -12,7 +12,7 @@ keywords:
 - 静态代码分析
 author: Sankara M
 translator: wenjunzhangp
-poster: “./2019-11-18-integration-of-c-stat-code-analysis-with-automated-jenkins-ci-build/cover.jpg”
+poster: "./2019-11-18-integration-of-c-stat-code-analysis-with-automated-jenkins-ci-build/cover.jpg"
 ---
 
 ![cover](cover.jpg)
@@ -25,9 +25,9 @@ poster: “./2019-11-18-integration-of-c-stat-code-analysis-with-automated-jenki
 
 ### 先决条件：
 
-* IAR 嵌入式工作台 IDE
-* C-STAT 许可证
-* Jenkins 安装
+a. IAR 嵌入式工作台 IDE
+b. C-STAT 许可证
+c. Jenkins 安装
 
 IAR 嵌入式工作台工具为我们提供了命令行执行选项，以实现 IAR 项目的静态代码分析。现在，我们将了解其工作原理。
 
@@ -101,13 +101,13 @@ ireport.exe --db D:\sample\project\setup\Debug\Obj\cstat.db --project D:\sample\
 
 请参阅下面的脚本，了解我是如何在一个变量中获取这些值，然后用 sea t 阈值进行验证。
 
-![1](1.jpg)
+![sea-t](sea-t.jpg)
 
 ### Jenkins 构建结果
 
 下面是 Jenkins CI 构建日志，供您参考。您可以看到由于标识为“中优先级”的 19 个问题而导致构建失败。
 
-![2](2.jpg)
+![CI-log](CI-log.jpg)
 
 ## 结论
 
