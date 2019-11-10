@@ -1,6 +1,6 @@
 ---
-title: "Jenkins 2019 年董事会和官员选举更新"
-description: "Jenkins 社区正在进行 2019 年董事会和官员职位的选举，提名征集已经结束。"
+title: "Jenkins 2019 年 Board 和 Officer positions 选举更新"
+description: "Jenkins 社区正在进行 2019 年 Board 和 Officer positions 的选举活动，我们诚恳的邀请您参加并且投出您宝贵的一票。"
 date: 2019-11-09
 original: "https://jenkins.io/blog/2019/11/08/board-elections/"
 tags:
@@ -19,32 +19,32 @@ poster: "./2019-11-09-2019-jenkins-board-and-officer-elections-update/poster.jpg
 
 ![poster](poster.jpg)
 
-Jenkins 社区正在进行 2019 年董事会和官员职位的选举。提名征集已经结束。我们征集到了很多提名。根据愿意接受提名的人和无可争议的官员职位，我们将有 3 票：
+Jenkins 社区正在进行 2019 年 Board 和 Officer positions 的选举。提名征集已经结束。我们征集到了很多提名。根据愿意接受提名的人和无可争议的 Officer Positions，我们将有 3 票：
 
-1. 投票选举 3 名[董事会成员](https://jenkins.io/project/governance/#governance-board)
-2. 投票选举 Jenkins [安全官](https://jenkins.io/project/board/#security)
-3. 投票选举 Jenkins [活动官员](https://jenkins.io/project/board/#events)
+1. 投票选举 3 名[board members](https://jenkins.io/project/governance/#governance-board)
+2. 投票选举 Jenkins [security officer](https://jenkins.io/project/board/#security)
+3. 投票选举 Jenkins [events officer](https://jenkins.io/project/board/#events)
 
 ## 候选人
 
-每位候选人都提供了一份声明，以帮助指导选民为什么要为候选人投票。有关更多详细信息，请参阅[候选人的声明](https://docs.google.com/document/d/15rJYkBjWLGZTL87xeJ4P2Y1LNn7C0EBb0wkDVUSfLmQ/edit#)。竞选董事会职位的候选人为：
+每位候选人都提供了一份声明，以帮助指导选民为什么要为候选人投票。有关更多详细信息，请参阅[候选人宣言](https://docs.google.com/document/d/15rJYkBjWLGZTL87xeJ4P2Y1LNn7C0EBb0wkDVUSfLmQ/edit#)。竞选 board members 的候选人为：
 
 * Alex Earl
 * Oliver Gondza
 * Ullrich Hafner
 * Oleg Nenashev
 * Mark Waite
-* Zhao Xiaojie (a.k.a. Rick to many of you)
+* 赵晓杰（Rick）
 
-竞选安全官员的候选人是：
+竞选 security officer 的候选人是：
 
 * Daniel Beck
 * Wadeck Follonier
 
-竞选活动官员的候选人是：
+竞选 events officer 的候选人是：
 
 * Alyssa Tong
-* Zhao Xiaojie (a.k.a. Rick to many of you)
+* 赵晓杰（Rick）
 
 ## 选民登记
 
@@ -64,7 +64,7 @@ Jenkins 社区正在进行 2019 年董事会和官员职位的选举。提名征
 
 ## 表决
 
-投票将于 2019 年 11 月 11 日正式开始。候选人将收到 Kohsuke Kawaguchi 发送的 Condorcet 互联网投票电子邮件。每次投票将发送一封电子邮件（因此，总共 3 票：董事会 1 票，活动官员 1 票，安全官员 1 票）。投票将要求使用以下截图对候选人进行排名：
+投票将于 2019 年 11 月 11 日正式开始。候选人将收到 Kohsuke Kawaguchi 发送的 Condorcet 互联网投票电子邮件。每次投票将发送一封电子邮件（因此，总共 3 票：board 1 票，events officer 1 票，security officer 1 票）。投票将要求使用以下截图对候选人进行排名：
 
 ![election-ballot](election-ballot.png)
 
@@ -72,15 +72,18 @@ Jenkins 社区正在进行 2019 年董事会和官员职位的选举。提名征
 
 以下是关键选举日期的摘要：
 
-[cols="s,n",options="header"]
-|==================================================
-|Date         |Event
-|Now          |Voter registration ongoing
-|Nov 11, 2019 |Voting begins
-|Nov 17, 2019 |Voter registration closes
-|Nov 24, 2019 |Voting closes a 5:00 PM Pacific Time
-|Dec 3, 2019  |New representatives announced
-|==================================================
+```
+Date	            Event
+Now                 Voter registration ongoing
+
+Nov 11, 2019        Voting begins
+
+Nov 17, 2019        Voter registration closes
+
+Nov 24, 2019        Voting closes a 5:00 PM Pacific Time
+
+Dec 3, 2019         New representatives announced
+```
 
 选举结果将发布到 [Jenkins 开发人员的邮件列表中](https://groups.google.com/forum/#!forum/jenkinsci-dev)，然后在 [jenkins.io](https://jenkins.io/node/) 上发布公告博客。
 
@@ -88,17 +91,18 @@ Jenkins 社区正在进行 2019 年董事会和官员职位的选举。提名征
 
 ## 无可争议的职位
 
-当一个官员职位只有一个愿意接受提名的候选人时，没有理由对该职位进行投票。该人将成为该职位的唯一候选人。
+当一个 officer position 只有一个愿意接受提名的候选人时，没有理由对该职位进行投票。该人将成为该职位的唯一候选人。
 
-毫无争议的官员包括：
+毫无争议的 Officer Positions 包括：
 
-[cols="s,n",options="header"]
-|==================================================
-|Name           |Role
-|Olivier Vernin |Infrastructure Officer
-|Oliver Gondza  |Release Officer
-|Mark Waite     |Documentation Officer
-|==================================================
+```
+Name	        Role
+Olivier Vernin  Infrastructure Officer
+
+Oliver Gondza   Release Officer
+
+Mark Waite      Documentation Officer
+```
 
 ## 参考文献
 
