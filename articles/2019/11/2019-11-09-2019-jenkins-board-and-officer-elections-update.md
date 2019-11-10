@@ -1,6 +1,6 @@
 ---
 title: "Jenkins 2019 年董事会和官员选举更新"
-description: "Jenkins 社区正在进行 2019 年董事会和官员职位的选举，提名征集已经结束。有关更多详细信息请阅读下文。"
+description: "Jenkins 社区正在进行 2019 年董事会和官员职位的选举，提名征集已经结束。"
 date: 2019-11-09
 original: "https://jenkins.io/blog/2019/11/08/board-elections/"
 tags:
@@ -27,7 +27,7 @@ Jenkins 社区正在进行 2019 年董事会和官员职位的选举。提名征
 
 ## 候选人
 
-每位候选人都提供了一份声明，以帮助指导选民为什么要为候选人投票。有关更多详细信息，请参阅[候选语句](https://docs.google.com/document/d/15rJYkBjWLGZTL87xeJ4P2Y1LNn7C0EBb0wkDVUSfLmQ/edit#)。竞选董事会职位的候选人为：
+每位候选人都提供了一份声明，以帮助指导选民为什么要为候选人投票。有关更多详细信息，请参阅[候选人的声明](https://docs.google.com/document/d/15rJYkBjWLGZTL87xeJ4P2Y1LNn7C0EBb0wkDVUSfLmQ/edit#)。竞选董事会职位的候选人为：
 
 * Alex Earl
 * Oliver Gondza
@@ -41,16 +41,16 @@ Jenkins 社区正在进行 2019 年董事会和官员职位的选举。提名征
 * Daniel Beck
 * Wadeck Follonier
 
-竞选活动主任的候选人是：
+竞选活动官员的候选人是：
 
 * Alyssa Tong
 * Zhao Xiaojie (a.k.a. Rick to many of you)
 
 ## 选民登记
 
-这是近一段时间以来我们第一次进行 Jenkins 选举。我们正在学习。Jenkins 选举旨在实现包容性。我们不仅将选举限于代码提交者。在 2019 年 9 月 1 日之前注册了 Jenkins 帐户的任何人都有资格投票。Jenkins 是一个成功的项目，大约有 10 万个符合该标准的帐户。因此，我们正在与符合条件的选民联系，并要求他们明确 `opt-in` 以参加投票。
+这是近一段时间以来我们第一次进行 Jenkins 选举。我们正在学习。Jenkins 选举旨在实现包容性。我们不仅将选举限于代码提交者。在 2019 年 9 月 1 日之前注册了 Jenkins 帐户的任何人都有资格投票。Jenkins 是一个成功的项目，大约有 10 万个符合该标准的帐户。我们正在与符合条件的选民联系，并要求他们明确 `选择性加入` 以参加投票。
 
-如果符合条件，您将在注册的 jenkins.io 电子邮件地址中收到一封电子邮件。该邮件来自 elections@jenkins.io，标题为 `2019 Jenkins Election-邀请参加`。该电子邮件将提供选举详细信息，并包含一个 `I want to participate` 按钮。
+如果符合条件，您将在注册的 jenkins.io 电子邮件地址中收到一封电子邮件。该邮件来自 elections@jenkins.io，标题为 `2019 Jenkins Election - Invitation to Participate`。该电子邮件将提供选举详细信息，并包含一个 `I want to participate` 按钮。
 
 ![election-invitation](election-invitation.png)
 
@@ -72,19 +72,15 @@ Jenkins 社区正在进行 2019 年董事会和官员职位的选举。提名征
 
 以下是关键选举日期的摘要：
 
-```
-Date	            Event
-
-Now                 Voter registration ongoing
-
-Nov 11, 2019        Voting begins
-
-Nov 17, 2019        Voter registration closes
-
-Nov 24, 2019        Voting closes a 5:00 PM Pacific Time
-
-Dec 3, 2019         New representatives announced
-```
+[cols="s,n",options="header"]
+|==================================================
+|Date         |Event
+|Now          |Voter registration ongoing
+|Nov 11, 2019 |Voting begins
+|Nov 17, 2019 |Voter registration closes
+|Nov 24, 2019 |Voting closes a 5:00 PM Pacific Time
+|Dec 3, 2019  |New representatives announced
+|==================================================
 
 选举结果将发布到 [Jenkins 开发人员的邮件列表中](https://groups.google.com/forum/#!forum/jenkinsci-dev)，然后在 [jenkins.io](https://jenkins.io/node/) 上发布公告博客。
 
@@ -96,15 +92,13 @@ Dec 3, 2019         New representatives announced
 
 毫无争议的官员包括：
 
-```
-Name	        Role
-
-Olivier Vernin  Infrastructure Officer
-
-Oliver Gondza   Release Officer
-
-Mark Waite      Documentation Officer
-```
+[cols="s,n",options="header"]
+|==================================================
+|Name           |Role
+|Olivier Vernin |Infrastructure Officer
+|Oliver Gondza  |Release Officer
+|Mark Waite     |Documentation Officer
+|==================================================
 
 ## 参考文献
 
