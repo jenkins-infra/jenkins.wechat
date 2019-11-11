@@ -1,6 +1,6 @@
 ---
 title: "Jenkins 2019 年 Board 和 Officer positions 选举更新"
-description: "Jenkins 社区正在进行 2019 年 Board 和 Officer positions 的选举活动，我们诚恳的邀请您参加并且投出您宝贵的一票。"
+description: "Jenkins 社区正在进行 2019 年 Board 和 Officer positions 的选举活动，我们诚恳的邀请您参加并且投出您宝贵的一票"
 date: 2019-11-09
 original: "https://jenkins.io/blog/2019/11/08/board-elections/"
 tags:
@@ -12,9 +12,9 @@ keywords:
 - Jenkins
 - Board
 - Officer Elections
-author:  Tracy Miranda
+author: Tracy Miranda
 translator: wenjunzhangp
-poster: "./2019-11-09-2019-jenkins-board-and-officer-elections-update/cover.png"
+poster: "cover.png"
 ---
 
 ![cover](cover.png)
@@ -72,18 +72,13 @@ Jenkins 社区正在进行 2019 年 Board 和 Officer positions 的选举。提�
 
 以下是关键选举日期的摘要：
 
-```
-Date	            Event
-Now                 Voter registration ongoing
-
-Nov 11, 2019        Voting begins
-
-Nov 17, 2019        Voter registration closes
-
-Nov 24, 2019        Voting closes a 5:00 PM Pacific Time
-
-Dec 3, 2019         New representatives announced
-```
+|Date|Event|
+|---|---|
+|Now|Voter registration ongoing|
+|Nov 11, 2019|Voting begins|
+|Nov 17, 2019|Voter registration closes|
+|Nov 24, 2019|Voting closes a 5:00 PM Pacific Time|
+|Dec 3, 2019|New representatives announced|
 
 选举结果将发布到 [Jenkins 开发人员的邮件列表中](https://groups.google.com/forum/#!forum/jenkinsci-dev)，然后在 [jenkins.io](https://jenkins.io/node/) 上发布公告博客。
 
@@ -95,14 +90,11 @@ Dec 3, 2019         New representatives announced
 
 毫无争议的 Officer Positions 包括：
 
-```
-Name	        Role
-Olivier Vernin  Infrastructure Officer
-
-Oliver Gondza   Release Officer
-
-Mark Waite      Documentation Officer
-```
+|Name|Role|
+|---|---|
+|Olivier Vernin|Infrastructure Officer|
+|Oliver Gondza|Release Officer|
+|Mark Waite|Documentation Officer|
 
 ## 参考文献
 
