@@ -38,7 +38,7 @@ github:
 ```
 export UPDATEBOT_DRY_RUN=true
 ```
-然后，我们仍然需要使用 `UPDATEBOT_GITHUB_USER` 和 `UPDATEBOT_GITHUB_PASSWORD`（[或令牌](https://github.com/jenkins-x/updatebot/blob/a08fdec38654a96f8bc5785b59b086193e861911/updatebot-core/src/main/java/io/jenkins/updatebot/EnvironmentVariables.java#L26)）的其他环境变量设置 git 凭据。
+然后，我们仍然需要使用 `UPDATEBOT_GITHUB_USER` 和 `UPDATEBOT_GITHUB_PASSWORD`（[Token](https://github.com/jenkins-x/updatebot/blob/a08fdec38654a96f8bc5785b59b086193e861911/updatebot-core/src/main/java/io/jenkins/updatebot/EnvironmentVariables.java#L26)）的其他环境变量设置 git 凭据。
 
 然后，我们可以运行一些 `UpdateBot` 命令，并查看从 Git 克隆的项目中替换了什么。为此，我们可以在 GitHub 上使用一个包含[预配置脚本](https://github.com/ryandawsonuk/usingupdatebot/blob/master/updatebot-dryrun.sh)的[演示项目](https://github.com/ryandawsonuk/usingupdatebot)。
 
@@ -84,4 +84,4 @@ UpdateBot 可以尝试仅通过使用 `updatebot push` 而不是带有显式参�
 
 本示例使用单个 UpdateBot YAML 文件将一组依赖项/版本推送到单个下游项目。YAML 文件还支持将一组更改推送到多个[下游存储库](https://github.com/jenkins-x/jenkins-x-platform/commit/196ef005ff026cbd9be8fd505945bbbc5b71da67)。UpdateBot 推送其能够进行的所有替换，以便每个下游存储库都获得适用于它的所有更改。
 
-例如，在[构建没有快照的 Maven 项目](https://redstack.wordpress.com/2014/07/14/continuous-integration-without-snapshots/)时，[UpdateBot 可用于在 CI / CD 设置中传播版本](https://community.alfresco.com/community/bpm/blog/2018/11/05/activiti-cloud-cicd-approach-for-java-libraries-and-beyond)。但是，正如我们已经看到的那样，它不仅限于 Maven，而且可以对产生各种不同类型制品的项目进行一系列更改。
+例如，在[构建没有快照的 Maven 项目](https://redstack.wordpress.com/2014/07/14/continuous-integration-without-snapshots/)时，[UpdateBot 可用于在 CI/CD 设置中传播版本](https://community.alfresco.com/community/bpm/blog/2018/11/05/activiti-cloud-cicd-approach-for-java-libraries-and-beyond)。但是，正如我们已经看到的那样，它不仅限于 Maven，而且可以对产生各种不同类型制品的项目进行一系列更改。
