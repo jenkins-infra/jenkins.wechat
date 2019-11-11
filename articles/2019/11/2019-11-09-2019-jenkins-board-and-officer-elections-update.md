@@ -14,10 +14,10 @@ keywords:
 - Officer Elections
 author:  Tracy Miranda
 translator: wenjunzhangp
-poster: "./2019-11-09-2019-jenkins-board-and-officer-elections-update/poster.jpg"
+poster: "./2019-11-09-2019-jenkins-board-and-officer-elections-update/cover.png"
 ---
 
-![poster](poster.jpg)
+![cover](cover.png)
 
 Jenkins 社区正在进行 2019 年 Board 和 Officer positions 的选举。提名征集已经结束。我们征集到了很多提名。根据愿意接受提名的人和无可争议的 Officer Positions，我们将有 3 票：
 
