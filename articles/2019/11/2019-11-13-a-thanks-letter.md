@@ -3,8 +3,9 @@ title: "致霍格沃兹测试学院的一份感谢信"
 description: "社区大于代码，不满意就提 PR"
 date: 2019-11-13
 author: linuxsuren
-poster: ""
+poster: "open-source.png"
 ---
+![open-source](open-source.png)
 
 Jenkins 虽然有着无数潜在的用户群体，但是，在国内直接参与社区的人却了了无几，甚至，
 都没有一个集中沟通交流的场所。这是非常令人困惑不解的一点，毕竟 Jenkins 已经诞生15年之久，
