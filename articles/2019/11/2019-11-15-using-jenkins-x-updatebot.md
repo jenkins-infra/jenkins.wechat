@@ -12,7 +12,7 @@ keywords:
 - 自动执行依赖版本更新
 author: Ryan Dawson
 translator: wenjunzhangp
-poster: "./2019-11-15-using-jenkins-x-updatebot/cover.jpg"
+poster: "cover.jpg"
 ---
 
 ![cover](cover.jpg)
@@ -67,7 +67,7 @@ java -jar updatebot-1.1.31.jar push-version --kind npm ngx-cookie 2.0.2
 java -jar updatebot-1.1.31.jar push-version --kind docker openjdk 8-jdk
 ```
 
-这表明我们可以抓取出来。Dockerfile 实际上使用两个不同的 openjdk 映像，每个映像都有一个不同的标签，并且此命令将替换这两个映像：
+这表明我们可以抓取出来。Dockerfile 实际上使用两个不同的 openjdk 镜像，每个镜像都有一个不同的标签，并且此命令将替换这两个镜像：
 ![screen-shot-2018-11-06-at-193341](screen-shot-2018-11-06-at-193341.png)
 
 我在运行命令之前没有考虑过这一点，因此在这里我需要确定我真正要替换的内容。
@@ -82,6 +82,6 @@ UpdateBot 具有自动合并 pull request 的功能，例如通过轮询 GitHub 
 
 UpdateBot 可以尝试仅通过使用 `updatebot push` 而不是带有显式参数的 `updatebot push-version` 来推断要作为提交触发管道的一部分进行的更改。但是，通常管道作业将有权访问要推送的版本，而 `push version` 使更改更明确且更易于跟踪。
 
-本示例使用单个 UpdateBot YAML 文件将一组依赖项/版本推送到单个下游项目。YAML 文件还支持将一组更改推送到多个[下游存储库](https://github.com/jenkins-x/jenkins-x-platform/commit/196ef005ff026cbd9be8fd505945bbbc5b71da67)。UpdateBot 推送其能够进行的所有替换，以便每个下游存储库都获得适用于它的所有更改。
+本示例使用单个 UpdateBot YAML 文件将一组依赖项/版本推送到一个下游项目。YAML 文件还支持将一组更改推送到多个[下游存储库](https://github.com/jenkins-x/jenkins-x-platform/commit/196ef005ff026cbd9be8fd505945bbbc5b71da67)。UpdateBot 推送其能够进行的所有替换，以便每个下游存储库都获得适用于它的所有更改。
 
 例如，在[构建没有快照的 Maven 项目](https://redstack.wordpress.com/2014/07/14/continuous-integration-without-snapshots/)时，[UpdateBot 可用于在 CI/CD 设置中传播版本](https://community.alfresco.com/community/bpm/blog/2018/11/05/activiti-cloud-cicd-approach-for-java-libraries-and-beyond)。但是，正如我们已经看到的那样，它不仅限于 Maven，而且可以对产生各种不同类型制品的项目进行一系列更改。
