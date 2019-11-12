@@ -23,14 +23,13 @@ Jenkins 虽然有着无数潜在的用户群体，但是，在国内直接参与
 
 ![霍格沃兹测试学院](hogwarts.png)
 
-[霍格沃兹测试学院](https://testing-studio.com)是中国领先的测试开发技术培训机构，专注于高级测试人才的培养。
-由 BAT 一线**测试大咖执教**，提供**实战驱动**的接口自动化测试、移动自动化测试、性能测试、Jenkins 持续集成
-与 DevOps 等技术培训，以及测试开发优秀人才内推服务。
+[霍格沃兹测试学院](https://www.testing-studio.com)是中国领先的测试开发技术在线教育机构，
+由知名测试社区 TesterHome 与测吧（北京）科技有限公司合作创办，专注于高级测试人才的培养。
 
 对我们而言，并没有业内专家的驻场，背后也没有大厂的光环，全部是草根个人在努力奉献自己的力量。但是，我们深深地
 理解开源的意义所在，开源并不是走秀，并不是只有大佬可以玩。任何一个不只是流于口舌的同学都是社区里的主人，
 不满意就提 PR，这就是开源社区所需要的人才。社区大于代码，开源不只是把代码扔到 GitHub 上就可以了。我相信，
-[霍格沃兹测试学院](https://testing-studio.com)也正是出于 Jenkins 中文社区下面的行为准则才愿意支持我们的：
+[霍格沃兹测试学院](https://www.testing-studio.com)也正是出于 Jenkins 中文社区下面的行为准则才愿意支持我们的：
 
 * 治理开源
     * [公开例会](https://jenkins-zh.cn/meeting/)
@@ -48,5 +47,4 @@ Jenkins 虽然有着无数潜在的用户群体，但是，在国内直接参与
 
 [https://jenkins-zh.cn/about/sponsors-list/](https://jenkins-zh.cn/about/sponsors-list/)
 
-最后，我们由衷地希望[霍格沃兹测试学院](https://testing-studio.com)和开源事业发展的越来越好，得到更多人和组织的
-关注和支持。
+最后，我们由衷地希望[霍格沃兹测试学院](https://www.testing-studio.com)和开源事业发展的越来越好，得到更多人和组织的关注和支持。
