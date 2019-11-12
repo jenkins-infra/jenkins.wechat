@@ -1,7 +1,7 @@
 ---
 title: "Jenkins 2019 年 Board 和 Officer positions 选举更新"
 description: "Jenkins 社区正在进行 2019 年 Board 和 Officer positions 的选举活动，我们诚恳的邀请您参加并且投出您宝贵的一票。"
-date: 2019-11-09
+date: 2019-11-12
 original: "https://jenkins.io/blog/2019/11/08/board-elections/"
 tags:
 - community
@@ -14,7 +14,7 @@ keywords:
 - Officer Elections
 author:  Tracy Miranda
 translator: wenjunzhangp
-poster: "./2019-11-09-2019-jenkins-board-and-officer-elections-update/cover.png"
+poster: "./2019-11-12-2019-jenkins-board-and-officer-elections-update/cover.png"
 ---
 
 ![cover](cover.png)
