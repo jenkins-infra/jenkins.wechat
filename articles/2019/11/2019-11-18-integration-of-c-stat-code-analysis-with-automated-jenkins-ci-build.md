@@ -1,6 +1,6 @@
 ---
 title: "Jenkins CI 自动构建与 C-STAT 代码分析的集成"
-description: "了解如何通过与 Jenkins 集成来进一步进行静态代码分析。"
+description: "了解如何通过与 Jenkins 集成来进一步进行静态代码分析，并且提供清晰的分析结果和生产静态的 HTML 报告。"
 date: 2019-11-18
 original: "https://dzone.com/articles/integration-of-c-stat-code-analysis-with-automated"
 tags:
@@ -12,7 +12,7 @@ keywords:
 - 静态代码分析
 author: Sankara M
 translator: wenjunzhangp
-poster: "./2019-11-18-integration-of-c-stat-code-analysis-with-automated-jenkins-ci-build/cover.jpg"
+poster: "cover.jpg"
 ---
 
 ![cover](cover.jpg)
