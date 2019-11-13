@@ -1,6 +1,6 @@
 ---
 title: "Working Hours 插件的第一阶段更新"
-description: "实现了 Working Hours Plugin 和 React 集成，提供更加好用的排除日期和时间范围选择器。"
+description: "实现了 Working Hours Plugin 和 React 集成，提供更加好用的排除日期和时间范围选择器"
 date: 2019-11-14
 original: "https://jenkins.io/blog/2019/07/09/Phase1-Updates-On-Working-Hours-Plugin/"
 tags:
