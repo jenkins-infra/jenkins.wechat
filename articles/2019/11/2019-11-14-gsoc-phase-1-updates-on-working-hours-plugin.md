@@ -1,15 +1,15 @@
 ---
 title: "Working Hours 插件的第一阶段更新"
-description: "Working Hours 插件的第一阶段更新"
-date: 2019-11-13
+description: "实现了 Working Hours Plugin 和 React 集成，提供更加好用的排除日期和时间范围选择器。"
+date: 2019-11-14
 original: "https://jenkins.io/blog/2019/07/09/Phase1-Updates-On-Working-Hours-Plugin/"
 tags:
 - react plugins gsoc gsoc2019
 keywords:
 - react gsoc
-author:  Jack Shen
+author: Jack Shen
 translator: wenjunzhangp
-poster: "./2019-11-13-gsoc-phase-1-updates-on-working-hours-plugin/cover.jpg"
+poster: "cover.jpg"
 ---
 
 ![cover](cover.jpg)
