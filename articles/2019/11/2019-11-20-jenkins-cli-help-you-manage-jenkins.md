@@ -85,8 +85,8 @@ jcli <command> --help
 jcli <command> <subcommand> --help
 ```
 也可以查看官方文档：
-https://github.com/jenkins-zh/jenkins-cli/blob/master/doc/README.md
-https://jenkins-zh.github.io/jcli-docs/
+- https://github.com/jenkins-zh/jenkins-cli/blob/master/doc/README.md
+- https://jenkins-zh.github.io/jcli-docs/
 
 **如果你有意愿使用 Jenkins CLI，那么赶快动手来体验吧！**
 
