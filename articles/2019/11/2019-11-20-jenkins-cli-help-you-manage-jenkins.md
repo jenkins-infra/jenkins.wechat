@@ -8,7 +8,7 @@ poster: "jenkins-cli.png"
 
 ![jenkins cli](jenkins-cli.png)
 
-Jenkins CLI，简称 jcli，一个由国人开发的开源的 Jenkins 命令行工具。
+Jenkins CLI，简称 jcli，一个使用 Golang 开发的开源的 Jenkins 命令行工具。
 它可以帮忙你轻松地管理 Jenkins。
 无论你是 Jenkins 插件开发者，还是 Jenkins 管理员或者只是一个普通的 Jenkins 用户，它都是为你而生！
 
@@ -113,7 +113,7 @@ Jenkins CLI 仍旧在不断发展中。
 
 ## Jenkins CLI 期待你的投票
 2019 年的中国开源界，开源项目的数量也在激增。
-作为中国开眼界的一份子，此时此刻，Jenkins CLI 正在参加由 OSCHINA（开源中国）主办的`2019年度最受欢迎中国开源软件评选`活动。
+作为中国开源界的一份子，此时此刻，Jenkins CLI 正在参加由 OSCHINA（开源中国）主办的`2019年度最受欢迎中国开源软件评选`活动。
 
 ![qr-code-for-vote](vote-page.png)
 
