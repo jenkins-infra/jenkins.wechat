@@ -119,9 +119,10 @@ Jenkins CLI 仍旧在不断发展中。
 2019 年的中国开源界，开源项目的数量也在激增。
 作为中国开源界的一份子，此时此刻，Jenkins CLI 正在参加由 OSCHINA（开源中国）主办的`2019年度最受欢迎中国开源软件评选`活动。
 
-![qr-code-for-vote](vote-page.png)
+![vote-page](vote-page.png)
 
 恳请占用你的一点宝贵时间，麻烦动动手指为 Jenkins CLI 投上支持的一票，不胜感激！
 
 投票方式：长按图片，识别图中二维码，打开投票活动页面，找到`开发工具类-->Jenkins CLI`，点击投票，再次感谢支持 Jenkins CLI ！
+
 ![qr-code-for-vote](qr-code-for-vote.png)
