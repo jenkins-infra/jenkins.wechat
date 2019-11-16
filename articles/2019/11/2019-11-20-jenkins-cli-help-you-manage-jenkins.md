@@ -22,6 +22,10 @@ Jenkins CLI，简称 jcli，一个使用 Golang 开发的开源的 Jenkins 命�
 * 重启你的 Jenkins
 * 支持通过代理连接
 
+此外，优秀的开源项目应该有着高代码质量。Jenkins CLI 始终坚持内建质量的原则，在开发过程中持续编写单元测试代码，并使用 TravisCI + SonarCloud 对代码质量持续分析，从而保证代码质量。
+目前测试覆盖率为81.8%，下一个目标是将测试覆盖率提升到90%。
+Go Report Card 给 Jenkins CLI 的代码质量评分为 A+。
+
 ## 如何安装 Jenkins CLI？
 Jenkins CLI 目前支持的操作系统有：MacOS、Linux 以及 Windows。
 
