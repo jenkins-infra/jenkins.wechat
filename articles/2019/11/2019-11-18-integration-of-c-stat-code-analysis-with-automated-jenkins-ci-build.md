@@ -97,7 +97,7 @@ ireport.exe --db D:\sample\project\setup\Debug\Obj\cstat.db --project D:\sample\
 
 默认情况下，C-STAT 不向我们提供设置此值的选项。但是我们可以使用以下自定义脚本来实现此目的。
 
-我们可以获得包含低、中、高问题计数分析结果的 HTML 报告。这些值以 format **data: [0-9, 0-9 ,0-9]** 在 HTML 结果文件中展现。
+我们可以获得包含低、中、高问题计数分析结果的 HTML 报告。这些值以格式 **data: [0-9, 0-9 ,0-9]** 在 HTML 结果文件中展现。
 
 请参阅下面的脚本，了解我是如何在一个变量中获取这些值，然后用 sea t 阈值进行验证。
 
