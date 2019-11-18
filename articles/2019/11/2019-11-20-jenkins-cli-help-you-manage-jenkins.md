@@ -47,6 +47,13 @@ sudo mv jcli /usr/local/bin/
 ### 在 Windows 上安装
 你只要点击[这里](https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-windows-386.tar.gz)就可以下载到最新版本的压缩包。然后，把解压后的文件 `jcli` 拷贝到你的系统目录下即可。
 
+### 其他包管理器
+还可以使用一些其他的包管理器安装 jcli：
+* [GoFish](https://gofi.sh/) 的用户可以使用命令 `gofish install jcli` 来安装
+* [Scoop](https://scoop.sh/) 的用户可以使用命令 `scoop install jcli` 来安装
+
+GoFish 同时支持 Linux 和 Windows，Scoop 支持 Windows。
+
 ## 使用入门
 安装 jcli 后，你需要提供一份配置文件。请执行命令 `jcli config generate`，该命令会帮助你编辑配置文件 `~/.jenkins-cli.yaml`，你需要根据实际的 Jenkins 配置情况做相应的修改。
 
@@ -101,7 +108,7 @@ Jenkins CLI 仍旧在不断发展中。
 如果你有希望开发的新功能，请提交 issue 到 GitHub 仓库。
 
 ## 欢迎反馈与贡献
-如果你在使用过程中遇到问题，欢迎在 GitHub 仓库提交 issue 来反馈；
+如果你在使用过程中遇到问题，欢迎在 GitHub 仓库提交 [issue](https://github.com/jenkins-zh/jenkins-cli/issues) 来反馈；
 同时，我们也非常欢迎贡献者对 Jenkins CLI 贡献自己的一份力量。
 目前除了国内的主要贡献者：
 - [LinuxSuRen](https://github.com/LinuxSuRen)
