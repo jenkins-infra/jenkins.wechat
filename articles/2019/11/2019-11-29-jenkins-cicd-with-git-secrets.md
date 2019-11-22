@@ -18,7 +18,7 @@ poster: connection-netwok.jpg
 
 通常，对我们在代码中使用的机密或凭据进行加密，然后将其保存在安全的地方。我们可以有很多选择来实现这一目标，例如使用 Vault 和 Git-crypt 等工具来。[git-secret](https://git-secret.io/) 是一个简单的工具，我们可以使用它在 Git 仓库中存储密钥。Git-secret 使用 gpg 加密和解密密钥。
 
-git-secret 的工作方式如下。进入仓库中要加密文件的文件夹，然后，运行 `git init && git secret init`。这将初始化 `.gitsecret` 文件夹，然后运行 `git secret tell $email`，如果您希望其他用户解密密钥文件，则必须导入其 gpg 公钥，然后再次运行 `git secret tell $otheruseremailid`。现在您可以运行 `git secret add $secretfilename` 和 `git secret hide`，这将创建名为 `$yoursecretfile.secret` 的加密的密钥文件。
+git-secret 的工作方式如下。进入仓库中要加密文件的文件夹，然后，运行 `git init && git secret init`。这将初始化 `.gitsecret` 文件夹，然后运行 `git secret tell $email`，如果您希望其他用户解密密钥文件，则必须导入其 gpg 公钥，然后再次运行 `git secret tell $otheruseremailid`。现在您可以运行 `git secret add $secretfilename` 和 `git secret hide`，这将创建名为 `$secretfilename.secret` 的加密的密钥文件。
 
 **或许你会对[在 Git 中存储加密的凭据](https://dzone.com/articles/storing-encrypted-credentials-in-git)感兴趣。**
 
@@ -103,4 +103,3 @@ pipeline {
 [避免将安全凭据传递给 GitHub ](https://dzone.com/articles/avoid-passing-security-credentials-to-github)
 
 [如何将 GitHub 仓库集成到 Jenkins 项目](https://dzone.com/articles/how-to-integrate-your-github-repository-to-your-je)
-
