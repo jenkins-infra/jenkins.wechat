@@ -30,7 +30,7 @@ git-secret 的工作方式如下。进入仓库中要加密文件的文件夹，
 
 ## 在 Jenkins 上运行 git-secret
 
-1.导出gpg私钥。
+1.导出 gpg 私钥。
 
 ```
 gpg -a --export-secret-keys $keyid > gpg-secret.key
@@ -54,7 +54,7 @@ uid           [ultimate] Test (test gpg key) <test@domain.com>
 
 ![Add a passphrase of gpg private key as credentials as a kind secret text](secret-text.png)
 
-4.在 Jenkins 流水线中使用添加的 gpg 私钥、所有者信任文件和密码短语。这里的"gpg-secret"、"gpg-trust" 和 "gpg-passphrase" 是添加 Jenkins 凭据时给出的 ID。
+4.在 Jenkins 流水线中使用添加的 gpg 私钥、所有者信任文件和密码短语。这里的 "gpg-secret"、"gpg-trust" 和 "gpg-passphrase" 是添加 Jenkins 凭据时给出的 ID。
 
 ```
 pipeline {
