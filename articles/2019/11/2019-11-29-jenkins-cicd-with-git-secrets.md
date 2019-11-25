@@ -22,7 +22,7 @@ git-secret 的工作方式如下。进入仓库中要加密文件的文件夹，
 
 **或许你会对[在 Git 中存储加密的凭据](https://dzone.com/articles/storing-encrypted-credentials-in-git)感兴趣。**
 
-现在，您可以提交主仓库了。git-secret 自动将 `$secretfile` 添加到 `.gitignore`，因此您只需提交 `$secretfile.secret` 文件。
+现在，您可以提交 master 分支库了。git-secret 自动将 `$secretfile` 添加到 `.gitignore`，因此您只需提交 `$secretfile.secret` 文件。
  
 将 git-secret 集成到 Jenkins 中的主要挑战是 git-secret 使用 gpg 私钥和公钥。如果我们必须运行 `git secret reveal`，我们应该有一个 gpg 私钥。因此，我们如何在 Jenkins 上运行它，怎样使用一个从节点来拉取仓库并进行构建，如果您必须在从节点展示 git secret，则应该在从节点拥有 gpg 私钥。 我们如何在 Jenkins 流水线中实现这种加密和解密？
 
