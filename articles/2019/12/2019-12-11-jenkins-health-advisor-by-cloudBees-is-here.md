@@ -22,11 +22,11 @@ poster: "cover.png"
 
 * 您如何掌握 Jenkins 环境中发生的所有事情？您是否正在查看问题跟踪器中打开的每个新缺陷？
 * 您如何确保您的 master 或 agents 不会默默失败？您是否正在监视其日志？其所有内部组件？如果出现问题，您该如何解决？
-* 您如何避免 “angry Jenkins” logo？
+* 您如何避免臭名昭著的 “angry Jenkins” logo？
 
 这就是我们通过 CloudBees 创建 Jenkins Health Advisor 的原因。
 
-在 [CloudBees](https://www.cloudbees.com/?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)，我们拥有多年支持 [supporting our customers who are using Jenkins](https://www.cloudbees.com/products/cloudbees-jenkins-support/overview)，其中包括基于 Jenkins 构建的专有产品，例如 [CloudBees Core](https://www.cloudbees.com/products/core/overview)。因此，我们的支持团队由拥有 Jenkins 知识的自动化专家组成，您在其他任何地方都无法获得。
+在 [CloudBees](https://www.cloudbees.com/?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)，我们拥有多年[支持使用 Jenkins 的客户](https://www.cloudbees.com/products/cloudbees-jenkins-support/overview)的经验，其中包括基于 Jenkins 构建的专有产品，例如 [CloudBees Core](https://www.cloudbees.com/products/core/overview)。因此，我们的支持团队由拥有 Jenkins 知识的自动化专家组成，您在其他任何地方都无法获得。
 
 当我们的工程师创建一个平台时，便会开始自动运行状况检查，以便他们可以编写规则来检测客户提供的 [support bundles](https://plugins.jenkins.io/support-core) 中的已知问题，并将其重定向到所需的知识源以诊断和解决问题。
 
