@@ -21,8 +21,8 @@ poster: "cover.png"
 管理任何软件都面临着独特的挑战。Jenkins Masters 也不例外。例如，
 
 * 您如何掌握 Jenkins 环境中发生的所有事情？您是否正在查看问题跟踪器中打开的每个新缺陷？
-* 您如何确保您的 master 或 agents 不会默默失效？您是否正在监控其日志？其所有内部组件？如果出现问题，您该如何解决？
-* 您如何避免出现 “Angry Jenkins” 商标？
+* 您如何确保您的 master 或 agents 不会默默失效？您是否正在监控其日志？监控其所有内部组件？如果出现问题，您该如何解决？
+* 您如何避免出现 “Angry Jenkins” 图标？
 
 这就是我们通过 CloudBees 创建 Jenkins Health Advisor 的原因。
 
