@@ -21,12 +21,12 @@ poster: "cover.png"
 管理任何软件都面临着独特的挑战。Jenkins Masters 也不例外。例如，
 
 * 您如何掌握 Jenkins 环境中发生的所有事情？您是否正在查看问题跟踪器中打开的每个新缺陷？
-* 您如何确保您的 master 或 agents 不会默默失败？您是否正在监视其日志？其所有内部组件？如果出现问题，您该如何解决？
-* 您如何避免臭名昭著的 “angry Jenkins” logo？
+* 您如何确保您的 master 或 agents 不会默默失效？您是否正在监控其日志？其所有内部组件？如果出现问题，您该如何解决？
+* 您如何避免出现 “Angry Jenkins” 商标？
 
 这就是我们通过 CloudBees 创建 Jenkins Health Advisor 的原因。
 
-在 [CloudBees](https://www.cloudbees.com/?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)，我们拥有多年[支持使用 Jenkins 的客户](https://www.cloudbees.com/products/cloudbees-jenkins-support/overview)的经验，其中包括基于 Jenkins 构建的专有产品，例如 [CloudBees Core](https://www.cloudbees.com/products/core/overview)。因此，我们的支持团队由拥有 Jenkins 知识的自动化专家组成，您在其他任何地方都无法获得。
+在 [CloudBees](https://www.cloudbees.com/?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)，我们拥有多年为[使用 Jenkins 的客户提供支持](https://www.cloudbees.com/products/cloudbees-jenkins-support/overview)的经验，其中包括基于 Jenkins 构建的专有产品，例如 [CloudBees Core](https://www.cloudbees.com/products/core/overview)。因此，我们的支持团队由拥有 Jenkins 知识的自动化专家组成，您在其他任何地方都无法获得。
 
 当我们的工程师创建一个平台时，便会开始自动运行状况检查，以便他们可以编写规则来检测客户提供的 [support bundles](https://plugins.jenkins.io/support-core) 中的已知问题，并将其重定向到所需的知识源以诊断和解决问题。
 
@@ -42,12 +42,12 @@ poster: "cover.png"
 
 我们希望您会喜欢这项服务，它将帮助您保持 masters 的健康。
 
-花几分钟时间阅读我们的[文档](https://docs.cloudbees.com/docs/admin-resources/latest/plugins/cloudbees-jenkins-advisor?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)，发现服务，并随时通过 Jenkins 社区渠道（[Gitter](https://gitter.im/jenkinsci/jenkins)，[jenkinsci-users@googlegroups.com](https://groups.google.com/forum/#!forum/jenkinsci-users)，…）与我们联系。
+花几分钟时间阅读我们的[文档](https://docs.cloudbees.com/docs/admin-resources/latest/plugins/cloudbees-jenkins-advisor?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)，发现服务，并随时通过 Jenkins 社区渠道（[Gitter](https://gitter.im/jenkinsci/jenkins)、[jenkinsci-users@googlegroups.com](https://groups.google.com/forum/#!forum/jenkinsci-users)，…）与我们联系。
 
 也不要错过在 [DevOps World|Jenkins World 2019](https://www.cloudbees.com/devops-world/lisbon)上与我们的支持团队会面的机会。
 
 有帮助的链接：
 
-* [Plugin Documentation](https://docs.cloudbees.com/docs/admin-resources/latest/plugins/cloudbees-jenkins-advisor?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)
-* [Jenkins Plugin Site](https://plugins.jenkins.io/cloudbees-jenkins-advisor)
-* [CloudBees Jenkins Support](https://www.cloudbees.com/products/cloudbees-jenkins-support/overview)
+* [插件文档](https://docs.cloudbees.com/docs/admin-resources/latest/plugins/cloudbees-jenkins-advisor?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)
+* [Jenkins 插件网站](https://plugins.jenkins.io/cloudbees-jenkins-advisor)
+* [CloudBees Jenkins 支持](https://www.cloudbees.com/products/cloudbees-jenkins-support/overview)
