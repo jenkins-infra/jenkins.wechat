@@ -1,6 +1,6 @@
 ---
 title: "Jenkins 健康检查顾问"
-description: "Jenkins 开放了一项新的免费服务: Jenkins Health Advisor by CloudBees，我们将教您如何使用它并保持您的 masters 健康。"
+description: "CloudBees 推出了一项新的免费服务:Jenkins Health Advisor，帮助您保持 master 节点的健康"
 date: 2019-12-11
 original: "https://jenkins.io/blog/2019/11/22/jenkins-health-advisor-by-cloudbees/"
 tags:
@@ -30,7 +30,7 @@ poster: "cover.png"
 
 当我们的工程师创建一个平台时，便会开始自动运行状况检查，以便他们可以编写规则来检测客户提供的 [support bundles](https://plugins.jenkins.io/support-core) 中的已知问题，并将其重定向到所需的知识源以诊断和解决问题。
 
-经过多年的内部使用，我们决定与社区共享此服务，我们很高兴为 **每个 Jenkins 用户推出一项新的免费（如啤酒）服务**：[Jenkins Health Advisor by CloudBees](https://www.cloudbees.com/jenkins/health-advisor-plugin)。
+经过多年的内部使用，我们决定与社区共享此服务，我们很高兴为 **每个 Jenkins 用户推出一项新的免费服务**：[Jenkins Health Advisor by CloudBees](https://www.cloudbees.com/jenkins/health-advisor-plugin)。
 
 [Jenkins Health Advisor by CloudBees](https://www.cloudbees.com/jenkins/health-advisor-plugin) 自动分析您的 Jenkins 环境，主动识别潜在问题，并通过详细的电子邮件报告为您提供解决方案和建议。
 
@@ -46,7 +46,7 @@ poster: "cover.png"
 
 也不要错过在 [DevOps World|Jenkins World 2019](https://www.cloudbees.com/devops-world/lisbon)上与我们的支持团队会面的机会。
 
-有帮助的链接：
+参考链接：
 
 * [插件文档](https://docs.cloudbees.com/docs/admin-resources/latest/plugins/cloudbees-jenkins-advisor?utm_medium=blog&utm_source=jenkins.io&utm_campaign=cloudbees-jenkins-advisor-plugin)
 * [Jenkins 插件网站](https://plugins.jenkins.io/cloudbees-jenkins-advisor)
