@@ -13,11 +13,11 @@ tags:
 - java
 ---
 
-![great-wall](2019-12-19-full-build-automation-for-java-application-using-docker/Jenkins-Docker.png)
+![great-wall](Jenkins-Docker.png)
 
 
 
-![pipeline-stages](2019-12-19-full-build-automation-for-java-application-using-docker/pipeline-stages.png)
+![pipeline-stages](pipeline-stages.png)
 
 这次的流水线中，我们使用 Docker 容器来构建我们的 Java 应用。
 
@@ -94,13 +94,13 @@ DockerHub 的密码加密过程同上。
 
 这个配置很简单，Jenkins 读取文件后，会先创建一个名为 “sample-maven-job” 的流水线 job, 然后把仓库指向 Github. 一并设置的还有名为 “github” 的凭据 id. 看起来像是这个样子：
 
-![pipeline-stages](2019-12-19-full-build-automation-for-java-application-using-docker/pipeline-configure.png)
+![pipeline-stages](pipeline-configure.png)
 
 配置好仓库地址以后，用来远程触发 job 的 token 也就生成了。为了设置远程触发，我们需要打开 “Trigger builds remotely” 选项，
 然后把上面的 token 设置到这里。这些配置可以在流水线配置页面的 “Build Triggers” 那一节中看到。为了在后面的 shell 脚本中用这个 token 触发 job，
 我们把这个 token 命名为 “MY-TOKEN”.
 
-![pipeline-stages](2019-12-19-full-build-automation-for-java-application-using-docker/pipeline-trigger.png)
+![pipeline-stages](pipeline-trigger.png)
 
 - **trigger-job.sh** - 这是一个简单的 shell 脚本，其中的 curl 命令用来触发 job.
 
