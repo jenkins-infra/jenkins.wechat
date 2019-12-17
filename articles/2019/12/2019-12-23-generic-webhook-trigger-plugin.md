@@ -23,13 +23,13 @@ poster: "cover.png"
 
 ## 问题
 
-与 Jenkins 一起工作时，我经常遇到同样的问题：
+在使用 Jenkins 工作时，我经常遇到同样的问题：
 
-* **代码复制和安全性**-每个仓库中的 `Jenkinsfiles`。
+* **代码重复和安全性**-每个仓库中的 `Jenkinsfiles`。
 * **分支不是功能**-`master` 上的参数化任务通常会混合与不同功能相关的参数。
 * **记录不良的触发器插件**-记录正常服务但记录不佳的使用插件
 
-## 代码复制和安全性
+## 代码重复和安全性
 
 每个 Git 仓库中都有 Jenkinsfiles，使开发人员可以使这些文件分开。开发人员 push 他们的项目，并且很难维护共享代码的模式。
 
@@ -81,11 +81,11 @@ Webhooks 通常在提供它们的服务中有据可查。例如：
 
 ## 解决方案
 
-我的解决方案几乎可以追溯到基本知识：我们有一个自动化服务器（Jenkins），我们想在外部 Webhooks 上触发它。我们想从该 Webhook 收集信息并将其提供给我们的构建。为了支持它，我创建了[通用 Webhook 触发器插件](https://plugins.jenkins.io/generic-webhook-trigger)。
+我的解决方案几乎可以追溯到基本知识：我们有一个自动化服务（Jenkins），我们想在外部 Webhooks 上触发它。我们想从该 Webhook 收集信息并将其提供给我们的构建。为了支持它，我创建了[通用 Webhook 触发器插件](https://plugins.jenkins.io/generic-webhook-trigger)。
 
 [仓库](https://github.com/jenkinsci/generic-webhook-trigger-plugin/)中提供了最新文档，并且有一个完整的示例，其中使用 `configuration-as-code` 实现了 GitLab。在[这里](https://github.com/tomasbjerre/jenkins-configuration-as-code-sandbox)查看仓库。
 
-## 代码复制和安全性
+## 代码重复和安全性
 
 我制定了所有开发人员都必须遵循的约定。而不是让开发人员从 Jenkinsfiles 显式调用基础结构。遵循一些规则，例如：
 
