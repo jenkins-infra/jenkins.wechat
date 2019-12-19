@@ -23,6 +23,8 @@ tags:
 
 我们会在 Docker 容器里运行 Jenkins，再使用 Jenkins 启动一个 Maven 容器，用来编译我们的代码，接着在另一个 Maven 容器中运行测试用例并生成制品（例如 jar 包），然后再在 Jenkins 容器中制作 Docker 镜像，最后将镜像推送到 Docker Hub。
 
+![pipeline-view](pipeline-view.png)
+
 我们会用到两个 Github 仓库。
 
 1. [Jenkins-complete](https://github.com/jagadish12/jenkins-complete.git)：这是主仓库，包含了启动 Jenkins 容器所需的配置文件。
