@@ -5,7 +5,7 @@ author:  Krishna Prasad Kalakodimi
 translator: anxk
 original: https://dzone.com/articles/implement-ci-for-multibranch-pipeline-in-jenkins
 poster: cover.jpg
-toc: false
+toc: true
 date: 2019-12-31
 tags:
 - jenkins
