@@ -16,7 +16,7 @@ tags:
 
 ## 简介
 
-Jenkins 是一个持续集成服务器，用于从版本控制系统（VCS）中获取最新代码，然后对其进行构建、测试并将结果通知给开发人员。除了作为一个持续集成（CI）服务器之外，Jenkins 还可以做很多其它的事情。最初它被称为 Hudson，是川口浩辅（Kohsuke Kawaguchi）基于 Java 编写的一个开源项目，因此，在安装和运行 Jenkins 之前，首先需要安装 [Java 8](https://dzone.com/articles/how-to-install-jdk-8-on-linux-operating-system-vid)。
+Jenkins 是一个持续集成服务器，用于从版本控制系统（VCS）中获取最新代码，然后对其进行构建、测试并将结果通知给开发人员。除了作为一个持续集成（CI）服务器之外，Jenkins 还可以做很多其它的事情。最初它被称为 Hudson，是川口耕介（Kohsuke Kawaguchi）基于 Java 编写的一个开源项目，因此，在安装和运行 Jenkins 之前，首先需要安装 [Java 8](https://dzone.com/articles/how-to-install-jdk-8-on-linux-operating-system-vid)。
 
 [多分支流水线](https://dzone.com/refcardz/declarative-pipeline-with-jenkins)是 Jenkins 中的一种流水线类型，它允许您在 Jenkinsfile 的帮助下为源码管理（SCM）库中的每个分支自动地创建一支流水线。
 
