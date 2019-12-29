@@ -1,5 +1,16 @@
 ﻿
-# [欢迎来到矩阵](https://jenkins.io/blog/2019/11/22/welcome-to-the-matrix/)
+---
+title：欢迎使用流水线指令-矩阵
+date：2019-12-29
+description：介绍了声明式流水线中 `matrix` 指令的使用方法，并介绍了 `matrix` 指令在pipeline中的句式。
+author：Liam Newman
+translator：0N0thing
+original：https://jenkins.io/blog/2019/11/22/welcome-to-the-matrix/
+tags：
+- Jenkins
+- pipeline
+---
+# [欢迎使用流水线指令-矩阵](https://jenkins.io/blog/2019/11/22/welcome-to-the-matrix/)
 我经常发现自己需要在一堆不同的配置上执行相同的操作。到目前为止，意味着我需要在流水线上的同一阶段制作多个副本。当我需要修改时，必须在整个流水线的多个地方做相同的修改。对于一个更大型的流水线来说，即便维护很少的配置也会变得困难。
 声明式流水线1.5.0-beta1（可以从[ Jenkins 实验更新站点 ](https://updates.jenkins.io/experimental/)获取）添加了一个新的  `matrix` 部分，该部分能让我一次指定一个阶段列表，然后在多个配置上并行运行同一列表。让我们来看一看！
 ## [单配置流水线](https://jenkins.io/blog/2019/11/22/welcome-to-the-matrix/#single-configuration-pipeline)
@@ -303,10 +314,10 @@ Do Test for mac - firefox
 Do Test for mac - chrome
 ```
 ## 重要
-在[ DevOps 世界 | Jenkins 世界2019](https://www.cloudbees.com/devops-world/lisbon) “[声明式流水线2019：知识点，技巧，以及接下来的事情](https://sched.co/UeQe)”中加入我。我会回顾过去的一年有哪些加入到了流水线（包括“矩阵”）以及探讨一些关于流水线下一步走向的想法。
+在[ DevOps World | Jenkins World 2019](https://www.cloudbees.com/devops-world/lisbon) “[声明式流水线2019：知识点，技巧，以及接下来的事情](https://sched.co/UeQe)”中加入我。我会回顾过去的一年有哪些加入到了流水线（包括“矩阵”）以及探讨一些关于流水线下一步走向的想法。
 
 ## [结论](https://jenkins.io/blog/2019/11/22/welcome-to-the-matrix/#conclusion)
-这篇博客里面，我已经看到了怎样使用 `matrix` 指令来构成简洁但又强大的声明式流水线。同样的一个不带有 `matrix` 的流水线会容易一些，但会消耗更多的时间同样也会更难理解和维护。
+这篇博客里面，我们已经看到了怎样使用 `matrix` 指令来构成简洁但又强大的声明式流水线。同样的一个不带有 `matrix` 的流水线会容易一些，但会消耗更多的时间同样也会更难理解和维护。
 ## [链接](https://jenkins.io/blog/2019/11/22/welcome-to-the-matrix/#links)
 - [ Jenkins 实验更新中心](https://updates.jenkins.io/experimental/)
 - [使用 Jenkins 实验更新中心](https://jenkins.io/doc/developer/publishing/releasing-experimental-updates/#using-the-experimental-update-center)
