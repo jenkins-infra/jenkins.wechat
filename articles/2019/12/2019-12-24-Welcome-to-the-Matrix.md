@@ -12,7 +12,7 @@ tags：
 ---
 
 我经常发现自己需要在一堆不同的配置上执行相同的操作。到目前为止，意味着我需要在流水线上的同一阶段制作多个副本。当我需要修改时，必须在整个流水线的多个地方做相同的修改。对于一个更大型的流水线来说，即便维护很少的配置也会变得困难。
-声明式流水线1.5.0-beta1（可以从[ Jenkins 实验更新站点](https://updates.jenkins.io/experimental/)获取）添加了一个新的  `matrix` 部分，该部分能让我一次指定一个阶段列表，然后在多个配置上并行运行同一列表。让我们来看一看！
+声明式流水线1.5.0-beta1（可以从[ Jenkins 实验性更新中心](https://updates.jenkins.io/experimental/)获取）添加了一个新的  `matrix` 部分，该部分能让我一次指定一个阶段列表，然后在多个配置上并行运行同一列表。让我们来看一看！
 ## 单一配置流水线
 开始我会使用一个带有构建和测试阶段的简单流水线。我使用 `echo` 步骤作为构建和测试行为的占位符。
 
@@ -319,5 +319,5 @@ Do Test for mac - chrome
 ## 结论
 这篇博客里面，我们已经看到了怎样使用 `matrix` 指令来构成简洁但又强大的声明式流水线。同样的一个不带有 `matrix` 的流水线会容易一些，但会消耗更多的时间同样也会更难理解和维护。
 ## 链接
-- [ Jenkins 实验更新中心](https://updates.jenkins.io/experimental/)
-- [使用 Jenkins 实验更新中心](https://jenkins.io/doc/developer/publishing/releasing-experimental-updates/#using-the-experimental-update-center)
+- [Jenkins 实验性更新中心](https://updates.jenkins.io/experimental/)
+- [使用 Jenkins 实验性更新中心](https://jenkins.io/doc/developer/publishing/releasing-experimental-updates/#using-the-experimental-update-center)
