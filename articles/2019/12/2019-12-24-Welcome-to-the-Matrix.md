@@ -313,8 +313,8 @@ Do Test for mac - safari
 Do Test for mac - firefox
 Do Test for mac - chrome
 ```  
-## 重要
-在[ DevOps World | Jenkins World 2019](https://www.cloudbees.com/devops-world/lisbon) “[声明式流水线2019：知识点，技巧，以及接下来的事情](https://sched.co/UeQe)”中加入我。我会回顾过去的一年有哪些加入到了流水线（包括“矩阵”）以及探讨一些关于流水线下一步走向的想法。
+**重要**
+在[ DevOps World | Jenkins World 2019](https://www.cloudbees.com/devops-world/lisbon) “[声明式流水线2019：知识点，技巧，以及接下来的事情](https://sched.co/UeQe)”中与我一起参与。我会回顾过去的一年有哪些加入到了流水线（包括“矩阵”）以及探讨一些关于流水线下一步走向的想法。
 
 ## 结论
 这篇博客里面，我们已经看到了怎样使用 `matrix` 指令来构成简洁但又强大的声明式流水线。同样的一个不带有 `matrix` 的流水线会容易一些，但会消耗更多的时间同样也会更难理解和维护。
