@@ -4,12 +4,15 @@ title：欢迎使用流水线指令-矩阵
 date：2019-12-29  
 description：介绍了声明式流水线中 `matrix` 指令的使用方法，并介绍了 `matrix` 指令在pipeline中的句式。  
 author：Liam Newman  
+poster：cover.jpg
 translator：0N0thing  
 original：https://jenkins.io/blog/2019/11/22/welcome-to-the-matrix/  
 tags：  
 - Jenkins  
 - pipeline  
 ---
+
+![cover](cover.jpg)
 
 我经常发现自己需要在一堆不同的配置上执行相同的操作。到目前为止，意味着我需要在流水线上的同一阶段制作多个副本。当我需要修改时，必须在整个流水线的多个地方做相同的修改。对于一个更大型的流水线来说，即便维护很少的配置也会变得困难。
 声明式流水线1.5.0-beta1（可以从[ Jenkins 实验性更新中心](https://updates.jenkins.io/experimental/)获取）添加了一个新的  `matrix` 部分，该部分能让我一次指定一个阶段列表，然后在多个配置上并行运行同一列表。让我们来看一看！
