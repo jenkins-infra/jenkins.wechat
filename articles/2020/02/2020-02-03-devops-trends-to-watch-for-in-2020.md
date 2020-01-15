@@ -48,7 +48,7 @@ Netscape 的创始人 Marc Andreessen 很久之前就谈到过软件是如何吞
 
 根据 Oracle 对云原生未来的预测，到 2025 年将有 80% 的 IT 企业会把业务迁移到云。CNCF 的调查结果显示，在生产环境中使用云原生技术的企业数量已经增长超过了 200％。
 
-![Abby Kearns, "Cloud Everything"](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-2p3a303m.png)
+![Abby Kearns, "Cloud Everything"](cloud-everything.png)
 
 去年，作为云服务提供商的 [Cloud Foundry Foundation](https://www.cloudfoundry.org/foundation/) 开源平台的执行董事 Abby Kearns 在 2018 年 [LinuxCon + ContainerCon + CloudOpen China](https://www.lfasiallc.com/events/lc3-2018/)（ LC3）上发表了主题演讲，对云原生及其未来做了更加深入的阐释。
 
@@ -98,7 +98,7 @@ Kearns 说：“云原生技术和云原生应用正在增长，在接下来的 
 
 由于 Go 可以静态编译成独立的二进制文件，因此非常适合在您无法安装或不想安装依赖项的环境中使用。无需设置整个环境，这可以让您比使用其他编程语言更快地完成工作。
 
-![Areas of Go development](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-l88x300z.png)
+![Areas of Go development](areas-of-go-development.png)
 
 JFrog 在最近于伦敦和圣地亚哥举行的 GopherCon 会议上对 1000 多名开发人员进行了调查，以便更好地了解 Go 社区和对 Go module 的总体看法。
 
@@ -116,7 +116,7 @@ JFrog 在最近于伦敦和圣地亚哥举行的 GopherCon 会议上对 1000 多
 
 在软件开发生命周期中，安全性变的比以往任何时候都更为重要。安全性变成了每个人的责任，而不仅仅是安全专家。
 
-![Global DevSecOps market](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-pviu302j.png)
+![Global DevSecOps market](global-devsecops-market.png)
 
 尽管 [DevSecOps](https://dzone.com/articles/just-what-is-devsecops) 一词似乎只是另外一个流行词汇，但仍要更加重视安全性。 DevSecOps 在组织内创建安全意识和共享的知识库，以加强软件开发过程中的安全性。今年早些时候，[Capital One](https://www.zdnet.com/article/capital-one-hacker-took-data-from-more-than-30-companies-new-court-docs-reveal/) 漏洞使[云安全成为一个令人关注的话题](https://www.synopsys.com/blogs/software-security/cost-to-fix-bugs-during-each-sdlc-phase/)，因此重点是保护公有云中的数据。
 
@@ -147,7 +147,7 @@ JFrog 在最近于伦敦和圣地亚哥举行的 GopherCon 会议上对 1000 多
 
 在最近的印度开源 2019 大会上，我们对近 300 名开源专业人士进行了调查，以下是当我们询问他们喜欢开源软件的原因时的回应。定制化是大多数人喜欢开源软件的事实。
 
-![Why developers like open source](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-34ol309u.png)
+![Why developers like open source](why-developers-like-open-source.png)
 
 [CB Insights](https://www.cbinsights.com/research/report/future-open-source/) 的最新研究估计，开源服务行业在 2019 年将超过 170 亿美元，并且在 2022 年有望达到近 330 亿美元。
 
@@ -159,7 +159,7 @@ JFrog 在最近于伦敦和圣地亚哥举行的 GopherCon 会议上对 1000 多
 
 Cloud Native Foundation 生态系统主管 Cheryl Hung 在最近的欧洲 Linux Foundation 开源峰会上的演讲中明确指出，大型公司正在致力于开源项目。特别是 Kubernetes，它创建了一个庞大的社区。
 
-![Cheryl Hung](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-26uz30sw.png)
+![Cheryl Hung](cheryl-hung.png)
 
 ## Serverless 仍然是个新事物，但却有着光明的未来
 
@@ -180,7 +180,7 @@ Cloud Native Foundation 生态系统主管 Cheryl Hung 在最近的欧洲 Linux 
 * 用户体验更好
 * 费用和基础设施问题更少
 
-![Adopting serverless](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-oawg30x5.png)
+![Adopting serverless](adopting-serverless.png)
 
 2017 年 5 月，微软首席执行官 Satya Nadella 指出 Serverless 的潜力及其改变云计算机制的能力。
 
@@ -192,7 +192,7 @@ Cloud Native Foundation 生态系统主管 Cheryl Hung 在最近的欧洲 Linux 
 
 上述旧版系统参加了每年的黑色星期五和网络星期一的活动，当系统无法控制夜间高峰时，这变成了一场灾难。结果，发生了一系列事件，其中 TAX 系统先关闭，这又使 SAP 宕机，结果整个乐高电子商务平台停顿了 2 个小时，这使他们蒙受了巨大损失。
 
-![Lego's serverless journey](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-9612z308c.png)
+![Lego's serverless journey](lego-serverless-journey.png)
 
 此事件使他们想到了 Serverless，为什么？
 
@@ -233,11 +233,11 @@ Azure 和 AWS 作为该领域的领导者将决定多云的未来。
 
 根据最近的 [RightScale 2019 云状态报告](https://info.flexera.com/SLO-CM-WP-State-of-the-Cloud-2019)，可以看到 84% 的企业具有多云策略。
 
-![Multi-cloud strategy](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-xr1583073.png)
+![Multi-cloud strategy](multi-cloud-strategy.png)
 
 多云与当今不断增长的市场趋势高度相关。根据 IDC 最近的一项名为[多云世界中的云遣返加速](https://www.idc.com/getdoc.jsp?containerId=US44185818)的调查，多云最能描述当今的云现实。
 
-![Multi-cloud deployment](vI89MS8Ou8OYOnT4ESBSH9HkCrz2-2x1bt30h8.png)
+![Multi-cloud deployment](multi-cloud-deployment.png)
 
 尽管有关云成本优化和供应商锁定的讨论很多，但多云在这里解决了一些关键性问题，例如：避免供应商锁定、成本优化、安全性、数据主权和减少停机时间等。
 
