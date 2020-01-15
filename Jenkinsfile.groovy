@@ -15,8 +15,11 @@ pipeline {
             steps{
                 script{
                     withChangeSets(){
-                        if(env.changePath != "" && env.changePath != null && env.changePath.endsWith(".md")) {
-                            checkArticleMeta(env.changePath)
+                        if(env.changePath != "" && env.changePath != null) {
+                            checkFileName(env.changePath)
+                            if(env.changePath.endsWith(".md")){
+                                checkArticleMeta(env.changePath)
+                            }
                         }
                     }
                 }
@@ -40,6 +43,12 @@ pipeline {
                 }
             }
         }
+    }
+}
+
+def checkFileName(filePath){
+    if(!filePath.equals(filePath.toLowerCase()){
+        error "alphabetic characters of filename should keep lowercase"
     }
 }
 
