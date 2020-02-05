@@ -24,7 +24,7 @@ Jenkins 之旅充满神奇，而且从未间断。我非常喜欢这一切，尤
 
 几年前，我曾经觉得如果我退出的话，天就会塌下开。在 2019 年的某个时刻，我突然发现我再也没有这种感觉了。这种转变是渐进的、稳定的，所以我不确定自己何时跨过的这道门槛，但是在 2019 年，我显然处于另一端。这样我才知道自己终于可以结束我的这一篇章。回首，与 Jenkins 在一起 15 年，与 CloudBees 合作9 年，这真是很长的时间了。
 
-我希望您会想知道我的新篇章是什么。我将与我的老伙伴 [Harpreet Singh](https://www.linkedin.com/in/singhharpreet/) 创办一家新的创业公司，即 [Launchable](https://launchableinc.com)。自从在 Sun Microsystems 和 JavaEE 工作以来，我就认识他，他是我在 CloudBees 领域的合伙人，从头开始建立 Jenkins 业务。他去 Atlassian 经营 BitBucket 业务已有一段时间，但是现在他和我又回到了一起。许多CloudBees人投资了 Launchable，包括 [Sacha Labourey](https://www.linkedin.com/in/sachalabourey)、[Bob Bickel](https://www.linkedin.com/in/bobbickel) 和 [John Vrionis](https://www.linkedin.com/in/johnvrionis)。
+我希望您会想知道我的新篇章是什么。我将与我的老伙伴 [Harpreet Singh](https://www.linkedin.com/in/singhharpreet/) 创办一家新的创业公司，即 [Launchable](https://launchableinc.com)。自从在 Sun Microsystems 和 JavaEE 工作以来，我就认识他，他是我在 CloudBees 领域的合伙人，从头开始建立 Jenkins 业务。他去 Atlassian 经营 BitBucket 业务已有一段时间，但是现在他和我又回到了一起。许多 CloudBees 人投资了 Launchable，包括 [Sacha Labourey](https://www.linkedin.com/in/sachalabourey)、[Bob Bickel](https://www.linkedin.com/in/bobbickel) 和 [John Vrionis](https://www.linkedin.com/in/johnvrionis)。
 
 通过 Jenkins 和 CloudBees ，我能够推动软件开发中自动化的发展。这种自动化产生了大量数据，但我们并未使用这些数据来改善我们的生活。这确实是一个浪费的金矿。Launchable 正在努力利用这些信息来提高开发人员的生产力。我写了[一篇单独的博客文章，以讨论有关我的想法的更多信息](https://launchableinc.com/2020/01/23/kohsuke-kawaguchi-launchable-smarter-testing-faster-devops/)。
 
