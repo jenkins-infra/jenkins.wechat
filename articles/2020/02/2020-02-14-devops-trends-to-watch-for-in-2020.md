@@ -6,7 +6,7 @@ translator: anxk
 original: https://dzone.com/articles/devops-trends-to-watch-for-in-2020#
 poster: cover.jpg
 toc: true
-date: 2020-02-03
+date: 2020-02-14
 tags:
 - DevOps
 ---
