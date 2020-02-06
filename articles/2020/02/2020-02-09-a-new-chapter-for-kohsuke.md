@@ -1,6 +1,6 @@
 ---
 title: "Jenkins 创始人 Kohsuke 的新篇章"
-description: "Jenkins 创始人 Kohsuke 的新篇章"
+description: "Jenkins 创始人 Kohsuke 即将退出 Jenkins，并投身于一个新的创业公司 Launchable "
 date: 2020-02-09
 original: "https://jenkins.io/blog/2020/01/23/a-new-chapter-for-kohsuke/"
 tags:
