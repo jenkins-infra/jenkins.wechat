@@ -4,9 +4,9 @@ description: Jenkins 2019 年终回顾
 author: Rob Davies
 translator: 熊科智
 original: "https://jenkins-x.io/blog/2020/01/14/happy-second-birthday/"
-poster: "./2020-02-14-happy-second-birthday-jenkins-x/7TH_BIRTHDAY.png"
+poster: "./2020-02-17-happy-second-birthday-jenkins-x/7TH_BIRTHDAY.png"
 toc: false
-date: 2020-02-14
+date: 2020-02-17
 tags:
 - tag1 jenkins-x
 - tag2 ci
@@ -16,7 +16,7 @@ keywords:
 
 ---
 
-![图片来自 Ashley McNamara](.\2020-02-14-happy-second-birthday-jenkins-x\7TH_BIRTHDAY.png)
+![图片来自 Ashley McNamara](.\2020-02-17-happy-second-birthday-jenkins-x\7TH_BIRTHDAY.png)
 
 始于 2019 年初的 Jenkins X 项目在去年的1月14号庆祝了它的第一个生日，这对任何开源项目来说都是一件大事，我们刚刚又庆祝了它的第二个生日。
 
@@ -32,11 +32,11 @@ Jenkins X 本身是功能专一的，但是却极易拓展。Jenkins X 是为实
 ### 2019 年 2 月：Tekton 的崛起！
 在 2018 年的后半年，Jenkins X 开始了一趟提供 Serverless Jenkins 与仅在需要时运行流水线引擎的旅程。这种流水线引擎基于 knative build-pipeline 项目，该项目进化成为了受到 Jenkins 和 Jenkins X 社区众多帮助与热爱的 Tekton 。[Jenkins X 项目在 2019 的 2 月完成了与 Tekton 的初次集成](https://jenkins-x.io/blog/2019/02/19/jenkins-x-next-gen-pipeline-engine/)。Tekton 是一个强大和灵活的 KuBurnes 本地开源框架，用于创建 CI/CD 流水线、管理制品和渐进部署。
 
-![Tekton-plane](.\2020-02-14-happy-second-birthday-jenkins-x\plane.png)
+![Tekton-plane](.\2020-02-17-happy-second-birthday-jenkins-x\plane.png)
 
 ### 2019 年 3 月：Jenkins X 加入了持续交付基金会！
 
-![cdf-logo](.\2020-02-14-happy-second-birthday-jenkins-x\cdf-logo.png)
+![cdf-logo](.\2020-02-17-happy-second-birthday-jenkins-x\cdf-logo.png)
 
 Jenkins X 加入了 Continuous Delivery Foundation (CDF)，与 Jenkins、Spinnaker 和 Tekton 一起作为创始项目。加入一个专注于持续交付的中立供应商基金会对于 Jenkins X 社区意义重大。
 
@@ -47,14 +47,14 @@ Jenkins X 加入了 Continuous Delivery Foundation (CDF)，与 Jenkins、Spinnak
 我们在整个六月都十分的忙碌 —— 暑期到来前一个疯狂的活动爆发期。Jenkins X 用户面临的一个常见问题便是在不同的 Kubernetes 集群上安装 Jenkins X 。按照正确的顺序安装服务和确保 DNS 和 Secrets 正确性的工作是因供应商的不同而完全不同，有时也因集群的不同而不同。我们意识到，要简化安装，我们确实需要一个流水线，虽然这听起来有点像一个电影情节，但运行 Jenkins X 流水线来安装 jx 确实是最好的选择。[jx boot 命令](https://jenkins-x.io/docs/getting-started/setup/boot/)使用本地 jx 二进制文件解释引导流水线。jx boot 命令也可以用于更新你的集群。
 
 ### 2019 年 7 月：一个新的 Logo！
-![jenkins-x-logo](.\2020-02-14-happy-second-birthday-jenkins-x\new-logo.png)
+![jenkins-x-logo](.\2020-02-17-happy-second-birthday-jenkins-x\new-logo.png)
 
 作为转移到 CDF 的一部分，Jenkins X 项目利用这个机会重新设计了它的标志。一个机器人就代表了 Jenkins X 在 Kubernetes 上提供自动化 CI/CD 的能力等等！
 
 ### 2019 年的后半年：聚焦于稳定性和可靠性
 Jenkins X 项目与很多不同的组件和活动部件一起进展的很快。不幸的是，这一快速的发展招致了一些不稳定性和导致了严重 issue 的增长，这些问题有可能破坏我们已经在 Jenkins X 上所做的所有杰出工作。于是，社区一直在努力提高稳定性和解决显著的 issue —— 下图展示了去年 issue 数量的走势，可以看出，在最后6个月内，创造的 issue 数量有一个显著的下降趋势。
 
-![cloubees](.\2020-02-14-happy-second-birthday-jenkins-x\graph.png)
+![cloubees](.\2020-02-17-happy-second-birthday-jenkins-x\graph.png)
 
 CloudBees 还通过引入 [CloudBees Jenkins X](https://www.cloudbees.com/products/cloudbees-jenkins-x-distribution/overview) 发行版帮助了这项工作，该发行版增加了围绕稳定配置和部署的测试，并且在每月定期发布。
 
@@ -63,14 +63,14 @@ Jenkins X Bootstrap [Steering Committee](https://github.com/jenkins-x/steering) 
 
 ### 2019 年 12 月：第一个 Jenkins X Outreachy 学员
 
-![outreachy](.\2020-02-14-happy-second-birthday-jenkins-x\outreachy.png)
+![outreachy](.\2020-02-17-happy-second-birthday-jenkins-x\outreachy.png)
 
 Neha Gupta 正在向 Jenkins X 中添加对 Kustomize 的支持以确保 Kubernetes 本机配置管理功能的实现，同时将在 2019 年 12 月到 2020 年 3 月期间参与 Outreachy。我们欢迎 Neha 在 Jenkins X 上所做的工作，并且期待着我们能在持续培养的文化基础上再接再厉！
 
 ### Jenkins X 在产品中的使用
 尝试 Jenkins X 最简单的方法无疑是使用[由 Jenkins X 驱动的 CloudBees CI/CD](https://www.cloudbees.com/products/cloudbees-ci-cd/overview)，它通过方便易用的 SaaS 提供 Jenkins X 。无需设置集群，无需安装 Jenkins X，这些它都已经为你完成了！目前，[由 Jenkins X 驱动的 CloudBees CI/CD](https://www.cloudbees.com/products/cloudbees-ci-cd/overview) 已经可供预览。在[这里](https://www.cloudbees.com/products/cloudbees-ci-cd/overview)注册试试新的 Jenkins X Saas 吧！
 
-![](.\2020-02-14-happy-second-birthday-jenkins-x\boxes.png)
+![](.\2020-02-17-happy-second-birthday-jenkins-x\boxes.png)
 
 ### 下一步？
 Jenkins X 项目将鼓励社区参与到更多的创新活动中。同时，有很多不错的想法也将继续扩展的我们的故事，比如：集成渐进式交付（A/B 测试、Canary 和 Blue/Green 部署）、持续化验证以及更多的平台支持。我们也期待着在 Jenkins X 的 CloudBees UI 中能涌现出更多更棒的新特性。
