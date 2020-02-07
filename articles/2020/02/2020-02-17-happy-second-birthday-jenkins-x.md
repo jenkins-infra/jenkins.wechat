@@ -1,6 +1,6 @@
 ---
 title: Happy Second Birthday Jenkins X!
-description: Jenkins 2019 年终回顾
+description: Jenkins X 2019 年终回顾
 author: Rob Davies
 translator: 熊科智
 original: "https://jenkins-x.io/blog/2020/01/14/happy-second-birthday/"
