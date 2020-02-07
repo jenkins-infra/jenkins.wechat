@@ -8,9 +8,9 @@ poster: "./2020-02-17-happy-second-birthday-jenkins-x/7TH_BIRTHDAY.png"
 toc: false
 date: 2020-02-17
 tags:
-- tag1 jenkins-x
-- tag2 ci
-- tag3 cd
+-  jenkins-x
+- ci
+- cd
 keywords:
 - jenkins-x
 
