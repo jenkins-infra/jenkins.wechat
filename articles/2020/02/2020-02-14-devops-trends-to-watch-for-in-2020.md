@@ -29,7 +29,7 @@ Netscape 的创始人 Marc Andreessen 很久之前就谈到过软件是如何吞
 
 根据 Kelly Shortridge 和 Nicole Forsgren 博士在 Black Hat USA 2019 上发布的[幻灯片](https://swagitda.com/speaking/us-19-Shortridge-Forsgren-Controlled-Chaos-the-Inevitable-Marriage-of-DevOps-and-Security.pdf)，在与 DevOps 行业中卓越的实践者进行对标时，有四个因素特别关键，分别是：
 
-1. 变动提前期
+1. 变更前置时间
 2. 发布频率
 3. 恢复时长
 4. 变更失败率
