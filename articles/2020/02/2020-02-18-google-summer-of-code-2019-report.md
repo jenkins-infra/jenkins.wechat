@@ -1,7 +1,7 @@
 ﻿---
-title：2019年 Google 编程之夏活动报告  
+title：2019 年 Google 编程之夏活动报告  
 date：2020-02-06  
-description：  主要介绍了 GSoC 2019活动的几个课题并讲述了整个活动的组织过程  
+description：  主要介绍了 GSoC 2019 活动的几个课题并讲述了整个活动的组织过程  
 author：Martin d'Anjou，Jeff Pearce，Oleg Nenashev，Marky Jackson  
 poster：cover.png  
 translator：0N0thing  
@@ -16,22 +16,22 @@ tags：
 
 ![cover](cover.jpg)
 
-Google 编程之夏活动不仅仅是一个夏日的实习项目，对于组织和一些社区的成员来说，这个活动是他们一整年努力的成果。现在，在里斯本举行的 Devops World | Jenkins World 会议以及最后的回顾会议之后，我们宣布 GSoC 2019正式画上结束的句号。首先我们感谢所有的参与者：学生们，导师们，主题专家，以及其他一些提出课题构想，参与学生选择，社区联系以及一些后期的讨论与回顾的贡献者们。Google 编程之夏活动是一个大型的活动，如果没有 Jenkins 社区的积极参与此次活动也就无法成行。  
+Google 编程之夏活动不仅仅是一个夏日的实习项目，对于组织和一些社区的成员来说，这个活动是他们一整年努力的成果。现在，在里斯本举行的 Devops World | Jenkins World 会议以及最后的回顾会议之后，我们宣布 GSoC 2019 正式画上结束的句号。首先我们感谢所有的参与者：学生们，导师们，主题专家，以及其他一些提出课题构想，参与学生选择，社区联系以及一些后期的讨论与回顾的贡献者们。Google 编程之夏活动是一个大型的活动，如果没有 Jenkins 社区的积极参与此次活动也就无法成行。  
 
 在这篇博客里我们想要与各位分享这次活动的成果以及我们从这一年总结的一些经验。
 
 ## 成果
-今年成功完成了5个 GSoC 课题：[角色策略插件性能优化](https://jenkins.io/projects/gsoc/2019/role-strategy-performance)，[插件安装管理 CLI 工具/库](https://jenkins.io/projects/gsoc/2019/plugin-installation-manager-tool-cli)，[运行时间插件 - UI 优化](https://jenkins.io/projects/gsoc/2019/working-hours-improvements)，[具有 Kubernetes 功能的 Apache Kafka 远程处理](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features)，[GitLab SCM 多分支流水线支持](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline)。我们会在后面的内容中讨论一下上面提到的这几个课题。
+今年成功完成了 5 个 GSoC 课题：[角色策略插件性能优化](https://jenkins.io/projects/gsoc/2019/role-strategy-performance)，[插件安装管理 CLI 工具/库](https://jenkins.io/projects/gsoc/2019/plugin-installation-manager-tool-cli)，[运行时间插件 - UI 优化](https://jenkins.io/projects/gsoc/2019/working-hours-improvements)，[具有 Kubernetes 功能的 Apache Kafka 远程处理](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features)，[GitLab SCM 多分支流水线支持](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline)。我们会在后面的内容中讨论一下上面提到的这几个课题。
 
 ![gsoc2019-highlights](gsoc2019-highlights.png)
 
 ## 项目细节
-8月底我们举行了最后一次 Jenkins 线上例会的演讲然后 Google 在9月3日发布了这些成果。最后的这些演讲内容可以从这里找到：[第一部分](https://www.youtube.com/watch?v=g19o24uzy6c)，[第二部分](https://www.youtube.com/watch?v=cMSbdGwGWp0)，[第三部分](https://www.youtube.com/watch?v=41dhyFC5Iak)。我们也在 [DevOps World | Jenkins World 旧金山](https://www.cloudbees.com/devops-world/san-francisco)以及 [DevOps World | Jenkins World 2019 里斯本](https://www.previous.cloudbees.com/devops-world/lisbon)会议中发布了[2019 Jenkins GSoC 报告](https://docs.google.com/presentation/d/e/2PACX-1vQf5RLIJXq8cPEKbCIaA4Bn3tMy5ITB4z2oGJKwLOJz_ne2AiNuSSvXi51nMDDDgA/pub?start=false&loop=false&delayms=3000)。
+8 月底我们举行了最后一次 Jenkins 线上例会的演讲然后 Google 在 9 月 3 日发布了这些成果。最后的这些演讲内容可以从这里找到：[第一部分](https://www.youtube.com/watch?v=g19o24uzy6c)，[第二部分](https://www.youtube.com/watch?v=cMSbdGwGWp0)，[第三部分](https://www.youtube.com/watch?v=41dhyFC5Iak)。我们也在 [DevOps World | Jenkins World 旧金山](https://www.cloudbees.com/devops-world/san-francisco)以及 [DevOps World | Jenkins World 2019 里斯本](https://www.previous.cloudbees.com/devops-world/lisbon)会议中发布了[2019 Jenkins GSoC 报告](https://docs.google.com/presentation/d/e/2PACX-1vQf5RLIJXq8cPEKbCIaA4Bn3tMy5ITB4z2oGJKwLOJz_ne2AiNuSSvXi51nMDDDgA/pub?start=false&loop=false&delayms=3000)。
 
 在下面的章节中，我们对每一个项目做一个简单的总结，第三阶段编码演示文稿的链接以及最后的成品。
 
 ## 角色策略插件性能优化
-[角色策略插件](https://plugins.jenkins.io/role-strategy)是 Jenkins 中最广泛被使用的认证插件之一，但因为其架构问题以及对项目角色的正则表达式检查使其没有因性能著称。[Abhyudaya Sharma](https://jenkins.io/blog/authors/abhyudayasharma) 与他的几位导师：[Oleg Nenashev](https://jenkins.io/blog/authors/oleg_nenashev)，[Runze Xia](https://jenkins.io/blog/authors/runzexia)，[Supun Wanniarachchi](https://jenkins.io/blog/authors/supun94) 一起进行该项目。他为 Jenkins 插件创建了一个基于 [JMH](https://openjdk.java.net/projects/code-tools/jmh/) 的微基准测试框架，创建微基准测试然后在一些真实场景中得到了3501%的提升。然后他继续深入研究创建了一个[基于目录的认证策略插件](https://plugins.jenkins.io/folder-auth)，当权限范围为目录时该插件为 Jenkins 实例提供了更佳的性能。在他的项目中 Abhyudaya 还修复了对 Jenkins 组策略的配置即代码的支持并为 [JCasC 插件](https://plugins.jenkins.io/folder-auth)贡献了一些优化与修复的代码。
+[角色策略插件](https://plugins.jenkins.io/role-strategy)是 Jenkins 中最广泛被使用的认证插件之一，但因为其架构问题以及对项目角色的正则表达式检查使其没有因性能著称。[Abhyudaya Sharma](https://jenkins.io/blog/authors/abhyudayasharma) 与他的几位导师：[Oleg Nenashev](https://jenkins.io/blog/authors/oleg_nenashev)，[Runze Xia](https://jenkins.io/blog/authors/runzexia)，[Supun Wanniarachchi](https://jenkins.io/blog/authors/supun94) 一起进行该项目。他为 Jenkins 插件创建了一个基于 [JMH](https://openjdk.java.net/projects/code-tools/jmh/) 的微基准测试框架，创建微基准测试然后在一些真实场景中得到了 3501% 的提升。然后他继续深入研究创建了一个[基于目录的认证策略插件](https://plugins.jenkins.io/folder-auth)，当权限范围为目录时该插件为 Jenkins 实例提供了更佳的性能。在他的项目中 Abhyudaya 还修复了对 Jenkins 组策略的配置即代码的支持并为 [JCasC 插件](https://plugins.jenkins.io/folder-auth)贡献了一些优化与修复的代码。
 - [项目页面](https://jenkins.io/projects/gsoc/2019/role-strategy-performance)
 - 发布的博客：[Jenkins 微基准测试框架](https://jenkins.io/blog/2019/06/21/performance-testing-jenkins/)，
 [引入一个新的目录认证插件](https://jenkins.io/blog/2019/08/16/folder-auth-plugin/)，[角色策略插件性能优化](https://jenkins.io/blog/2019/08/26/role-strategy-performance/)
@@ -59,16 +59,16 @@ Jenkins UI 和前端框架在Jenkins项目中成为了一个共同的话题，�
 ![working-hours-example-time-range](working-hours-example-time-range.png)
 
 ## 具有 Kubernetes 功能的 Apache Kafka 远程处理
-[Long Le Vu Nguyen](https://jenkins.io/blog/authors/longnguyen) 正在为  [Apache Kafka 远程插件](https://plugins.jenkins.io/TODO)扩展 Kubernetes 支持。他的导师 [Andrey Falco](https://jenkins.io/blog/authors/afalko)和 [Pham vu Tuan](https://jenkins.io/blog/authors/pvtuan10) 是我们 GSoC 2018 的学生和插件发明者。在这个项目过程中 Long 添加了一个新的代理启动器，该启动器规定了在 Kubernetes 中的 Jenkins 节点使其让它们连接到 master 节点。他还为其创建了一个 Cloud API 接口以及一个新的 Helm 图表，该图表可以将 Jenkins 作为 Kubernetes 中的一个完整的系统，默认启用 Apache Kafka。所有这些特性都发布在了 [Apache Kafka 远程插件2.0](https://jenkins.io/blog/2019/08/19/remoting-kafka-kubernetes-release-2/)中。
+[Long Le Vu Nguyen](https://jenkins.io/blog/authors/longnguyen) 正在为  [Apache Kafka 远程插件](https://plugins.jenkins.io/TODO)扩展 Kubernetes 支持。他的导师 [Andrey Falco](https://jenkins.io/blog/authors/afalko)和 [Pham vu Tuan](https://jenkins.io/blog/authors/pvtuan10) 是我们 GSoC 2018 的学生和插件发明者。在这个项目过程中 Long 添加了一个新的代理启动器，该启动器规定了在 Kubernetes 中的 Jenkins 节点使其让它们连接到 master 节点。他还为其创建了一个 Cloud API 接口以及一个新的 Helm 图表，该图表可以将 Jenkins 作为 Kubernetes 中的一个完整的系统，默认启用 Apache Kafka。所有这些特性都发布在了 [Apache Kafka 远程插件 2.0 ](https://jenkins.io/blog/2019/08/19/remoting-kafka-kubernetes-release-2/)中。
 - [项目页面](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features)
-- [Apache Kafka 远程插件2.0发布的博客](https://jenkins.io/blog/2019/08/19/remoting-kafka-kubernetes-release-2/)
+- [Apache Kafka 远程插件 2.0 发布的博客](https://jenkins.io/blog/2019/08/19/remoting-kafka-kubernetes-release-2/)
 - 最终评估：[幻灯片](https://docs.google.com/presentation/d/1QMjeAt6on3RPQdjlz4SiFg8YgpJ2xNOQhfzXDWgn2AY/)，[视频](https://youtu.be/g19o24uzy6c?t=3685)
 - [插件源码](https://github.com/jenkinsci/remoting-kafka-plugin)
 
 ![helm-chart](helm-chart.png)
 
 ## Gitlab SCM 支持多分支流水线
-[Parichay Barpanda](https://jenkins.io/blog/authors/baymac) 正在开发具有多分支流水线任务以及基于文件夹组织支持的新的 [GitLab 分支源码插件](https://plugins.jenkins.io/gitlab-branch-source)。他的导师是 [Marky Jackson-Taulia](https://jenkins.io/blog/authors/markyjackson-taulia)，[Justin Harringa](https://jenkins.io/blog/authors/justinharringa)，[Zhao Xiaojie](https://jenkins.io/blog/authors/surenpi) 和 [Joseph Petersen](https://jenkins.io/blog/authors/casz)。该插件扫描项目，并根据提供的的条件导入流水线任务。项目导入后，Jenkins 立即运行基于 Jenkinsfile 脚本的任务然后发送通知到 GitLab 流水线状态。该插件同样提供了 GitLab 服务器配置可以在系统配置或者通过 Jenkins 配置即代码进行配置（JCasC）。在 [GitLab 分支源码1.0声明](https://jenkins.io/blog/2019/08/23/introducing-gitlab-branch-source-plugin/)获取更多内容。
+[Parichay Barpanda](https://jenkins.io/blog/authors/baymac) 正在开发具有多分支流水线任务以及基于文件夹组织支持的新的 [GitLab 分支源码插件](https://plugins.jenkins.io/gitlab-branch-source)。他的导师是 [Marky Jackson-Taulia](https://jenkins.io/blog/authors/markyjackson-taulia)，[Justin Harringa](https://jenkins.io/blog/authors/justinharringa)，[Zhao Xiaojie](https://jenkins.io/blog/authors/surenpi) 和 [Joseph Petersen](https://jenkins.io/blog/authors/casz)。该插件扫描项目，并根据提供的的条件导入流水线任务。项目导入后，Jenkins 立即运行基于 Jenkinsfile 脚本的任务然后发送通知到 GitLab 流水线状态。该插件同样提供了 GitLab 服务器配置可以在系统配置或者通过 Jenkins 配置即代码进行配置（JCasC）。在 [GitLab 分支源码 1.0 声明](https://jenkins.io/blog/2019/08/23/introducing-gitlab-branch-source-plugin/)获取更多内容。
 - [项目页面](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline)
 - [第三阶段编码演示](https://docs.google.com/presentation/d/1avMoEPMf5Ksc99106fv7bGikAh17GQZJZdwUWKOzYBY/)
 - [GitLab 分支源码插件](https://github.com/jenkinsci/gitlab-branch-source-plugin/)，[GitLab API 插件](https://github.com/jenkinsci/gitlab-api-plugin)
@@ -76,12 +76,12 @@ Jenkins UI 和前端框架在Jenkins项目中成为了一个共同的话题，�
 ![multibranch-folder](multibranch-folder.png)
 
 ## 没有完成的项目
-今年并非所有的项目都完成了。我们也在 [Jenkins 流水线的制品提升插件](https://jenkins.io/projects/gsoc/2019/artifact-promotion-plugin-for-jenkins-pipeline)和[云特性的外部工作区管理插件](https://jenkins.io/projects/gsoc/2019/ext-workspace-manager-cloud-features)进行了尝试，但不幸的是这两个项目都在第一阶段编码后即停止了。无论如何，我们在这些领域得到了许多经验与收获。（请参阅链接的 Jira 门票！）我们希望这些故事的某一点能够被 Jenkins 贡献者实现出来。或许 [Google 编程之夏2020](https://jenkins.io/blog/2019/12/20/call-for-mentors/)可以？
+今年并非所有的项目都完成了。我们也在 [Jenkins 流水线的制品提升插件](https://jenkins.io/projects/gsoc/2019/artifact-promotion-plugin-for-jenkins-pipeline)和[云特性的外部工作区管理插件](https://jenkins.io/projects/gsoc/2019/ext-workspace-manager-cloud-features)进行了尝试，但不幸的是这两个项目都在第一阶段编码后即停止了。无论如何，我们在这些领域得到了许多经验与收获。（请参阅链接的 Jira 门票！）我们希望这些故事的某一点能够被 Jenkins 贡献者实现出来。或许 [Google 编程之夏 2020](https://jenkins.io/blog/2019/12/20/call-for-mentors/) 可以？
 
 ## 以组织层面运营 GSoC 项目
-这里有一些在我们组织 GSoC 前后的一些幕后的小故事跟大家分享。为了给即将涌入进来的学生们做好准备，我们更新了所有的 GSoC 页面，收录进去了我们这几年运营这个项目的所有知识。我们从2018年10月份开始准备，此时离项目开始还有很长一段时间。主要的目标是解决在 GSoC 2018期间得到的一些反馈。
+这里有一些在我们组织 GSoC 前后的一些幕后的小故事跟大家分享。为了给即将涌入进来的学生们做好准备，我们更新了所有的 GSoC 页面，收录进去了我们这几年运营这个项目的所有知识。我们从 2018 年 10 月份开始准备，此时离项目开始还有很长一段时间。主要的目标是解决在 GSoC 2018 期间得到的一些反馈。
 
-**课题构想**。我们在2018年的最后一个月开始收集课题的构想。我们在 Google 文档准备了[课题构想清单](https://jenkins.io/projects/gsoc/2019/project-ideas/)，并在文档的表格中追踪了每个课题的所有权情况。每个课题构想都在其 Google 文档中作进一步阐述。我们发现每个课题在定义阶段都非常的复杂，也许他们本身就太复杂了并且也应该完成不了。  
+**课题构想**。我们在 2018 年的最后一个月开始收集课题的构想。我们在 Google 文档准备了[课题构想清单](https://jenkins.io/projects/gsoc/2019/project-ideas/)，并在文档的表格中追踪了每个课题的所有权情况。每个课题构想都在其 Google 文档中作进一步阐述。我们发现每个课题在定义阶段都非常的复杂，也许他们本身就太复杂了并且也应该完成不了。  
 
 自从我们想让所有的课题构想都能用相同的方法编写成文档时，我们创建了一个模板来指导这些贡献者们。大多数课题构想的文档是由组织的管理员或者导师来编写的，但是偶尔也有一个学生提出一个极妙的点子。我们也在那个文档中获取了一些其他信息比如 GitHub 以及 Gitter 账号以及课题的潜在导师清单。我们将所有的课题文档放到了我们的网站上。  
 
@@ -99,7 +99,7 @@ Jenkins UI 和前端框架在Jenkins项目中成为了一个共同的话题，�
 
 **社区联系**。我们发现[社区联系阶段](https://developers.google.com/open-source/gsoc/resources/glossary#community_bonding_period)对于每一个课题的成功至关重要。社区联系有困难的课题通常来说不会做的很好。为了让学生们更好的融入进社区中，几乎所有的课题都在[特别兴趣小组](https://jenkins.io/sigs)的指导下进行，这样可以与更多相关人士交流。  
 
-**沟通**。每年我们都有学生通过个人社交工具与导师进行交流。学生们，如果你们正在读这篇文章，请**不要**给我们通过个人社交工具发送有关课题方面的内容，你不会收到任何额外的照顾。显然，开源化的目的是我们希望所有的讨论都是公开化的，所以学生们需要时刻牢记这一点。2019年我们使用 Gitter 处理了最多的聊天信息，但是从一名管理员角度来说相比邮箱沟通来说这样有点太碎片化了。并且它很难去搜索消息。聊天室很方便毕竟消息集中一些，但是从一名管理员角度来说，缺少话题功能很难从 Gitter 获得概要信息。最近 Gitter 添加了话题功能（2019年11月）但是在 Android 和 iOS 上并不能使用。在项目尾声我们使用 Zoom 会议并且我们发现使用它工作要比 Google 的 Hangouts 要容易一些。  
+**沟通**。每年我们都有学生通过个人社交工具与导师进行交流。学生们，如果你们正在读这篇文章，请**不要**给我们通过个人社交工具发送有关课题方面的内容，你不会收到任何额外的照顾。显然，开源化的目的是我们希望所有的讨论都是公开化的，所以学生们需要时刻牢记这一点。2019 年我们使用 Gitter 处理了最多的聊天信息，但是从一名管理员角度来说相比邮箱沟通来说这样有点太碎片化了。并且它很难去搜索消息。聊天室很方便毕竟消息集中一些，但是从一名管理员角度来说，缺少话题功能很难从 Gitter 获得概要信息。最近 Gitter 添加了话题功能（2019 年 11 月）但是在 Android 和 iOS 上并不能使用。在项目尾声我们使用 Zoom 会议并且我们发现使用它工作要比 Google 的 Hangouts 要容易一些。  
 
 **状态跟踪**。另一个很麻烦的事情就是一旦开始后获取每一个课题运行的概况。我们扩展了 Google 表格的用途，在项目期间跟踪表单中的课题与参与者来为课题排名以及追踪课题各阶段的状态（社区联系，编码，等等。）。让这些表格持续更新是一件很有挑战性的工作，每一个课题包括了好几位参与者以及好几个链接。在这件事上消耗的时间让我们发现让这些表格保持更新，准确，完整有一点困难，直到编码阶段开始之前都是这样。  
 
@@ -108,7 +108,7 @@ Jenkins UI 和前端框架在Jenkins项目中成为了一个共同的话题，�
 **回顾**。课题尾声，我们同样会举行一个回顾来为以后获取一些新的构想。你可以在[这里](https://docs.google.com/document/d/1qWeuQzMr1lGQUuirgorODwvqEXYH7RiyKkRByIed9co/edit?usp=sharing)找到这些笔记。我们已经处理了文档中最重要的一些评论以及明年课题的构想。  
 
 ## 奖励
-去年，我们想要通过发送纪念品的方式感谢每一位在项目中参与的人。今年，我们收集了所有我们能找到的邮寄地址准备给每一位送上 Jenkins 15周年纪念版 T 恤以及一些贴纸。这是一个非常棒的时刻。我也同样以个人名义感谢 Alyssa Tong 对我们 T 恤以及贴纸设计上的一些帮助。
+去年，我们想要通过发送纪念品的方式感谢每一位在项目中参与的人。今年，我们收集了所有我们能找到的邮寄地址准备给每一位送上 Jenkins 15 周年纪念版 T 恤以及一些贴纸。这是一个非常棒的时刻。我也同样以个人名义感谢 Alyssa Tong 对我们 T 恤以及贴纸设计上的一些帮助。
 
 ![swag-before-shipping](swag-before-shipping.jpg)
 
@@ -126,12 +126,12 @@ Jenkins UI 和前端框架在Jenkins项目中成为了一个共同的话题，�
 ![gsoc2019-team-jw-lisbon](gsoc2019-team-jw-lisbon.jpg)
 
 ## 结论
-今年，5个课题成功完成。我们从其他参加的组织那里得到的消息也说明这是一个正常的数字。
+今年，5 个课题成功完成。我们从其他参加的组织那里得到的消息也说明这是一个正常的数字。
 早些时间更新 GSoC 页面为我们后期的工作节省了很多时间因为有人联系我们的时候我们不能每次都重复所有的信息。我们发现保持跟进所有的导师们，学生们，课题以及元信息是必须的但又耗时的工作。我们希望有一个工具用来帮我们做这些事情。协调会议以及提醒参与者截止日之前需要完成的工作也是  GSoC 组织工作的一方面，我们需要持续做这件事。
 最后，我想再次感谢所有的参与者，没有你们我们不能做到这些。每年都有一些做的很棒工作以及为 Jenkins 社区贡献一些很棒作品的学生给我们留下了很深刻的印象。
 ## GSoC 2020？
-是的，会有 Google 编程之夏2020这个活动的！我们计划参加也在寻找课题构想，导师以及学生。Jenkins GSoC 页面已经更新了，我们邀请每一个人明年都能参与进来。
+是的，会有 Google 编程之夏 2020 这个活动的！我们计划参加也在寻找课题构想，导师以及学生。Jenkins GSoC 页面已经更新了，我们邀请每一个人明年都能参与进来。
 - [活动主页面](https://jenkins.io/projects/gsoc/)
-- [GSoC 2020课题构想](https://jenkins.io/projects/gsoc/2020/project-ideas/)
-- [GSoC 2020导师招募与课题构想收集](https://jenkins.io/blog/2019/12/20/call-for-mentors/)
+- [GSoC 2020 课题构想](https://jenkins.io/projects/gsoc/2020/project-ideas/)
+- [GSoC 2020 导师招募与课题构想收集](https://jenkins.io/blog/2019/12/20/call-for-mentors/)
 - [学生](https://jenkins.io/projects/gsoc/students/)与[导师](https://jenkins.io/projects/gsoc/mentors/)信息页面
