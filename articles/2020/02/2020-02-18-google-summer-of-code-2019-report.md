@@ -1,5 +1,5 @@
 ﻿---
-title：2019年Google编程之夏活动报告  
+title：2019年 Google 编程之夏活动报告  
 date：2020-02-06  
 description：  主要介绍了 GSoC 2019活动的几个课题并讲述了整个活动的组织过程  
 author：Martin d'Anjou，Jeff Pearce，Oleg Nenashev，Marky Jackson  
