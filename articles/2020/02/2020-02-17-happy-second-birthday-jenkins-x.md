@@ -30,7 +30,7 @@ Jenkins X 本身是功能专一的，但是却极易拓展。Jenkins X 是为实
 ## 属于 Jenkins X 的 2019 高光时刻
 
 ### 2019 年 2 月：Tekton 的崛起！
-在 2018 年的后半年，Jenkins X 开始了一趟提供 Serverless Jenkins 与仅在需要时运行流水线引擎的旅程。这种流水线引擎基于 knative build-pipeline 项目，该项目进化成为了受到 Jenkins 和 Jenkins X 社区众多帮助与热爱的 Tekton 。[Jenkins X 项目在 2019 的 2 月完成了与 Tekton 的初次集成](https://jenkins-x.io/blog/2019/02/19/jenkins-x-next-gen-pipeline-engine/)。Tekton 是一个强大和灵活的 KuBurnes 本地开源框架，用于创建 CI/CD 流水线、管理制品和渐进部署。
+在 2018 年的后半年，Jenkins X 开始了一趟提供 Serverless Jenkins 与仅在需要时运行流水线引擎的旅程。这种流水线引擎基于 knative build-pipeline 项目，该项目进化成为了受到 Jenkins 和 Jenkins X 社区众多帮助与热爱的 Tekton 。[Jenkins X 项目在 2019 的 2 月完成了与 Tekton 的初次集成](https://jenkins-x.io/blog/2019/02/19/jenkins-x-next-gen-pipeline-engine/)。Tekton 是一个强大和灵活的 Kubernetes 原生开源框架，用于创建 CI/CD 流水线、管理制品和渐进部署。
 
 ![Tekton-plane](.\2020-02-17-happy-second-birthday-jenkins-x\plane.png)
 
@@ -41,7 +41,7 @@ Jenkins X 本身是功能专一的，但是却极易拓展。Jenkins X 是为实
 Jenkins X 加入了 Continuous Delivery Foundation (CDF)，与 Jenkins、Spinnaker 和 Tekton 一起作为创始项目。加入一个专注于持续交付的中立供应商基金会对于 Jenkins X 社区意义重大。
 
 ### 2019 年 6 月：Lighthouse 项目
-当 Jenkins X 开始它的 serverless jenkins 旅程时，它选择了使用 [Prow](https://github.com/kubernetes/test-infra/tree/master/prow)，一个用于 Github 事件和 ChatOps 的事件处理器。Prow 被 Kubernetes 项目用于构建所有的仓库，初次以外，它还包含了一个强大的 webhook 事件处理器。Prow 已久经考验，但它却严重的依赖于 Github，并且难以拓展至其他的 SCM 提供商上。 在 2019 年 6 月末，一项轻量级、可拓展至 Prow 的项目开始了，它叫做 [Lighthouse](https://jenkins-x.io/docs/reference/components/lighthouse/)。Lighthouse 跟 Prow 支持同样的插件（因此你仍然可以通过 ChatOps 请求各种各样的东西）和配置 —— 这使得 Prow 和 Lighthouse 间的迁移变得极其容易。
+当 Jenkins X 开始它的 serverless jenkins 旅程时，它选择了使用 [Prow](https://github.com/kubernetes/test-infra/tree/master/prow)，一个用于 Github 事件和 ChatOps 的事件处理器。Prow 被 Kubernetes 项目用于构建所有的仓库，除此以外，它还包含了一个强大的 webhook 事件处理器。Prow 已久经考验，但它却严重的依赖于 Github，并且难以拓展至其他的 SCM 提供商上。 在 2019 年 6 月末，一项轻量级、可拓展至 Prow 的项目开始了，它叫做 [Lighthouse](https://jenkins-x.io/docs/reference/components/lighthouse/)。Lighthouse 跟 Prow 支持同样的插件（因此你仍然可以通过 ChatOps 请求各种各样的东西）和配置 —— 这使得 Prow 和 Lighthouse 间的迁移变得极其容易。
 
 ### 2019 年 6 月：Jenkins X Boot！
 我们在整个六月都十分的忙碌 —— 暑期到来前一个疯狂的活动爆发期。Jenkins X 用户面临的一个常见问题便是在不同的 Kubernetes 集群上安装 Jenkins X 。按照正确的顺序安装服务和确保 DNS 和 Secrets 正确性的工作是因供应商的不同而完全不同，有时也因集群的不同而不同。我们意识到，要简化安装，我们确实需要一个流水线，虽然这听起来有点像一个电影情节，但运行 Jenkins X 流水线来安装 jx 确实是最好的选择。[jx boot 命令](https://jenkins-x.io/docs/getting-started/setup/boot/)使用本地 jx 二进制文件解释引导流水线。jx boot 命令也可以用于更新你的集群。
