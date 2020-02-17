@@ -18,11 +18,11 @@ poster: 12751943-abcs.jpg
 
 ![DevOps and Docker from A to Z](12751943-abcs.jpg)
 
-DevOps 在IT行业中风靡一时。[维基百科](https://en.wikipedia.org/wiki/DevOps)中阐述 DevOps 是将软件开发（Dev）和信息技术维护（Ops）结合在一起的一组实践，旨在缩短系统开发生命周期并提供高质量的持续交付。 DevOps普及的主要原因是，它使企业可以比传统软件开发方法更快地开发和改进产品。
+DevOps 在 IT 行业中风靡一时。[维基百科](https://en.wikipedia.org/wiki/DevOps)中阐述 DevOps 是将软件开发（Dev）和信息技术维护（Ops）结合在一起的一组实践，旨在缩短系统开发生命周期并提供高质量的持续交付。 DevOps 普及的主要原因是，它使企业可以比传统软件开发方法更快地开发和改进产品。
 
 随着我们工作环境的变化越来越快，对软件开发市场中的快速交付和修复的需求正在上升。 因此，对在短时间内生产高质量输出且有限的后期错误需求催生了 DevOps。
 
-*你可能感兴趣：[Docker 和 DevOps：开发有状态的应用程序并在Docker中进行部署](https://dzone.com/articles/docker-and-devops-developing-state-full-applicatio)*
+*你可能感兴趣：[Docker 和 DevOps：开发有状态的应用程序并在 Docker 中进行部署](https://dzone.com/articles/docker-and-devops-developing-state-full-applicatio)*
 
 正如我们已经讨论了转变为 DevOps 软件开发方式的重要性一样，我们现在将对话更改为容器化，这是一种易于使用的技术，经常被用来使 DevOps 的实现更流畅、更便捷。 容器化是一项使 DevOps 实践更容易遵循的技术。 但是容器化到底是什么？ 让我们一探究竟！
 
@@ -32,9 +32,9 @@ DevOps 在IT行业中风靡一时。[维基百科](https://en.wikipedia.org/wiki
 
 近来，它克服了运行虚拟机所带来的挑战，从而获得了广泛的关注。虚拟机模拟主机操作系统内部的整个操作系统，并且需要固定比例的硬件分配才能运行操作系统的所有进程。因此，由于很大的开销，这导致不必要的计算资源浪费。
 
-同时，设置虚拟机需要花费时间，在每个虚拟机中设置特定应用程序的过程也需要时间。这导致仅在设置环境时就花费了大量时间和精力。由开源项目 ”Docker“ 普及的容器化解决了这些问题，并且通过将所有必需的依赖项与软件一起打包在便携的镜像文件中，从而提高了可移植性。
+同时，设置虚拟机需要花费时间，在每个虚拟机中设置特定应用程序的过程也需要时间。这导致仅在设置环境时就花费了大量时间和精力。由开源项目 “Docker” 普及的容器化解决了这些问题，并且通过将所有必需的依赖项与软件一起打包在便携的镜像文件中，从而提高了可移植性。
 
-让我们更深入地研究容器化，它的好处，它的工作原理，选择容器化工具的方式以及它如何胜过虚拟机（VM）的使用。
+让我们更深入地研究容器化，它的好处、它的工作原理、选择容器化工具的方式以及它如何胜过虚拟机（VM）的使用。
 
 一些流行的容器提供程序如下：
 
@@ -44,7 +44,7 @@ DevOps 在IT行业中风靡一时。[维基百科](https://en.wikipedia.org/wiki
 
 ## 什么是 Docker？
 
-[Docker](https://www.docker.com) 已经成为 IT 行业中的一个流行术语。 Docker 可以定义为一个开源软件平台，它提供了一种在容器内构建、测试、保护和部署应用程序的简化方法。 Docker 鼓励软件开发人员与云、Linux 和 Windows 操作系统进行协作，以轻松，快速地交付服务。
+[Docker](https://www.docker.com) 已经成为 IT 行业中的一个流行术语。 Docker 可以定义为一个开源软件平台，它提供了一种在容器内构建、测试、保护和部署应用程序的简化方法。 Docker 鼓励软件开发人员与云、Linux 和 Windows 操作系统进行协作，以轻松、快速地交付服务。
 
 Docker 是提供容器化的平台。它允许将应用程序及其依赖项打包到一个容器中，从而有助于简化开发并加快软件的部署。它消除了在应该测试解决方案的每台机器上复制本地环境的需求，从而帮助实现了输出的最大化，从而节省了宝贵的时间和精力，而这些宝贵的时间和精力将用于进一步的开发。
 
@@ -58,7 +58,7 @@ Docker 已普及了容器化的概念。 Docker 容器中的应用程序具有�
 
 最初，所需的软件开发、测试、部署和监督是分阶段进行的，其中一个阶段的完成将导致另一个阶段的开始。
 
-像 [AWS ECS](https://dzone.com/articles/deploying-an-aws-ecs-task-using-containers-from-ec) 一样，DevOps 和 Docker 镜像管理技术使软件开发人员可以轻松地进行 IT 运营，共享软件以及彼此协作，并提高生产力。除了鼓励开发人员一起工作之外，他们还成功地消除了以前影响应用程序的不同工作环境之间的冲突。简单来说，容器是动态的，它使IT专业人员可以毫无复杂地构建、测试和部署流水线，同时弥合基础架构和操作系统发行版之间的鸿沟，从而形成 DevOps 的文化。
+像 [AWS ECS](https://dzone.com/articles/deploying-an-aws-ecs-task-using-containers-from-ec) 一样，DevOps 和 Docker 镜像管理技术使软件开发人员可以轻松地进行 IT 运营、共享软件以及彼此协作，并提高生产力。除了鼓励开发人员一起工作之外，他们还成功地消除了以前影响应用程序的不同工作环境之间的冲突。简单来说，容器是动态的，它使 IT 专业人员可以毫无复杂地构建、测试和部署流水线，同时弥合基础架构和操作系统发行版之间的鸿沟，从而形成 DevOps 的文化。
 
 软件开发人员可以通过以下方式从容器中受益：
 
@@ -151,19 +151,19 @@ VM 需要更多内存，因此具有更多开销，与 Docker 容器相比，它
 - **依赖** – 包含形成环境所需的库，框架和软件，可以模拟执行应用程序的介质。
 - **容器镜像** – 一种软件包，提供创建容器所需的所有依赖关系和信息。
 - **Docker Hub** – 一个公共镜像托管注册表，您可以在其中上传镜像并对其进行处理。
-- **[Dockerfile](https://dzone.com/articles/a-beginners-guide-to-the-dockerfile)** – A text file containing instructions on how to build a Docker image.
-- **仓库** – 一种基于网络或基于 Internet 的服务，用于存储 Docker 镜像。有私有和公共的 Docker 仓库。
+- **[Dockerfile](https://dzone.com/articles/a-beginners-guide-to-the-dockerfile)** – 包含有关如何构建 Docker 镜像的文本说明文件。
+- **仓库** – 一种基于网络或基于 Internet 的服务，用于存储 Docker 镜像，有私有和公共的 Docker 仓库。
 - **注册表** – 一种存储来自多个源的仓库的服务。它可以是公共的也可以是私人的。
 - **[Docker Compose](https://dzone.com/articles/docker-basics-docker-compose)** – 一种工具，可帮助定义和运行多个容器 Docker 应用程序。
 - **Docker Swarm** – 为运行 Docker 而创建的机器集群。
 - **Azure 容器注册表** – 用于存储 Docker 镜像的注册表提供程序
 - **Orchestrator** – 一种有助于简化集群和 Docker 主机管理的工具。
-- **Docker社区版（CE）** – 为 Linux 和 Windows 容器提供开发环境的工具。
-- **Docker企业版（EE）** – 用于Linux和Windows开发的另一套工具。
+- **Docker 社区版（CE）** – 为 Linux 和 Windows 容器提供开发环境的工具。
+- **Docker 企业版（EE）** – 用于 Linux 和 Windows 开发的另一套工具。
 
 ### Docker 容器、镜像和注册表
 
-使用 Docker 创建服务，然后将其打包到容器镜像中。Docker镜像是服务及其依赖关系的虚拟表示。
+使用 Docker 创建服务，然后将其打包到容器镜像中。Docker 镜像是服务及其依赖关系的虚拟表示。
 
 该镜像的实例用于创建一个容器，使其在 Docker 主机上运行。 然后将镜像存储在注册表中。需要一个注册表才能部署到生产协调器。Docker Hub 用于在框架级别将其存储在其公共注册表中。然后将镜像及其依赖项部署到自己选择的环境中。重要的是要注意，有些公司还提供私人注册表。
 
