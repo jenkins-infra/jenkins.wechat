@@ -21,7 +21,7 @@ Google 编程之夏活动不仅仅是一个夏日的实习项目，对于组织�
 在这篇博客里我们想要与各位分享这次活动的成果以及我们从这一年总结的一些经验。
 
 ## 成果
-今年成功完成了 5 个 GSoC 课题：[角色策略插件性能优化](https://jenkins.io/projects/gsoc/2019/role-strategy-performance)，[插件安装管理 CLI 工具/库](https://jenkins.io/projects/gsoc/2019/plugin-installation-manager-tool-cli)，[运行时间插件 - UI 优化](https://jenkins.io/projects/gsoc/2019/working-hours-improvements)，[具有 Kubernetes 功能的 Apache Kafka 远程处理](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features)，[GitLab SCM 多分支流水线支持](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline)。我们会在后面的内容中讨论一下上面提到的这几个课题。
+今年成功完成了 5 个 GSoC 课题：[角色策略插件性能优化](https://jenkins.io/projects/gsoc/2019/role-strategy-performance)，[插件安装管理 CLI 工具/库](https://jenkins.io/projects/gsoc/2019/plugin-installation-manager-tool-cli)，[working-hours 插件 - UI 优化](https://jenkins.io/projects/gsoc/2019/working-hours-improvements)，[具有 Kubernetes 功能的 Apache Kafka 远程处理](https://jenkins.io/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features)，[GitLab SCM 多分支流水线支持](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline)。我们会在后面的内容中讨论一下上面提到的这几个课题。
 
 ![gsoc2019-highlights](gsoc2019-highlights.png)
 
@@ -49,12 +49,12 @@ Google 编程之夏活动不仅仅是一个夏日的实习项目，对于组织�
 
 ![yamlexample](yamlexample.png)
 
-## 运行时间插件 - UI 优化
+## working-hours 插件 - UI 优化
 Jenkins UI 和前端框架在Jenkins项目中成为了一个共同的话题，特别是最近这几个月发布了新的 [UX SIG](https://jenkins.io/sigs/ux) 之后。[Jack Shen](https://jenkins.io/blog/authors/jshen) 与他的导师 [Jeff Pearce](https://jenkins.io/blog/authors/jeffpearce) 正在探索一种新的途径来统一构建 Jenkins 的 Web UI。Jack 更新了[运行时间插件](https://plugins.jenkins.io/working-hours) 使用的 UI 控件是由标准的 React 库提供的。然后他将他的这些工作经验文档化并创建了[使用基于 React UI 的插件模板](https://github.com/jenkinsci/react-plugin-template)
 - [项目页面](https://jenkins.io/projects/gsoc/2019/working-hours-improvements)
-- 发布的博客：[运行时间插件的 UI 更新](https://jenkins.io/blog/2019/07/09/Phase1-Updates-On-Working-Hours-Plugin/)，[React 插件模板](https://jenkins.io/blog/2019/08/23/introduce-react-plugin-template/)
+- 发布的博客：[working-hours 的 UI 更新](https://jenkins.io/blog/2019/07/09/Phase1-Updates-On-Working-Hours-Plugin/)，[React 插件模板](https://jenkins.io/blog/2019/08/23/introduce-react-plugin-template/)
 - 最终评估：[幻灯片](https://docs.google.com/presentation/d/1txLbDliqsZhbKvKR7RBFLue0kvLIcoRpXpB1MthWonI/edit#slide=id.p1)，[视频](https://youtu.be/g19o24uzy6c?t=2493)
-- 源码：[运行时间插件](https://github.com/jenkinsci/working-hours-plugin)，[基于 React UI 的 Jenkins 插件模板](https://github.com/jenkinsci/react-plugin-template)
+- 源码：[working-hours 插件](https://github.com/jenkinsci/working-hours-plugin)，[基于 React UI 的 Jenkins 插件模板](https://github.com/jenkinsci/react-plugin-template)
 
 ![working-hours-example-time-range](working-hours-example-time-range.png)
 
@@ -76,7 +76,7 @@ Jenkins UI 和前端框架在Jenkins项目中成为了一个共同的话题，�
 ![multibranch-folder](multibranch-folder.png)
 
 ## 没有完成的项目
-今年并非所有的项目都完成了。我们也在 [Jenkins 流水线的制品提升插件](https://jenkins.io/projects/gsoc/2019/artifact-promotion-plugin-for-jenkins-pipeline)和[云特性的外部工作区管理插件](https://jenkins.io/projects/gsoc/2019/ext-workspace-manager-cloud-features)进行了尝试，但不幸的是这两个项目都在第一阶段编码后即停止了。无论如何，我们在这些领域得到了许多经验与收获。（请参阅链接的 Jira 门票！）我们希望这些故事的某一点能够被 Jenkins 贡献者实现出来。或许 [Google 编程之夏 2020](https://jenkins.io/blog/2019/12/20/call-for-mentors/) 可以？
+今年并非所有的项目都完成了。我们也在 [Jenkins 流水线上优化制品插件](https://jenkins.io/projects/gsoc/2019/artifact-promotion-plugin-for-jenkins-pipeline)和[云特性的外部工作区管理插件](https://jenkins.io/projects/gsoc/2019/ext-workspace-manager-cloud-features)进行了尝试，但不幸的是这两个项目都在第一阶段编码后即停止了。无论如何，我们在这些领域得到了许多经验与收获。（请参阅链接的 Jira 门票！）我们希望这些故事的某一点能够被 Jenkins 贡献者实现出来。或许 [Google 编程之夏 2020](https://jenkins.io/blog/2019/12/20/call-for-mentors/) 可以？
 
 ## 以组织层面运营 GSoC 项目
 这里有一些在我们组织 GSoC 前后的一些幕后的小故事跟大家分享。为了给即将涌入进来的学生们做好准备，我们更新了所有的 GSoC 页面，收录进去了我们这几年运营这个项目的所有知识。我们从 2018 年 10 月份开始准备，此时离项目开始还有很长一段时间。主要的目标是解决在 GSoC 2018 期间得到的一些反馈。
