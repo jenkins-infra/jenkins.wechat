@@ -6,7 +6,7 @@ translator: cycwll
 original: https://dev.to/cloudbees/feature-flags-and-gitops-5-use-cases-to-help-you-git-r-done-45ga
 poster: 
 toc: false
-date: 2020-03-07
+date: 2020-03-05
 tags:
 - tag1 devops
 - tag2 cloudbees
