@@ -1,5 +1,5 @@
 ---
-title: 功能开关和 GitOps
+title: 功能开关和 GitOps。5个用例帮您做Git。
 description: 功能开关和GitOps 以及CloudBees Rollout
 author: Kristin Baskett
 translator: cycwll
@@ -11,9 +11,6 @@ tags:
 - tag1 devops
 - tag2 cloudbees
 ---
-
-# 功能特性和 GitOps
-
 ------
 
 GitOps 的实践是持续交付的下一个替代。它允许开发人员进入 IT 运维的传统工作范围-许多历史关卡的所在地-自动更新生产环境的应用程序和运行程序的基础设施。在 GitOps 中，所有变更管理和版本控制的唯一可信来源是软件配置管理（SCM）。GitOps 抛弃了传统 ITIL 类型的管理，将基础设施和应用程序视为版本化的制品，包括在软件开发期间捕获的相同粒度的审计轨迹（提交 ID，时间戳等）。
