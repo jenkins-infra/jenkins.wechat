@@ -8,8 +8,8 @@ poster:
 toc: false
 date: 2020-03-05
 tags:
-- tag1 devops
-- tag2 cloudbees
+- devops
+- cloudbees
 ---
 ------
 
