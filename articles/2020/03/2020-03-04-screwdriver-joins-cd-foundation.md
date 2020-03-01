@@ -19,7 +19,7 @@ poster: "screwdriver.png"
 [持续交付基金会](https://cd.foundation/)（CDF），在持续交付领域对许多增长最快的项目来说是一个供应商中立的家，宣布 [Screwdriver](https://screwdriver.cd/?siteref=cdf_nav) 成为其最新的孵化项目。
 Screwdriver 是一个独立的、可插拔的服务，用于帮助开发人员使用最新的容器化技术构建、测试以及持续交付软件。
 Screwdriver 最初是由 Yahoo（现在的 Verizon Media）开发的，用于简化 Jenkins 的接口。
-它于2016年开源，并经过完全重建以应对大规模部署以及 CI/CD 目标。
+它于2016年开源，并经过完全重写以应对大规模部署以及 CI/CD 目标。
 
 Screwdriver 与 DevOps 团队的日常习惯直接相关。它测试 pull request，构建合并提交并部署到任何环境。它还轻松定义了负载测试、金丝雀部署和多环境部署流水线。
 
