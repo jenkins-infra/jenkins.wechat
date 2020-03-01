@@ -1,10 +1,10 @@
 ---
+poster: gitops.png
 title: 特性开关和 GitOps。5个用例帮您搞定。
 description: 特性开关和 GitOps 以及 CloudBees Rollout
 author: Kristin Baskett
 translator: cycwll
 original: https://dev.to/cloudbees/feature-flags-and-gitops-5-use-cases-to-help-you-git-r-done-45ga
-poster: ./2020-03-05-feature-flags-and-gitops-5-use-cases-to-help-you-git-r-done-45ga/gitops.png
 toc: false
 date: 2020-03-05
 tags:
