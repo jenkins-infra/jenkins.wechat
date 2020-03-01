@@ -4,7 +4,7 @@ description: 特性开关和 GitOps 以及 CloudBees Rollout
 author: Kristin Baskett
 translator: cycwll
 original: https://dev.to/cloudbees/feature-flags-and-gitops-5-use-cases-to-help-you-git-r-done-45ga
-poster: 
+poster: ./2020-03-05-feature-flags-and-gitops-5-use-cases-to-help-you-git-r-done-45ga/gitops.png
 toc: false
 <<<<<<< HEAD:articles/2020/03/2020-03-07-feature-flags-and-gitops-5-use-cases-to-help-you-git-r-done-45ga.md
 date: 2020-03-07
