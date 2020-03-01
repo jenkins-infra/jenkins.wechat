@@ -23,11 +23,11 @@ Screwdriver 最初是由 Yahoo（现在的 Verizon Media）开发的，用于简
 
 Screwdriver 与 DevOps 团队的日常习惯直接相关。它测试 pull request，构建合并提交并部署到任何环境。它还轻松定义了负载测试、金丝雀部署和多环境部署流水线。
 
-立即开始为 Screwdriver 做贡献吧。始终欢迎 pull request。从浏览 Screwdriver [贡献指南](https://docs.screwdriver.cd/about/contributing/) 开始吧。
+立即开始为 Screwdriver 做贡献吧。时刻欢迎提 pull request。从浏览 Screwdriver [贡献指南](https://docs.screwdriver.cd/about/contributing/) 开始吧。
 
 “CD 基金会欢迎 Screwdriver。我们相信 Screwdriver 开创了一个良好的开端，我们很高兴能一起工作。通过加入 CD 基金会，Screwdriver 将能够更快地扩展规模，在开发和部署方面取得更大的进步。” CDF 项目经理 [Dan Lopez](https://www.linkedin.com/in/danlopez/) 说。“有了如此多支持的集成，Screwdriver 提供了 DevOps 团队所需要的开放性和灵活性。”
 
-“Screwdriver 团队和平台是 Yahoo 和 Verizon Media 的英雄，他们可以帮助我们规模化运行大规模的软件工程业务。我们在一起也可以使您的 CI/CD 团队英雄成为您公司的英雄。我们邀请您在这个中立的家中与我们合作，以实现卓越的开源。” Verizon Media/Yahoo开 源高级总监 [Gil Yehuda](https://www.linkedin.com/in/gilyehuda) 这样说。
+“Screwdriver 团队和平台是 Yahoo 和 Verizon Media 的英雄，他们可以帮助我们运行大规模的软件工程业务。我们在一起也可以使您的 CI/CD 团队英雄成为您公司的英雄。我们邀请您在这个中立的家中与我们合作，以实现卓越的开源。” Verizon Media/Yahoo开 源高级总监 [Gil Yehuda](https://www.linkedin.com/in/gilyehuda) 这样说。
 
 “很高兴看到 Screwdriver 加入 CDF。我知道该项目的幕后工作人员与我们一样对同一件事充满热情，并且我们可以一起共同更快地产生更大的影响。事实证明，开源具有实现跨项目边界的独特能力。” Launchable，Inc. 联合首席执行官 [Kohsuke Kawaguchi](https://www.linkedin.com/in/kohsukekawaguchi/) 这样说。
 
