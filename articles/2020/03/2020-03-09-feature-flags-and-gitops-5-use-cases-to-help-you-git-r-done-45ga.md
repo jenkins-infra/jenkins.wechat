@@ -1,5 +1,5 @@
 ---
-title: 特性开关和 GitOps。5个用例帮您搞定。
+title: 特性开关和 GitOps, 5个用例帮您搞定。
 description: 特性开关和 GitOps 以及 CloudBees Rollout
 author: Kristin Baskett
 translator: cycwll
@@ -11,7 +11,6 @@ tags:
 - devops
 - cloudbees
 ---
-------
 
 ![cover](gitops.png)
 
