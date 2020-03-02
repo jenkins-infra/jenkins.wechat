@@ -5,7 +5,7 @@ author: Kristin Baskett
 translator: cycwll
 original: https://dev.to/cloudbees/feature-flags-and-gitops-5-use-cases-to-help-you-git-r-done-45ga
 toc: false
-date: 2020-03-05
+date: 2020-03-09
 poster: gitops.png
 tags:
 - devops
