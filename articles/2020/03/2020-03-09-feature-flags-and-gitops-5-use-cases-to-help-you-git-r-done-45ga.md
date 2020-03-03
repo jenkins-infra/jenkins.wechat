@@ -49,6 +49,3 @@ CloudBees Rollout 将所有特性开关和目标数据存储为保存在 Git 存
 **5. 通过 Git 命令回滚功能变更：** 每个开发人员都曾经遇到过，需要回滚某个提交。您可以通过一个简单的 git revert 命令使用特性开关来实现这一点。由于 CloudBees Rollout 将配置代码保存在 Git 中，因此您可以使用分支隔离更改以及时回滚，并在并行流中工作，而不会影响生产/预备环境。
 
 尽管采用 GitOps 仍然是团队的理想选择，您也可以使用 CloudBees Rollout 来管理您的特性开关。API集成允许您链接到您最喜欢的性能、分析、监控和 APM 工具，使之更容易适应，而不管您如何管理 Dev 和 Ops 之间的桥梁。
-
-想亲自试一下吗？[获取14天免费试用][1]
-  [1]: https://app.rollout.io/signup?utm_source=scotchio&utm_medium=referral&utm_content=five_use_cases&utm_campaign=rollout_trial_scotchio
