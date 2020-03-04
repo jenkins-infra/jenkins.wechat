@@ -1,7 +1,7 @@
 ---
 title: "Screwdriver 作为 CD 基金会的第一个孵化项目加入 CD 基金会"
 description: "Screwdriver 将持续交付视为构建流水线中的一等公民"
-date: 2020-03-04
+date: 2020-03-05
 original: "https://cd.foundation/blog/2020/02/19/screwdriver-joins-cd-foundation-as-its-first-incubation-project-treating-continuous-delivery-as-a-first-class-citizen-in-the-build-pipeline/"
 tags:
 - cdf
