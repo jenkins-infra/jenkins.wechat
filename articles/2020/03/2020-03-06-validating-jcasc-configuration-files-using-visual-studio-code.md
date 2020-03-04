@@ -64,3 +64,8 @@ jenkins:
 ![参考文档2](userDocs2.png)
 
 我们将于 2 月 26 日举行在线 [meetup](https://www.meetup.com/Jenkins-online-meetup/events/268823268)，讨论该插件以及如何使用它来验证您的 YAML 配置文件。对于有关架构的任何建议或讨论，请随时加入我们的 [gitter 频道](https://gitter.im/jenkinsci/jcasc-devtools-project)。可以在 [Github](https://github.com/jenkinsci/configuration-as-code-plugin/issues) 上提交问题。
+
+## 链接
+
+* [Video](https://www.youtube.com/watch?v=nlm-ZaW9FPo&feature=youtu.be)
+* [Slides](https://www.slideshare.net/SladynNunes/jenkins-jcasc-online-meetup)
