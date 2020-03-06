@@ -63,7 +63,7 @@ jenkins:
 
 ![参考文档2](userDocs2.png)
 
-我们将于 2 月 26 日举行在线 [meetup](https://www.meetup.com/Jenkins-online-meetup/events/268823268)（译注：该 meetup 已举办，Video 及 Slides 链接见最下方），讨论该插件以及如何使用它来验证您的 YAML 配置文件。对于有关架构的任何建议或讨论，请随时加入我们的 [gitter 频道](https://gitter.im/jenkinsci/jcasc-devtools-project)。可以在 [Github](https://github.com/jenkinsci/configuration-as-code-plugin/issues) 上提交问题。
+我们于 2 月 26 日举行了在线 [meetup](https://www.meetup.com/Jenkins-online-meetup/events/268823268)（译注：该 meetup 已举办，Video 及 Slides 链接见最下方），讨论该插件以及如何使用它来验证您的 YAML 配置文件。对于有关架构的任何建议或讨论，请随时加入我们的 [gitter 频道](https://gitter.im/jenkinsci/jcasc-devtools-project)。可以在 [Github](https://github.com/jenkinsci/configuration-as-code-plugin/issues) 上提交问题。
 
 ## 链接
 
