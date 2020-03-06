@@ -1,6 +1,6 @@
 ---
-title: "更新流水线授权 SIG"
-description: "聊聊流水线授权 SIG 更新的新特性"
+title: "流水线编撰 SIG 公告"
+description: "带你了解公告 SIG 的变化，从而更好地利用 Jenkins 流水线"
 date: 2020-03-16
 original: "https://jenkins.io/blog/2020/03/02/pipeline-authoring-sig-update/"
 tags:
