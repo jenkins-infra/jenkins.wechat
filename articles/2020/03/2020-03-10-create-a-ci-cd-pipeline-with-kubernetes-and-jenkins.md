@@ -1,12 +1,12 @@
 ﻿---
 title：使用 Kubernetes 和 Jenkins 创建一个 CI/CD 流水线  
 date：2020-03-10  
-description：  
+description：文章主要说明了关于 CI/CD 的知识，通过实验结合 Jenkins，Ansible，Kubernetes 将应用程序部署到 k8s 上。  
 author：Mohamed Ahmed  
 poster：cover.png  
 translator：0N0thing  
-original：[https://www.magalix.com/blog/create-a-ci/cd-pipeline-with-kubernetes-and-jenkins](https://www.magalix.com/blog/create-a-ci/cd-pipeline-with-kubernetes-and-jenkins)  
-tags：
+original：https://www.magalix.com/blog/create-a-ci/cd-pipeline-with-kubernetes-and-jenkins  
+tags：  
 - DevOps  
 - Kubernetes  
 - Deployment  
@@ -26,7 +26,7 @@ CI/CD 表示持续集成/持续交付和/或部署。如果一个团队不接入
 
 2. 具有业务分析能力的开发人员开始对应用进行编码，执行单元测试，然后将结果提交到版本控制系统（例如 git）。  
 
-3. 一旦开发阶段完成，项目移交到 QA。对产品进行多轮测试，比如用户接受测试，集成测试，性能测试。在此期间，直到 QA 阶段完成之前都不会有任何代码上的改动。如果有任何 bug 被发现，需要回退给开发人员做修改，然后再将产品移交给 QA。  
+3. 一旦开发阶段完成，项目移交到 QA。对产品进行多轮测试，比如用户验收测试，集成测试，性能测试。在此期间，直到 QA 阶段完成之前都不会有任何代码上的改动。如果有任何 bug 被发现，需要回退给开发人员做修改，然后再将产品移交给 QA。  
 
 4. 一旦 QA 完成，操作团队会将代码部署到生产环境中。  
 
@@ -47,9 +47,9 @@ CI/CD 通过引入自动化来解决上述的问题。代码中的每次改动�
 
 1. **持续集成（CI）**：第一步不包括 QA。换句话说，它不关注代码是否提供了用户需要的功能。相反，它确保了代码的质量。通过单元测试，集成测试，开发人员能很快的就会发现代码质量中的缺陷。我们可以增加代码覆盖率的检查以及静态分析让代码质量保证做的更加完善。  
 
-2. **用户接受测试**：这是 CD 流程的第一部分。这个阶段，会对代码执行自动化测试从而确保代码符合用户的期望。比如说，一个 web 应用没有任何报错产生能正常运行，但是客户想让访问者在导航到主页之前先进入到登录页面。但是当前的代码直接让访问者导航到了主页面，这与客户的需求不相符。这种问题会在 UAT 测试时被指出。而在非-CD 环境，就成了人工的 QA 测试人员的工作。  
+2. **用户验收测试**：这是 CD 流程的第一部分。这个阶段，会对代码执行自动化测试从而确保代码符合用户的期望。比如说，一个 web 应用没有任何报错产生能正常运行，但是客户想让访问者在导航到主页之前先进入到登录页面。但是当前的代码直接让访问者导航到了主页面，这与客户的需求不相符。这种问题会在 UAT 测试时被指出。而在非 CD 环境，就成了人工的 QA 测试人员的工作。  
 
-3. **部署**：这是 CD 流程的第二部分。它包括在托管应用的服务器/ pods /容器上面执行更改来应用更新的版本。这会在自动化的方法下完成，最好通过一个配置管理工具来做这些事情，比如 Ansible，Chef 或者 Puppet。
+3. **Deployment**：这是 CD 流程的第二部分。它包括在托管应用的服务器/ pods /容器上面执行更改来应用更新的版本。这会在自动化的方法下完成，最好通过一个配置管理工具来做这些事情，比如 Ansible、Chef 或者 Puppet。
 
 ## 什么是流水线？
 流水线是一个有着简单的概念的花哨术语；当你有一些需要按照顺序依次执行的脚本用来实现一个共同的目标时，这些组合起来可以称为“流水线”。比如说，在 Jenkins 里，一个流水线包含了一个或多个一次构建需要成功必须全部执行的 *stages* 。使用 stages 能够可视化整个流程，能够看到每个阶段使用了多长时间，然后能够准确得出构建过程的哪个地方是失败的。
@@ -133,9 +133,9 @@ ENTRYPOINT [ "./app" ]
 ```
 Dcokerfile 是一个[多阶段](https://docs.docker.com/develop/develop-images/multistage-build/)的文件能让镜像保持的越小越好。它从基于 golang:alpine 构建镜像开始。生成的二进制文件在第二个镜像中使用，它仅仅是一个[临时](https://hub.docker.com/_/scratch/)的镜像，这个镜像没有依赖或者库文件，只有用来启动应用的二进制文件。
 
-**服务**
+**Service**
 
-由于我们使用 Kubernetes 作为托管该应用程序的平台，我们需要至少一个服务和一个部署。我们的 service.yml 长这样：  
+由于我们使用 Kubernetes 作为托管该应用程序的平台，我们需要至少一个 service 和一个 deployment。我们的 service.yml 长这样：  
 ```
 apiVersion: v1
 kind: Service
@@ -153,7 +153,7 @@ spec:
 ```
 这个文件的定义没有什么特别的地方，只有一个 NodePort 作为其类型的  Service。它会监听任何 IP 地址的集群节点上的 32000 端口。传入的连接将中继到 8080 端口上。而作为内部通信，这个服务在 80 端口上进行监听。  
 
-**部署**
+**deployment**
 
 应用程序本身，一旦容器化了，就可以通过一个 Deployment 资源部署到 Kubernetes。deployment.yml 如下所示：
 ```
@@ -211,7 +211,7 @@ Ansible 已经包括了 [k8s 模块](https://docs.ansible.com/ansible/latest/mod
 
 [学习怎样持续优化您的 k8s 集群](https://www.magalix.com/cs/c/?cta_guid=18dc390a-3729-410b-a0ec-41819020a462&placement_guid=963b2ba4-df32-4a3b-8781-f8fa4ff38750&portal_id=3487587&canon=https://www.magalix.com/blog/create-a-ci/cd-pipeline-with-kubernetes-and-jenkins&redirect_url=APefjpEjDFzt4Sl8wBDTIZFRFQr8gQIi0H7nSbf62dZ9s24ZpowvcMfPdUH7tGPbgLJHk77SGzLyC4SuaUS6faCwzx9vHNCXMrE5bF6P7Zq95WUaGgxcnUOTZGD031cOS0p2ORZA7UkjCRL0vDG_86mRuZQNUhkOwD48FphLE014TNvpfmYrjp3EtrBsbZLhmLbpUhzktbuW3Y4kIR4350oLYSz6E7yVApR3iz7Vwc-zSYYznI3FRdc&click=89db65f0-7562-4ce7-8949-5830e379ab36&hsutk=2409bc4404a43926acbac7cfb68aa0f3&signature=AAH58kH8hLDjnb1r65AeYBmMvzVA2iKdkQ&pageId=25236089500&__hstc=197029363.2409bc4404a43926acbac7cfb68aa0f3.1582852099819.1583203535085.1583212534714.5&__hssc=197029363.1.1583212534714&__hsfp=1883824912&contentType=blog-post)
 
-## 第二部：安装 Jenkins，Ansible 和 Docker
+## 第二部：安装 Jenkins、Ansible 和 Docker
 让我们开始安装 Ansible 然后使用它自动部署一个 Jenkins 服务器以及 Docker  运行环境。我们同样需要安装 openshift Python 模块用来将 Ansible 连接到 Kubernetes。
 Ansible 的安装非常简单；只需要安装 Python 然后使用 pip 安装 Ansible：
 
@@ -281,7 +281,7 @@ $ sudo chown -R jenkins: ~jenkins/.kube/
 
 我们修改的配置有：
 
-- 我们使用 Poll SCM 作为构建触发器；设置这个选项来让 Jenkins 定期检查 Git 仓库（按 **** 指示的每分钟进行检查）。如果仓库从上次轮询后做了修改，任务就会被触发。
+- 我们使用 Poll SCM 作为构建触发器；设置这个选项来让 Jenkins 定期检查 Git 仓库（按 * * * * 指示的每分钟进行检查）。如果仓库从上次轮询后做了修改，任务就会被触发。
 
 - 从流水线本身来说，我们指定了仓库的 URL 以及凭据。分支是 master 分支。
 
