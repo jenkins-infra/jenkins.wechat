@@ -267,7 +267,7 @@ ansible-galaxy install geerlingguy.docker
 $ sudo cp ~/.kube/config ~jenkins/.kube/
 $ sudo chown -R jenkins: ~jenkins/.kube/
 ```
-需要记住的是你使用的账号必须要有必要的权限用来创建管理 Deployments 和 Services。
+需要记住的是你使用的账号必须要有必要的权限用来创建管理 Deployment 和 Service。
 
 ## 第四步：创建 Jenkins 流水线任务
 
