@@ -1,14 +1,14 @@
 ﻿---
-title：7 款你或许不知道的 DevOps 工具链编排解决方案  
-date：2020-03-24  
-description：  介绍了 7 种在现代软件开发过程中使用到的工具链编排解决方案
-author：Souvik Banerjee  
-poster：cover.jpg  
-translator：s1mple_zj  
-original：https://dzone.com/articles/7-devops-toolchain-orchestration-solution-you-may  
-tags：
-- DevOps
-- toolchains
+title: 7 款你或许不知道的 DevOps 工具链编排解决方案  
+date: 2020-03-24  
+description: 介绍了 7 种在现代软件开发过程中使用到的工具链编排解决方案  
+author: Souvik Banerjee  
+poster: cover.jpg  
+translator: s1mple_zj  
+original: https://dzone.com/articles/7-devops-toolchain-orchestration-solution-you-may  
+tags:   
+- DevOps  
+- toolchains  
 ---
 
 ![cover](cover.png)
@@ -25,7 +25,7 @@ tags：
 
 但是这些实践没有工具是不能正常运转的。在不同 DevOps 环境下使用不同的控制工具的解决方案称为“DevOps 工具链编排解决方案”。主要有以下工具组成。  
 
-或许你同样感兴趣：[2019 年你应该知道的 5 款 DveOps 工具](https://dzone.com/articles/5-devops-tools-you-should-know-in-2019)
+或许你同样感兴趣: [2019 年你应该知道的 5 款 DveOps 工具](https://dzone.com/articles/5-devops-tools-you-should-know-in-2019)
 
 ## 1. 源码管理（SCM）
 你为公司构建的所有公司想要表达的东西都是通过代码实现的。但是代码同样有窍门的，你必须确保它能尽可能容易地被理解。你必须对它们进行控制和操作分支。如果做不到这些，就有可能面临非常乱糟糟的情况。  
@@ -33,7 +33,7 @@ tags：
 为此，它们拥有的 SCM 包括 [GitHub](https://github.com/) 和 [Gitlab](https://about.gitlab.com/)。
 
 ## 2. 持续集成（CI）
-现在软件开发已经完全需要依赖 [CI](https://dzone.com/articles/the-complete-cicd-collection-tutorials)。这项可操作的技术可以让开发任何东西变得容易。安装一个可设置的 CI 是很重要的，这可以：
+现在软件开发已经完全需要依赖 [CI](https://dzone.com/articles/the-complete-cicd-collection-tutorials)。这项可操作的技术可以让开发任何东西变得容易。安装一个可设置的 CI 是很重要的，这可以: 
 
 - 减少与集成相关的任何问题    
 
