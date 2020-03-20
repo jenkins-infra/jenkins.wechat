@@ -11,7 +11,7 @@ tags:
 - toolchains  
 ---
 
-![cover](cover.png)
+![cover](cover.jpg)
 
 这七款 DevOps 工具将会帮助你用来考虑将哪个工具包含到你的工具链中。  
 
