@@ -15,20 +15,20 @@ poster: "cover.jpg"
 
 ![封面图](cover.jpg)
 
-对于 Jenkins 而言，可以使用大量插件来可视化各种构建步骤的结果。有一些插件可用于呈现测试结果，代码覆盖率，静态分析等。所有这些插件通常都会获取给定构建步骤的构建结果，并在用户界面中显示它们。为了呈现这些细节，大多数插件使用静态 HTML 页面，因为这种类型的用户界面是 Jenkins 自 2007 年成立以来的标准可视化。
+对于 Jenkins 而言，可以使用大量插件来可视化各种构建步骤的结果。有一些插件可用于呈现测试结果、代码覆盖率、静态分析等。所有这些插件通常都会获取给定构建步骤的构建结果，并在用户界面中显示它们。为了呈现这些细节，大多数插件使用静态 HTML 页面，因为这种类型的用户界面是 Jenkins 自 2007 年成立以来的标准可视化。
 
 为了改善这些插件的外观和用户体验，有必要向前发展并合并一些现代 Java Script 库和组件。由于 Blue Ocean 的开发已经停止（请参阅 [Jenkins mailing list post](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/jenkinsci-users/xngZrSsXIjc/btasuPpYCgAJ)），因此插件作者需要自己决定，哪些 UI 技术可帮助完成该任务。但是，现代 UI 组件的种类繁多，以至于只挑选一小部分被证明是有用的并且与 Jenkins 基础 Web 技术兼容的组件是有意义的。而且，合并这样一个新组件的初始设置相当大，因此如果该工作仅需要执行一次，将会有很大的帮助。
 
 本指南介绍了一些 UI 组件，以后所有插件作者都可以使用这些 UI 组件，从而为 Jenkins 中的报告提供丰富的用户界面。为了简化这些库在 Jenkins 作为基于 Java 的 Web 应用程序的上下文中的使用，这些 Java Script 库和组件已打包为普通的 Jenkins 插件。
 
-在以下各小节中，将逐步介绍这些新组件。为了了解如何使用这些组件的插件，我将演示新功能，同时使用新的用户界面增强现有的 [Forensics Plugin](https://github.com/jenkinsci/forensics-api-plugin)。由于 Warnings Next Generation 插件也使用这些新组件，因此您可以在[警示插件的文档](https://github.com/jenkinsci/warnings-ng-plugin/blob/master/doc/Documentation.md)中或在我们的公共 [ci.jenkins.io 实例](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/master/pmd/)中看到其他示例，这些示例已经在警示插件的详细信息视图中使用了这些组件。
+在以下各小节中，将逐步介绍这些新组件。为了了解如何使用这些组件的插件，我将演示新功能，同时使用新的用户界面增强现有的 [Forensics Plugin](https://github.com/jenkinsci/forensics-api-plugin)。由于 Warnings Next Generation 插件也使用这些新组件，因此您可以在 [warnings 插件的文档](https://github.com/jenkinsci/warnings-ng-plugin/blob/master/doc/Documentation.md)中或在我们的公共 [ci.jenkins.io 实例](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/master/pmd/)中看到其他示例，这些示例已经在 warnings 插件的详细信息视图中使用了这些组件。
 
 ## 新的用户界面插件
 
 新的 Jenkins 插件提供了以下 UI 组件:
 
-* [jquery3-api-plugin](https://github.com/jenkinsci/jquery3-api-plugin):为 Jenkins 插件提供 [jQuery 3](https://jquery.com/)。jQuery 是一个快速，小型且功能丰富的 JavaScript 库，正如其首页所述。借助易于使用的 API（可在多种浏览器中使用），使 HTML 文档的遍历和操作，事件处理，动画和 Ajax 等事情变得更加简单。兼具多功能性和可扩展性，jQuery 改变了数百万人编写 JavaScript 的方式。
-* [bootstrap4-api-plugin](https://github.com/jenkinsci/bootstrap4-api-plugin):为 Jenkins 插件提供 [Bootstrap 4](https://getbootstrap.com/)。Bootstrap 是-根据其自我感知-是世界上最流行的前端组件库，用于在 Web 上构建响应式，移动优先的项目。它是一个用于使用 HTML、CSS、JS 开发的开源工具包。开发人员可以使用他们的 Sass 变量和 mixins，响应式栅格系统，大量的预构建组件以及基于 jQuery 构建的强大插件，快速构建其思想原型或构建整个应用程序。
+* [jquery3-api-plugin](https://github.com/jenkinsci/jquery3-api-plugin):为 Jenkins 插件提供 [jQuery 3](https://jquery.com/)。如其首页所述，jQuery 是一个快速、小型且功能丰富的 JavaScript 库。借助易于使用的 API（可在多种浏览器中使用），使 HTML 文档的遍历和操作、事件处理、动画和 Ajax 等事情变得更加简单。兼具多功能性和可扩展性，jQuery 改变了数百万人编写 JavaScript 的方式。
+* [bootstrap4-api-plugin](https://github.com/jenkinsci/bootstrap4-api-plugin):为 Jenkins 插件提供 [Bootstrap 4](https://getbootstrap.com/)。Bootstrap 自称是世界上最流行的前端组件库，用于在 Web 上构建响应式，移动优先的项目。它是一个用于使用 HTML、CSS 和 JS 开发的开源工具包。开发人员可以使用他们的 Sass 变量和 mixins、响应式栅格系统、大量的预构建组件以及基于 jQuery 构建的强大插件，快速构建其思想原型或整个应用程序。
 * [data-tables-api-plugin](https://github.com/jenkinsci/data-tables-api-plugin):提供 Jenkins 插件的[数据表格](https://datatables.net/)。DataTables 是 jQuery Javascript 库的插件。这是一个高度灵活的工具，建立在逐步增强的基础上，可将所有这些高级功能添加到任何 HTML 表中:
     * 上一页，下一页和页面导航
     * 通过文本搜索过滤结果
@@ -36,9 +36,9 @@ poster: "cover.jpg"
     * DOM、Javascript、Ajax、服务器端处理
     * 简单主题化
     * 手机端兼容友好
-* [echarts-api-plugin](https://github.com/jenkinsci/echarts-api-plugin):为 Jenkins 插件提供 [ECharts](https://echarts.apache.org/en/index.html)。ECharts 是一种开放源代码的 JavaScript 可视化工具，用于创建直观，交互式和高度可定制的图表。它可以在 PC、移动设备上流畅运行，并且与大多数现代 Web 浏览器兼容。
-* [font-awesome-api-plugin](https://github.com/jenkinsci/font-awesome-api-plugin):为 Jenkins 插件提供 [Font Awesome](https://fontawesome.com/)。Font Awesome 具有矢量图标和社交徽标，根据他们的自觉，它是网络上最受欢迎的图标集和工具包。目前，它包含 1,500 多个免费图标。
-* [popper-api-plugin](https://github.com/jenkinsci/popper-api-plugin):为 Jenkins 插件提供 [Popper.js](https://popper.js.org/)。Popper只需一行代码即可轻松定位工具提示，弹出窗口或其他任何内容。
+* [echarts-api-plugin](https://github.com/jenkinsci/echarts-api-plugin):为 Jenkins 插件提供 [ECharts](https://echarts.apache.org/en/index.html)。ECharts 是一种开放源代码的 JavaScript 可视化工具，用于创建直观、交互式和高度可定制的图表。它可以在 PC 和移动设备上流畅运行，并且与大多数现代 Web 浏览器兼容。
+* [font-awesome-api-plugin](https://github.com/jenkinsci/font-awesome-api-plugin):为 Jenkins 插件提供 [Font Awesome](https://fontawesome.com/)。Font Awesome 具有矢量图标和社交徽标，号称是网络上最受欢迎的图标集和工具包。目前，它包含 1,500 多个免费图标。
+* [popper-api-plugin](https://github.com/jenkinsci/popper-api-plugin):为 Jenkins 插件提供 [Popper.js](https://popper.js.org/)。Popper 只需一行代码即可轻松定位工具提示，弹出窗口或其他任何内容。
 * [plugin-util-api-plugin](https://github.com/jenkinsci/plugin-util-api-plugin):这个小插件提供了一些帮助程序和基类，以简化 Jenkins 中报告程序的创建。该插件还提供了一组体系结构规则，这些规则可以包含在插件的体系结构测试套件中。
 
 ## POM 文件必要的改变
@@ -104,17 +104,17 @@ Jenkins 使用 [图 1](https://jenkins.io/blog/2020/03/17/ui-plugins/#jenkins-mo
 
 ![jenkins-design](jenkins-design.png)
 
-Jenkins 用户界面中的顶级项目是工作（至少是我们感兴趣的顶级项目）。Jenkins 包含多个不同类型的作业（自由式作业、Maven作业、流水线等）。
+Jenkins 用户界面中的顶级项目是工作（至少是我们感兴趣的顶级项目）。Jenkins 包含多个不同类型的任务（自由式任务、Maven任务、流水线等）。
 
-这些作业中的每一个都包含任意数量的构建（或更确切地说，是运行）。每个版本均由其唯一的版本号标识。Jenkins 插件可以将结果附加到这些版本中，例如生成工件、测试结果、分析报告等。为了附加这样的结果，插件在技术上需要实现并创建存储这些结果的操作。
+这些任务中的每一个都包含任意数量的构建（或更确切地说，是运行）。每个版本均由其唯一的版本号标识。Jenkins 插件可以将结果附加到这些版本中，例如生成工件、测试结果、分析报告等。为了附加这样的结果，插件在技术上需要实现并创建存储这些结果的操作。
 
-这些 Java 对象在几种不同的视图中可视化，以下各节将对其进行详细描述。显示所有可用作业的顶级视图如[图 2](https://jenkins.io/blog/2020/03/17/ui-plugins/#img-jobs) 所示。
+这些 Java 对象在几种不同的视图中可视化，以下各节将对其进行详细描述。显示所有可用任务的顶级视图如[图 2](https://jenkins.io/blog/2020/03/17/ui-plugins/#img-jobs) 所示。
 
 ![jobs](jobs.png)
 
 插件还可以在这些视图中提供 UI 元素，但这超出了本指南的范围。
 
-每个作业都有一个详细视图，插件可以在其中扩展相应的扩展点并提供摘要框和趋势图。通常，在工作级别上不需要报告者摘要框，因此我仅更详细地描述趋势图，请参见第 [5.5.2](https://jenkins.io/blog/2020/03/17/ui-plugins/#trend-charts) 节。
+每个任务都有一个详细视图，插件可以在其中扩展相应的扩展点并提供摘要框和趋势图。通常，在工作级别上不需要报告者摘要框，因此我仅更详细地描述趋势图，请参见第 [5.5.2](https://jenkins.io/blog/2020/03/17/ui-plugins/#trend-charts) 节。
 
 ![job](job.png)
 
@@ -337,7 +337,7 @@ index.jelly
 
 ### 图表
 
-插件报告程序通常还会报告从构建到构建的某种趋势。到目前为止，Jenkins 核心仅提供了一个非常有限的概念来呈现诸如趋势图之类的趋势。Jenkins 核心提供的 [JFreeChart](http://www.jfree.org/jfreechart/) 框架是服务器端渲染引擎，可将图表创建为静态 PNG 图像，并将其包含在作业和详细信息页面中。如今，有几个功能强大的基于 JS 的图表库可供使用，它们在客户端完成相同的工作（实际上甚至做得更好）。这样做的好处是可以在每个客户端上自定义这些图表，而不会影响服务器性能。此外，您还可以免费获得许多其他功能（例如缩放，动画等）。此外，这些图表库不仅支持典型的构建趋势图，而且还支持许多其他图表类型，可用于改善插件的用户体验。这些图表库之一是 [ECharts](https://echarts.apache.org/en/index.html):该库具有强大的 API，并且实际上支持一个人可以想象的每种图表类型。您可以在库的[示例页面](https://echarts.apache.org/examples/en/)上获得一些功能印象。
+插件报告程序通常还会报告从构建到构建的某种趋势。到目前为止，Jenkins 核心仅提供了一个非常有限的概念来呈现诸如趋势图之类的趋势。Jenkins 核心提供的 [JFreeChart](http://www.jfree.org/jfreechart/) 框架是服务器端渲染引擎，可将图表创建为静态 PNG 图像，并将其包含在任务和详细信息页面中。如今，有几个功能强大的基于 JS 的图表库可供使用，它们在客户端完成相同的工作（实际上甚至做得更好）。这样做的好处是可以在每个客户端上自定义这些图表，而不会影响服务器性能。此外，您还可以免费获得许多其他功能（例如缩放，动画等）。此外，这些图表库不仅支持典型的构建趋势图，而且还支持许多其他图表类型，可用于改善插件的用户体验。这些图表库之一是 [ECharts](https://echarts.apache.org/en/index.html):该库具有强大的 API，并且实际上支持一个人可以想象的每种图表类型。您可以在库的[示例页面](https://echarts.apache.org/examples/en/)上获得一些功能印象。
 
 为了使用这些图表，可以通过导入相应的 JS 文件并在相应的 Jelly 文件中定义图表来嵌入使用该库的图表。尽管这已经很好地工作了，但是从詹金斯的构建结果中为这些图表提供相应的模型仍然有些麻烦。因此，我添加了功能强大的 Java API，可帮助在 Java 端为这些图表创建模型。该 API 提供以下功能:
 
@@ -386,9 +386,9 @@ ViewModel.java
 9 [...]  
 ```
 
-#### 作业级别视图上的趋势图
+#### 任务级别视图上的趋势图
 
-为了显示在作业页面上呈现折线图的趋势（请参见[图 3](https://jenkins.io/blog/2020/03/17/ui-plugins/#img-job)），您需要提供一个所谓的浮动框（存储在作业操作的 `floatBox.jelly` 文件中（请参见[第 3 节](https://jenkins.io/blog/2020/03/17/ui-plugins/#reporter-structure)））。该文件的内容非常简单，仅包含一个 `trend-chart` 标签:
+为了显示在任务页面上呈现折线图的趋势（请参见[图 3](https://jenkins.io/blog/2020/03/17/ui-plugins/#img-job)），您需要提供一个所谓的浮动框（存储在任务操作的 `floatBox.jelly` 文件中（请参见[第 3 节](https://jenkins.io/blog/2020/03/17/ui-plugins/#reporter-structure)））。该文件的内容非常简单，仅包含一个 `trend-chart` 标签:
 
 ```
 floatingBox.jelly
@@ -400,7 +400,7 @@ floatingBox.jelly
 6 </j:jelly>
 ```
 
-在 Java 方面，需要在 `JobAction` 的相应子类（浮动框的所有者）中提供图表的模型。由于趋势图的计算在服务器端也非常昂贵（需要从磁盘读取多个构建，并且需要计算有趣的数据点），因此该过程已放入单独的后台作业中。一旦计算完成，将通过 Ajax 调用显示结果。为了为插件作者隐藏这些详细信息，您应该简单地从相应的 `AsyncTrendJobAction` 类派生 `JobAction` 类，该类已经包含样板代码。因此，您的静态插件对象模型实际上会变得有些复杂:
+在 Java 方面，需要在 `JobAction` 的相应子类（浮动框的所有者）中提供图表的模型。由于趋势图的计算在服务器端也非常昂贵（需要从磁盘读取多个构建，并且需要计算有趣的数据点），因此该过程已放入单独的后台任务中。一旦计算完成，将通过 Ajax 调用显示结果。为了为插件作者隐藏这些详细信息，您应该简单地从相应的 `AsyncTrendJobAction` 类派生 `JobAction` 类，该类已经包含样板代码。因此，您的静态插件对象模型实际上会变得有些复杂:
 
 ![chart-model](chart-model.png)
 
