@@ -1,9 +1,9 @@
 ---
 title: "致 UCloud 的一封感谢信"
 description: "Jenkins 中文社区会在 UCloud 的帮助下为用户提供给好的服务"
-date: 2020-04-04
+date: 2020-03-26
 author: linuxsuren
-poster: “./2020-04-04-thanks-ucloud/ucloud-logo.png”
+poster: “./2020-03-26-thanks-ucloud/ucloud-logo.png”
 ---
 
 ![ucloud logo](ucloud-logo.png)
