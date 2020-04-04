@@ -27,6 +27,10 @@ Jenkins 是一个由开源社区驱动的项目，拥有非常丰富的插件生
 | 多分支流水线 + BlueOcean | `jenkinszh/blueocean-zh:2.204.5` |
 | 多分支流水线（GitHub、GitLab、Bitbucket）| `jenkinszh/jenkins-multi-pipeline-zh:2.204.5` |
 
+上面的清单中没有你想要的？自己动手，丰衣足食。参考下图中的 [Pull Request](https://github.com/jenkins-zh/jenkins-formulas/pull/18/files) 来提交几个文本文件，就可以了。
+
+![Jenkins formula pr](jenkins-formula-pr.png)
+
 [last-blog]: http://jenkins-zh.cn/wechat/articles/2019/11/2019-11-11-update-center-mirror-announcement/
 [mirror-data]: https://jenkins-zh.github.io/update-center-mirror/data
 [jenkins-formulas]: https://github.com/jenkins-zh/jenkins-formulas
