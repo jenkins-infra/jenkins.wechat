@@ -1,4 +1,4 @@
-**请注意：该仓库已归档，内容已经迁移到 [jenkins-zh](https://github.com/jenkins-zh/jenkins-zh)**
+**请注意：该仓库已归档，新的文章请提交到 [jenkins-zh](https://github.com/jenkins-zh/jenkins-zh)**。
 
 # Jenkins WeChat
 
