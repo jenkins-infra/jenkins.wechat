@@ -4,7 +4,7 @@ date: 2020-04-08
 description: 主要介绍了关于 Jenkins “配置即代码”模式的具体方法，结合工具以及脚本对该模式进行了说明。  
 author: Amet Umerov  
 poster: cover.jpg  
-translator: s1mple_zj  
+translator: 0N0thing  
 original: https://medium.com/preply-engineering/jenkins-omg-275e2df5d647  
 tags:  
 - Jenkins  
@@ -38,7 +38,6 @@ tags:
 
 ![DevOps-system](DevOps-system.png)
 
-来源: https://www.altexsoft.com/blog/engineering/comparison-of-most-popular-continuous-integration-tools-jenkins-teamcity-bamboo-travis-ci-and-more/
 
 我们想要让 Jenkins 以及基础架构、配置、任务和插件完全代码化。并且，我们之前有过在 Kubernetes 运行的经验，但是因为 [Jenkins 架构](https://jenkins.io/doc/book/architecting-for-scale/)以及我们自身的目的发现它并不适合我们。
 
@@ -142,7 +141,7 @@ tags:
 
 packer的配置是这样的
 
-Bootstrap 文件 `packer_bootstrap.sh` 包含了在 AMI 预安装软件的所有命令。举个例子，我们使用 Docker，docker-compose 以及 [vaultenv](https://github.com/channable/vaultenv) 或者安装 Datadog 节点用来监控。
+Bootstrap 文件 `packer_bootstrap.sh` 包含了在 AMI 预安装软件的所有命令。举个例子，我们使用 Docker、docker-compose 以及 [vaultenv](https://github.com/channable/vaultenv) 或者安装 Datadog 节点用来监控。
 
 考虑到这个 AMI 的架构，我们可以使用 Terraform、CloudFormation、Pulumi 甚至是 Ansible。这个是在 AWS 上使用 Jenkins 的可能会使用的架构之一。
 
@@ -491,5 +490,3 @@ JJB 并不是灵丹妙药，因为仍有一些不是很常用的插件是不支�
 现在我们已经看到了‘一切事物即代码’模式的一个大概的轮廓以及我们怎样使用 Jenkins，我们可以回到文章开头提到的那几个问题那里。你找到答案了吗？或许，显而易见了，5 个问题的答案都是 “yes”。
 
 我们仅仅想同你一同分享我们的经验，这篇文章中参数配置以及 [Jenkins 最佳实践](https://wiki.jenkins.io/display/JENKINS/Jenkins+Best+Practices)我们没有深入展开讲。
-
-*订阅 [Preply 工程师博客](https://medium.com/preply-engineering)获取更多有关 Preply 工程的一些有趣的文章。敬请关注！*
