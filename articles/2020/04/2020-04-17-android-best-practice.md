@@ -1,11 +1,11 @@
 ---
 title: Jenkins 构建 Android 应用实践
 description: 文章结合 Jenkins，探讨如何使用 Jenkins 构建 Android 应用。
-author: Jim
+author: Sakuragi
 original: https://jenkins-zh.cn/tutorial/best-practice/android/android-best-practice/
 poster: cover.png
 toc: false
-date: 2020-03-29
+date: 2020-04-17
 tags:   
 - DevOps  
 - Android  
@@ -111,7 +111,7 @@ docker run ^
 
 3. 在 Unlock Jenkins 页面，粘贴该密码到 Administrator password 字段并点击 Continue。
 
-### 使用插件自定义 Jenkins
+### 安装插件
 在解锁 Jenkins 后，Customize Jenkins 页面出现。
 
 在该页面，点击 Install suggested plugins。
@@ -281,7 +281,6 @@ pipeline{
 }
 ```
 
-### 继续
  
 3. 保存对 Jenkinsfile 的修改并将其提交到你的本地 jenkins-android-sample Git 仓库。例如，在 jenkins-android-sample 目录下，运行以下命令：   
 git add .  
@@ -342,8 +341,6 @@ pipeline{
 
 }
 ```
-
-### 继续
 
 3. 保存对 Jenkinsfile 的修改并将其提交到你的本地 jenkins-android-sample Git 仓库。例如，在 jenkins-android-sample 目录下，运行以下命令：    
 git add .  
